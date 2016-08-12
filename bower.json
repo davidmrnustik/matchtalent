@@ -1,0 +1,17 @@
+{
+  "name": "MatchTalent Product Web",
+  "authors": [
+    "David Mrnustik / Memorandum Multimedia"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "OTHER",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

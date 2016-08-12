@@ -1,0 +1,32 @@
+{
+  "name": "matchtalent",
+  "version": "1.0.0",
+  "description": "MatchTalent Product Web",
+  "main": "index.html",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/david_samper/matchtalent-product-web.git"
+  },
+  "author": "David Samper / Memorandum Multimedia",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/david_samper/matchtalent-product-web#readme",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-pixrem": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sequence": "^0.4.5",
+    "gulp-surge": "^0.1.0",
+    "gulp-uglify": "^2.0.0"
+  }
+}
