@@ -1,6 +1,8 @@
 # Preparación del entorno local #
 
-*​Si no tienes bower (https://bower.io/), instalalo asi:*  
+Necesitas node con npm. Si no las tienes, instalalo desde https://nodejs.org/en/.
+
+​Si no tienes bower (https://bower.io/), instalalo asi:  
 $ npm install -g bower  
 
 **Sigue con los siguientes:**  
