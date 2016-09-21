@@ -1,0 +1,17 @@
+{
+  "name": "matchtalent",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "davidm@memorandum.net"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
