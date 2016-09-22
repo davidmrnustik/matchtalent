@@ -1,0 +1,16 @@
+$block: 'inner';
+
+.#{$block} {
+	margin: 0 auto;
+	max-width: $inner-max-width;
+
+	& > div,
+	& > ul {
+		@include custom-breakpoint-max($inner-max-width + 20) {
+			padding: 0px 40px;
+		}
+		@include custom-breakpoint-max($breakpoint-phablet) {
+			padding: 0px 20px;
+		}
+	}
+}

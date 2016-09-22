@@ -1,0 +1,10 @@
+$block: 'text';
+
+.#{$block} {
+	&_center {
+		text-align: center;
+	}
+	&_uppercase {
+		text-transform: uppercase;
+	}
+}
