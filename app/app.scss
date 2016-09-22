@@ -1,12 +1,13 @@
-@import "blocks/mixins";
-@import "blocks/variables";
+@import "base/*";
 @import "blocks/body/*";
 @import "blocks/clients/*";
 @import "blocks/contact-with-us/*";
+@import "blocks/content/*";
 @import "blocks/features/*";
 @import "blocks/footer/*";
 @import "blocks/header/*";
 @import "blocks/hero/*";
+@import "blocks/menu-icon/*";
 @import "blocks/mobile-menu/*";
 @import "blocks/partners/*";
 @import "blocks/solutions-for/*";

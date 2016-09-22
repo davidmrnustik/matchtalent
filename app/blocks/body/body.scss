@@ -1,4 +1,3 @@
 body {
-	background: $bg;
-	@include test(14px);
+	font-family: $font-main;
 }

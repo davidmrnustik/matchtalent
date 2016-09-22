@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="_dev/css/app.css">
 </head>
 <body>
-	<div class="mobile-menu">
+	<div class="mobile-menu" id="mobileMenu">
 		<select name="mobile-language" class="mobile-menu__lang-switcher">
 			<option value="spanish" selected>Español</option>
 			<option value="english">English</option>
@@ -16,16 +16,23 @@
 			<li class="nav__item"><a href="#">Ventajas</a></li>
 			<li class="nav__item"><a href="#">Precios</a></li>
 			<li class="nav__item"><a href="#">Contacto</a></li>
-			<li class="nav__item"><a href="#">Inte
-			graciones</a></li>
+			<li class="nav__item"><a href="#">Integraciones</a></li>
 			<li class="nav__item nav__item_highlighted"><a href="#">Prueba gratuita</a></li>
 		</ul>
 	</div>
-	<div class="container">
+	<div class="content" id="mainContent">
 		<header class="header">
 
-			<div class="logo header___logo">
+			<div class="logo header__logo">
 				logo
+			</div>
+
+			<div class="menu-icon header__menu-icon" id="menu">
+				<div class="menu-icon__content">
+					<span class="menu-icon__line"></span>
+					<span class="menu-icon__line"></span>
+					<span class="menu-icon__line"></span>
+				</div>
 			</div>
 
 			<ul class="nav header__nav">
@@ -191,5 +198,6 @@
 		</footer>
 
 	</div>
+<script src="_dev/js/app.js"></script>
 </body>
 </html>

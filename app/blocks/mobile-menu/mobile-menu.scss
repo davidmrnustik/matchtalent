@@ -1,0 +1,33 @@
+$block: 'mobile-menu';
+
+.menu-open {
+	& .#{$block} {
+		&_show {
+			@include custom-breakpoint-min($breakpoint-phablet) {
+				height: 0;
+				transition: visibility 0s .5s, height 0s .5s;
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+.#{$block} {
+	background: magenta;
+	bottom: 0px;
+	height: 0;
+	left: 80px;
+	overflow: auto;
+	position: fixed;
+	left: 0;
+	text-align: center;
+	top: 0;
+	transition: visibility 0s .5s, height 0s .5s;
+	visibility: hidden;
+
+	&_show {
+		height: 100%;
+		transition: visibility 0s .5s, height 0s 0s;
+		visibility: visible;
+	}
+}

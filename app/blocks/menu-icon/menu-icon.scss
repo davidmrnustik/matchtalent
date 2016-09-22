@@ -1,0 +1,48 @@
+$block: 'menu-icon';
+
+.#{$block} {
+	display: none;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-color: green;
+	text-align: center;
+	transition: background-color .3s;
+	cursor: pointer;
+
+	@include custom-breakpoint-max($breakpoint-phablet) {
+		display: inline-block;
+	}
+
+	.menu-icon__content {
+		display: inline-block;
+		height: 40px;
+		position: relative;
+		vertical-align: middle;
+		width: 22px;
+
+		.menu-icon__line {
+			background-color: white;
+			display: block;
+			height: 2px;
+			width: 100%;
+		}
+		.menu-icon__line:nth-child(1){
+			margin-top: 20px;
+			transition: opacity .2s;
+		}
+		.menu-icon__line:nth-child(2),
+		.menu-icon__line:nth-child(3){
+			position: absolute;
+			transition: transform .3s;
+		}
+		.menu-icon__line:nth-child(2) {
+			transform: translateY(-430%);
+		}
+		.menu-icon__line:nth-child(3) {
+			transform: translateY(230%);
+		}
+
+	}
+
+}
