@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp 						= require('gulp');
+var del 						=	require('del');
 var runSequence	 		=	require('run-sequence');
 var gulpLoadPlugins = require('gulp-load-plugins');
 var gp 							= gulpLoadPlugins();
@@ -8,25 +9,31 @@ var browserSync	 		=	require('browser-sync');
 var reload					= browserSync.reload;
 
 var src = {
-	scss: ['./app/base/**/*.scss','./app/blocks/**/*.scss'],
-	js: ['./app/base/**/*.js','./app/blocks/**/*.js','./app/app.js'],
+	scss: ['./app/**/*.scss'],
+	js: ['./app/base/utils/*.js','./app/base/*.js','./app/blocks/**/*.js','./app/app.js'],
+	jscomponents: ['./app/components/modernizr-load/modernizr.js'],
+	jslegacy: ['./app/components/respond/dest/respond.src.js'],
 	dev: '_dev',
 	build: '_build',
 	jade: './**/*.jade'
 };
 
+gulp.task('clean', function(){
+	return del.sync([src.dev, src.build]);
+});
+
 gulp.task('sass:dev', function(){
-	return gulp.src('app/app.scss')
+	return gulp.src(['./app/*.scss'])
 	.pipe(gp.plumber({
 		errorHandler: function (error) {
 			console.log(error.message);
 			this.emit('end');
 		}
 	}))
-	.pipe(gp.sourcemaps.init())
 	.pipe(gp.cssGlobbing({
 		extensions: ['.scss']
 	}))
+	.pipe(gp.sourcemaps.init())
 	.pipe(gp.sass())
 	.pipe(gp.cssnano())
 	.pipe(gp.plumber.stop())
@@ -43,6 +50,24 @@ gulp.task('js', function(){
 	.pipe(gulp.dest(src.dev + '/js'));
 });
 
+gulp.task('jscomponents', function(){
+	return gulp.src(src.jscomponents, { base: 'app' })
+	.pipe(gp.sourcemaps.init())
+		.pipe(gp.concat('components.js'))
+		.pipe(gp.uglify())
+	.pipe(gp.sourcemaps.write())
+	.pipe(gulp.dest(src.dev + '/js'));
+});
+
+gulp.task('jslegacy', function(){
+	return gulp.src(src.jslegacy, { base: 'app' })
+	.pipe(gp.sourcemaps.init())
+		.pipe(gp.concat('legacy.js'))
+		.pipe(gp.uglify())
+	.pipe(gp.sourcemaps.write())
+	.pipe(gulp.dest(src.dev + '/js'));
+});
+
 gulp.task('serve', ['build'], function(){
 	browserSync({
 		server: {
@@ -50,7 +75,7 @@ gulp.task('serve', ['build'], function(){
 		}
 	});
 
-	gulp.watch([src.scss, './app/app.scss'], ['sass:dev', reload]);
+	gulp.watch([src.scss, './app/*.scss'], ['sass:dev', reload]);
 	gulp.watch([src.js], ['js', reload]);
 });
 
@@ -58,8 +83,8 @@ gulp.task('watch:jade', function(){
 	gulp.watch([src.jade], ['jade']);
 });
 
-gulp.task('build', [], function(){
-	runSequence('sass:dev', 'js');
+gulp.task('build', ['clean'], function(){
+	runSequence('sass:dev', 'js', 'jscomponents', 'jslegacy');
 });
 
 gulp.task('jade', function(){
@@ -68,4 +93,4 @@ gulp.task('jade', function(){
 	.pipe(gulp.dest('./html'));
 });
 
-gulp.task('default', ['build'], function(){});
+gulp.task('default', ['serve'], function(){});

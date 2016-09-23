@@ -8,7 +8,7 @@ $block: 'content';
 	z-index: 1;
 
 	&.menu-open {
-		transform: translateX(200px);
+		transform: translateX(100px);
 
 		@include custom-breakpoint-min($breakpoint-phablet) {
 			transform: translateX(0);

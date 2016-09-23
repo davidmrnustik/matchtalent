@@ -1,3 +1,14 @@
 body {
 	font-family: $font-main;
+	overflow-x: hidden;
+
+	.menu-open & {
+		@include custom-breakpoint-max($breakpoint-phablet) {
+      height: 100%;
+      overflow: hidden;
+    }
+	}
+}
+.clearfix {
+	@include clearfix();
 }

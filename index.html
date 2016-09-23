@@ -4,6 +4,11 @@
 	<title>MatchTalent</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="_dev/css/app.css">
+	<script src="_dev/js/components.js"></script>
+	<!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="_dev/css/no-flexbox.css">
+		<script src="_dev/js/legacy.js"></script> 
+	<![endif]-->
 </head>
 <body>
 	<div class="mobile-menu" id="mobileMenu">
@@ -23,16 +28,16 @@
 	<div class="content" id="mainContent">
 		<header class="header">
 
-			<div class="logo header__logo">
-				logo
-			</div>
-
 			<div class="menu-icon header__menu-icon" id="menu">
 				<div class="menu-icon__content">
 					<span class="menu-icon__line"></span>
 					<span class="menu-icon__line"></span>
 					<span class="menu-icon__line"></span>
 				</div>
+			</div>
+
+			<div class="logo header__logo">
+				logo
 			</div>
 
 			<ul class="nav header__nav">
@@ -101,27 +106,29 @@
 			</div>
 		</section>
 
-		<section class="clients inner">
-			<div class="clients__item">
-				<div class="clients__logo">
-					ROOM MATE logo
+		<section class="clients inner text_center">
+			<div class="grid grid_2-columns">
+				<div class="clients__item grid__column">
+					<div class="clients__logo">
+						ROOM MATE logo
+					</div>
+					<div class="clients__name">
+						Room Mate Hotels
+					</div>
 				</div>
-				<div class="clients__name">
-					Room Mate Hotels
-				</div>
-			</div>
-			<div class="clients__item">
-				<div class="clients__logo">
-					PARADORES logo
-				</div>
-				<div class="clients__name">
-					Paradores - Hoteles &amp; Restaurantes 1928
+				<div class="clients__item grid__column">
+					<div class="clients__logo">
+						PARADORES logo
+					</div>
+					<div class="clients__name">
+						Paradores - Hoteles &amp; Restaurantes 1928
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="why-matchtalent inner">
-			<div class="why-matchtalent__headline text-uppercase">
+			<div class="why-matchtalent__headline text_uppercase text_center">
 				¿Por qué matchtalent?
 			</div>
 			<div class="grid grid_3-columns">
@@ -170,7 +177,7 @@
 			</div>
 		</section>
 
-		<section class="contact-with-us text_white">
+		<section class="contact-with-us text_white text_center">
 			<div class="inner">
 				<div class="contact-with-us__text">
 					Contacta con nosotros <strong>987 654 321</strong> o solicita demo:
@@ -248,63 +255,71 @@
 			</div>
 		</section>
 
-		<section class="partners inner">
-			<div class="partners__item">
-				<a href="#" class="partners__logo"><img src="" alt="" title="" />BUSCAREMPLEO logo</a>
-			</div>
-			<div class="partners__item">
-				<a href="#" class="partners__logo"><img src="" alt="" title="" />TICJOB logo</a>
-			</div>
-			<div class="partners__item">
-				<a href="#" class="partners__logo"><img src="" alt="" title="" />INFOEMPLEO logo</a>
-			</div>
-			<div class="partners__item">
-				<a href="#" class="partners__logo"><img src="" alt="" title="" />DISJOB logo</a>
-			</div>
-			<div class="partners__item">
-				<a href="#" class="partners__logo"><img src="" alt="" title="" />FJOBS logo</a>
-			</div>
-			<div class="partners__item">
-				<a href="#" class="partners__logo"><img src="" alt="" title="" />TRABAJANDO logo</a>
-			</div>
-			<div class="partners__item">
-				<a href="#" class="partners__logo"><img src="" alt="" title="" />TURIJOBS logo</a>
+		<section class="partners inner text_center">
+			<div class="grid grid_flex">
+				<div class="partners__item grid__column">
+					<a href="#" class="partners__logo"><img src="" alt="" title="" />BUSCAREMPLEO logo</a>
+				</div>
+				<div class="partners__item grid__column">
+					<a href="#" class="partners__logo"><img src="" alt="" title="" />TICJOB logo</a>
+				</div>
+				<div class="partners__item grid__column">
+					<a href="#" class="partners__logo"><img src="" alt="" title="" />INFOEMPLEO logo</a>
+				</div>
+				<div class="partners__item grid__column">
+					<a href="#" class="partners__logo"><img src="" alt="" title="" />DISJOB logo</a>
+				</div>
+				<div class="partners__item grid__column">
+					<a href="#" class="partners__logo"><img src="" alt="" title="" />FJOBS logo</a>
+				</div>
+				<div class="partners__item grid__column">
+					<a href="#" class="partners__logo"><img src="" alt="" title="" />TRABAJANDO logo</a>
+				</div>
+				<div class="partners__item grid__column">
+					<a href="#" class="partners__logo"><img src="" alt="" title="" />TURIJOBS logo</a>
+				</div>
 			</div>
 		</section>
 
 		<footer class="footer">
 			<div class="inner">
-				<div class="logo footer__logo">
-					MATCHTALENT logo
+				
+				<div class="grid grid_space-between grid_nowrap grid_3-column footer__grid_3-column">
+					<div class="logo footer__logo grid__column">
+						MATCHTALENT logo
+					</div>
+					<ul class="nav footer__nav grid__column">
+						<li class="nav__item"><a href="#">Ventajas</a></li>
+						<li class="nav__item"><a href="#">Precios</a></li>
+						<li class="nav__item"><a href="#">Contacto</a></li>
+						<li class="nav__item"><a href="#">Intergraciones</a></li>
+						<li class="nav__item nav__item_highlighted"><a href="#">Prueba gratuita</a></li>
+						<li class="nav__item nav__item_highlighted"><a href="#">Llamar 987 654 321</a></li>
+					</ul>
+					<div class="footer__socialnet grid__column">
+						<div class="footer__icon footer__icon_facebook">
+							facebook
+						</div>
+						<div class="footer__icon footer__icon_twitter">
+							twitter
+						</div>
+						<div class="footer__icon footer__icon_googleplus">
+							googleplus
+						</div>
+						<div class="footer__icon footer__icon_instagram">
+							instagram
+						</div>
+					</div>
 				</div>
-				<ul class="nav footer__nav">
-					<li class="nav__item"><a href="#">Ventajas</a></li>
-					<li class="nav__item"><a href="#">Precios</a></li>
-					<li class="nav__item"><a href="#">Contacto</a></li>
-					<li class="nav__item"><a href="#">Intergraciones</a></li>
-					<li class="nav__item nav__item_highlighted"><a href="#">Prueba gratuita</a></li>
-					<li class="nav__item nav__item_highlighted"><a href="#">Llamar 987 654 321</a></li>
-				</ul>
-				<div class="footer__socialnet">
-					<div class="footer__icon footer__icon_facebook">
-						facebook
+
+				<div class="grid grid_2-columns">
+					<div class="footer__copyright grid__column">
+						Copyright &copy; MatchTalent, 2016. All Rights Reserved.
 					</div>
-					<div class="footer__icon footer__icon_twitter">
-						twitter
+					<div class="footer__designby grid__column text_right">
+						<p>Desarrollado por:</p>
+						MEMORANDUM logo
 					</div>
-					<div class="footer__icon footer__icon_googleplus">
-						googleplus
-					</div>
-					<div class="footer__icon footer__icon_instagram">
-						instagram
-					</div>
-				</div>
-				<div class="footer__copyright">
-					Copyright &copy; MatchTalent, 2016. All Rights Reserved.
-				</div>
-				<div class="footer__designby">
-					<p>Desarrollado por:</p>
-					MEMORANDUM logo
 				</div>
 			</div>
 		</footer>

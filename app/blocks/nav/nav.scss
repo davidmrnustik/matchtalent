@@ -1,0 +1,11 @@
+$block: 'nav';
+
+.#{$block} {
+	@include clearfix();
+
+	&__item {
+		@include custom-breakpoint-min($breakpoint-phablet) {
+			float: left;
+		}
+	}
+}

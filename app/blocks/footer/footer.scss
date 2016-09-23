@@ -2,4 +2,23 @@ $block: 'footer';
 
 .#{$block} {
 	background: green;
+
+	&__grid_3-column {
+		& > .grid__column {
+			&:first-child,
+			&:last-child {
+				@include custom-breakpoint-min($breakpoint-tablet) {
+					background: blue;
+					min-width: 160px;
+				}
+			}
+		}
+	}
+}
+
+.#{$block}__grid_3-column {
+	@include custom-breakpoint-max($breakpoint-tablet) {
+		text-align: center;
+		display: block !important;
+	}
 }
