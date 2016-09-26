@@ -1,0 +1,7 @@
+@import "__dotnav/slider__dotnav";
+
+$block: 'slider';
+
+.#{$block} {
+	background: pink;
+}

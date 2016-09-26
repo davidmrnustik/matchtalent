@@ -1,0 +1,13 @@
+$block: 'slider__dotnav';
+$dotnav-bg-color: #b4b4b4;
+
+.#{$block} {
+	li {
+		button {
+			&:before {
+				content: "" !important;
+				background: $dotnav-bg-color;
+			}
+		}
+	}
+}

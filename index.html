@@ -3,6 +3,7 @@
 <head>
 	<title>MatchTalent</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="_dev/css/app.css">
 	<script src="_dev/js/components.js"></script>
 	<!--[if IE 8]>
@@ -25,6 +26,7 @@
 			<li class="nav__item nav__item_highlighted"><a href="#">Prueba gratuita</a></li>
 		</ul>
 	</div>
+
 	<div class="content" id="mainContent">
 		<header class="header">
 
@@ -51,56 +53,49 @@
 		</header>
 
 		<section class="hero">
-			<div class="slider hero__slider">
-				<div class="slider__container">
-					<div class="slider__item">
-						<div class="slider__title">
-							Gestión de ofertas
-						</div>
-						<div class="slider__description">
-							Gestione sus ofertas de empleo y candidatos desde su propia web de la mano de los portales de empleo que elija.
-						</div>
-						<div class="slider__button button button_inverse">
-							Solicitar demo
-						</div>
+			<div class="slider hero__slider text_center" data-slick='{"arrows": false, "dots": true, "dotsClass": "slick-dots slider__dotnav"}'>
+				<div class="slider__item">
+					<div class="slider__title">
+						Gestión de ofertas
 					</div>
-					<div class="slider__item">
-						<div class="slider__title">
-							Ahorro de tiempo con la máxima difusión
-						</div>
-						<div class="slider__description">
-							Ahorre tiempo y dinero tenienido todos los currículos a un click (editar, eliminar, clasificar etc) recibidos desde cualqier portal de empleo.
-						</div>
-						<div class="slider__button button button_inverse">
-							Solicitar demo
-						</div>
+					<div class="slider__description">
+						Gestione sus ofertas de empleo y candidatos desde su propia web de la mano de los portales de empleo que elija.
 					</div>
-					<div class="slider__item">
-						<div class="slider__title">
-							Proceso automatizado
-						</div>
-						<div class="slider__description">
-							Consiga que las ofertas y candidatos de cualquier portal de empleo lleguen a su web automaticamente.
-						</div>
-						<div class="slider__button button button_inverse">
-							Solicitar demo
-						</div>
-					</div>
-					<div class="slider__item">
-						<div class="slider__title">
-							Entrevistas por videoconferencia
-						</div>
-						<div class="slider__description">
-							Gestione la agenda de entrevistas a candidatos y conózcalos a través de videoconferencia.
-						</div>
-						<div class="slider__button button button_inverse">
-							Solicitar demo
-						</div>
+					<div class="slider__button button button_inverse">
+						<a href="#" onclick='alert("SOLICITAR DEMO")'>Solicitar demo</a>
 					</div>
 				</div>
-				<div class="slider__dotnav">
-					<div class="slider__dotnav-item">
-						slidet dotnav
+				<div class="slider__item">
+					<div class="slider__title">
+						Ahorro de tiempo con la máxima difusión
+					</div>
+					<div class="slider__description">
+						Ahorre tiempo y dinero tenienido todos los currículos a un click (editar, eliminar, clasificar etc) recibidos desde cualqier portal de empleo.
+					</div>
+					<div class="slider__button button button_inverse">
+						Solicitar demo
+					</div>
+				</div>
+				<div class="slider__item">
+					<div class="slider__title">
+						Proceso automatizado
+					</div>
+					<div class="slider__description">
+						Consiga que las ofertas y candidatos de cualquier portal de empleo lleguen a su web automaticamente.
+					</div>
+					<div class="slider__button button button_inverse">
+						Solicitar demo
+					</div>
+				</div>
+				<div class="slider__item">
+					<div class="slider__title">
+						Entrevistas por videoconferencia
+					</div>
+					<div class="slider__description">
+						Gestione la agenda de entrevistas a candidatos y conózcalos a través de videoconferencia.
+					</div>
+					<div class="slider__button button button_inverse">
+						Solicitar demo
 					</div>
 				</div>
 			</div>
@@ -326,5 +321,8 @@
 
 	</div>
 <script src="_dev/js/app.js"></script>
+<script>
+	$('.slider').slick();
+</script>
 </body>
 </html>

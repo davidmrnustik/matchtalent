@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "respond": "^1.4.2",
-    "modernizr-load": "*"
+    "modernizr-load": "*",
+    "slick-carousel": "^1.6.0"
   }
 }
