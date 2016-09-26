@@ -9,6 +9,12 @@
 		clear: both;
 	}
 }
+@function calc-em($px, $context: $browser-context) {
+	@return ($px / $context) * 1em;
+}
+@mixin font-size($size) {
+	font-size: calc-em($size);
+}
 @mixin custom-breakpoint-max($max-width) {
 	@media (max-width: $max-width) { @content ; }
 }

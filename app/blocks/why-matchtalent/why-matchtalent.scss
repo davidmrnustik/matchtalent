@@ -1,1 +1,35 @@
 $block: 'why-matchtalent';
+
+.#{$block} {
+	&__title {
+		padding-bottom: 30px;
+
+		&:after {
+			content: "";
+			position: relative;
+			top: 20px;
+			width: 55px;
+			margin: 0px auto;
+			display: block;
+			height: 2px;
+			text-align: center;
+			background-color: $color-blue;
+		}
+	}
+	&__item:first-of-type {
+		padding-right: 60px;
+	}
+	&__item:nth-child(2) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	&__item:last-of-type {
+		padding-left: 60px;
+	}
+	&__description {
+		br {}
+	}
+	&__button {
+		margin-top: 25px;
+	}
+}

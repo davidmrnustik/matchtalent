@@ -1,6 +1,12 @@
 body {
-	font-family: $font-main;
+	font-family: $font-primary;
+	@include font-size(16);
+	font-weight: 500;
+	color: $color-main;
 	overflow-x: hidden;
+	line-height: 1.6em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 
 	.menu-open & {
 		@include custom-breakpoint-max($breakpoint-phablet) {
@@ -11,4 +17,9 @@ body {
 }
 .clearfix {
 	@include clearfix();
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: $link-color;
 }

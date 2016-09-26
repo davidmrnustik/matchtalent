@@ -1,5 +1,16 @@
 // Fonts
-$font-main: arial, 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-primary: 'opensans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+$font-secondary: 'proximanova', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+$browser-context: 16;
+
+// Colors
+$color-blue: #1a6fb6;
+$color-main: #444444;
+$link-color: $color-blue;
+
+// Headings
+$headings-font: $font-secondary;
+$headings-font-color: $color-blue;
 
 // Breakpoints
 $breakpoint-phone: 400px;
@@ -8,5 +19,16 @@ $breakpoint-tablet: 800px;
 $breakpoint-desktop: 1024px;
 $breakpoint-big: 1300px;
 
-// inner
+// Inner
 $inner-max-width: 1080px;
+
+// Slider slick [https://github.com/kenwheeler/slick/] - dot nav
+$dotnav-bg-color: #b4b4b4;
+$slick-opacity-on-hover: 1 !default;
+$slick-dot-character: "" !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;

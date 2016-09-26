@@ -13,11 +13,11 @@ var src = {
 	js: ['./app/base/utils/*.js','./app/base/*.js','./app/blocks/**/*.js','./app/app.js'],
 	jscomponents: [
 		'./app/components/modernizr-load/modernizr.js',
-		'./app/components/jquery/dist/jquery.slim.js',
+		'./app/components/jquery/jquery.js',
 		'./app/components/slick-carousel/slick/slick.js'
 	],
 	slick: './app/components/slick-carousel/slick/ajax-loader.gif',
-	slickFonts: './app/components/slick-carousel/slick/fonts/*',
+	fonts: './app/fonts/*',
 	jslegacy: ['./app/components/respond/dest/respond.src.js'],
 	dev: '_dev',
 	build: '_build',
@@ -65,6 +65,12 @@ gulp.task('jscomponents', function(){
 	.pipe(gulp.dest(src.dev + '/js'));
 });
 
+gulp.task('jscomponentsie', function(){
+	return gulp.src(src.jscomponents, { base: 'app' })
+		.pipe(gp.concat('components_ie.js'))
+		.pipe(gulp.dest(src.dev + '/js'));
+});
+
 gulp.task('jslegacy', function(){
 	return gulp.src(src.jslegacy, { base: 'app' })
 	.pipe(gp.sourcemaps.init())
@@ -85,14 +91,14 @@ gulp.task('serve', ['build'], function(){
 	gulp.watch([src.js], ['js', reload]);
 });
 
-gulp.task('slick', ['slick-fonts'], function(){
+gulp.task('slick', function(){
 	return gulp.src(src.slick)
 	.pipe(gulp.dest(src.dev + '/css'));
 });
 
-gulp.task('slick-fonts', function(){
-	return gulp.src(src.slickFonts)
-	.pipe(gulp.dest(src.dev + '/css/fonts'));
+gulp.task('fonts', function(){
+	return gulp.src(src.fonts)
+	.pipe(gulp.dest(src.dev + '/fonts'));
 });
 
 gulp.task('watch:jade', function(){
@@ -100,7 +106,7 @@ gulp.task('watch:jade', function(){
 });
 
 gulp.task('build', ['clean'], function(){
-	runSequence('sass:dev', 'js', 'jscomponents', 'jslegacy', 'slick');
+	runSequence('sass:dev', 'js', 'jscomponents', 'jscomponentsie', 'jslegacy', 'slick', 'fonts');
 });
 
 gulp.task('jade', function(){

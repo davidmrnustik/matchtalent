@@ -16,6 +16,7 @@
   "dependencies": {
     "respond": "^1.4.2",
     "modernizr-load": "*",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "jquery": "1.7.0"
   }
 }

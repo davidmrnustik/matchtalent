@@ -1,0 +1,19 @@
+$urlFonts: "../fonts/";
+
+@each $font_family, $font_filename, $font_weight in
+	('opensans', 'opensans-bold', 700),
+	('opensans', 'opensans-regular', 500),
+	('opensans', 'opensans-italic', 400),
+	('proximanova', 'proximanova-bold', 700)
+{
+	@font-face {
+		font-family: $font_family;
+		src: url('#{$urlFonts}#{$font_filename}-webfont.woff2') format('woff2'),
+				 url('#{$urlFonts}#{$font_filename}-webfont.woff') format('woff'),
+				 url('#{$urlFonts}#{$font_filename}-webfont.ttf') format('truetype'),
+				 url('#{$urlFonts}#{$font_filename}-webfont.svg##{$font_family}') format('svg'),
+				 url('#{$urlFonts}#{$font_filename}-webfont.eot');
+		font-weight: $font_weight;
+		font-style: normal;
+	}
+}

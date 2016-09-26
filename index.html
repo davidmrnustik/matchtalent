@@ -5,9 +5,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="_dev/css/app.css">
-	<script src="_dev/js/components.js"></script>
+	<!--[if !IE]><!--><script src="_dev/js/components.js"></script><!--<![endif]-->
+	<!--[if IE 9]><!--><script src="_dev/js/components.js"></script><!--<![endif]-->
 	<!--[if IE 8]>
 		<link rel="stylesheet" type="text/css" href="_dev/css/no-flexbox.css">
+		<script src="_dev/js/components_ie.js"></script> 
 		<script src="_dev/js/legacy.js"></script> 
 	<![endif]-->
 </head>
@@ -53,7 +55,7 @@
 		</header>
 
 		<section class="hero">
-			<div class="slider hero__slider text_center" data-slick='{"arrows": false, "dots": true, "dotsClass": "slick-dots slider__dotnav"}'>
+			<div class="slider hero__slider text_center" data-slick='{"arrows": false, "dots": true, "dotsClass": "slider__dotnav"}'>
 				<div class="slider__item">
 					<div class="slider__title">
 						Gestión de ofertas
@@ -73,7 +75,7 @@
 						Ahorre tiempo y dinero tenienido todos los currículos a un click (editar, eliminar, clasificar etc) recibidos desde cualqier portal de empleo.
 					</div>
 					<div class="slider__button button button_inverse">
-						Solicitar demo
+						<a href="#">Solicitar demo</a>
 					</div>
 				</div>
 				<div class="slider__item">
@@ -84,7 +86,7 @@
 						Consiga que las ofertas y candidatos de cualquier portal de empleo lleguen a su web automaticamente.
 					</div>
 					<div class="slider__button button button_inverse">
-						Solicitar demo
+						<a href="#">Solicitar demo</a>
 					</div>
 				</div>
 				<div class="slider__item">
@@ -95,7 +97,7 @@
 						Gestione la agenda de entrevistas a candidatos y conózcalos a través de videoconferencia.
 					</div>
 					<div class="slider__button button button_inverse">
-						Solicitar demo
+						<a href="#">Solicitar demo</a>
 					</div>
 				</div>
 			</div>
@@ -122,51 +124,51 @@
 			</div>
 		</section>
 
-		<section class="why-matchtalent inner">
-			<div class="why-matchtalent__headline text_uppercase text_center">
+		<section class="why-matchtalent inner text_center">
+			<h2 class="why-matchtalent__headline text_uppercase">
 				¿Por qué matchtalent?
-			</div>
+			</h2>
 			<div class="grid grid_3-columns">
 				<div class="why-matchtalent__item grid__column">
 					<div class="why-matchtalent__icon">
 						icon A
 					</div>
-					<div class="why-matchtalent__title">
+					<h3 class="why-matchtalent__title">
 						Optimiza recursos
-					</div>
+					</h3>
 					<div class="why-matchtalent__description">
 						El Departamento de RRHH dispondrá de una herramienta para gestionar Ofertas y Candidatos desde su propia Web, con el ahorro de tiempo que ello supone para todos los miembros del Departamento. Un portal de empleo dentro de su propia Web.
 					</div>
 					<div class="why-matchtalent__button button">
-						más detalles
+						<a href="#">más detalles</a>
 					</div>
 				</div>
 				<div class="why-matchtalent__item grid__column">
 					<div class="why-matchtalent__icon">
 						icon B
 					</div>
-					<div class="why-matchtalent__title">
+					<h3 class="why-matchtalent__title">
 						Mejores resultados
-					</div>
+					</h3>
 					<div class="why-matchtalent__description">
-						Podrá trabajar todas sus ofertas de empleo de una manera fácil y sencilla, sin depender del elevado coste de un tercero, con un software pensado para optimizar todos los pasos de un proceso de selección.
+						Podrá trabajar todas sus ofertas de empleo de una manera fácil y sencilla, sin depender del elevado coste de un tercero, con un software pensado para optimizar todos los pasos de un proceso de selección.<br class="no-desktop" />
 					</div>
 					<div class="why-matchtalent__button button">
-						más detalles
+						<a href="#">más detalles</a>
 					</div>
 				</div>
 				<div class="why-matchtalent__item grid__column">
 					<div class="why-matchtalent__icon">
 						icon C
 					</div>
-					<div class="why-matchtalent__title">
+					<h3 class="why-matchtalent__title">
 						Mayor alcance
-					</div>
+					</h3>
 					<div class="why-matchtalent__description">
-						Según el tipo de oferta de empleo que quiera lanzar, podremos difundirla entre uno o varios portales de empleo (Turijobs, Infoempleo, Buscaempleo, Ticjobs etc) y que sus candidatos más afines se multipliquen.
+						Según el tipo de oferta de empleo que quiera lanzar, podremos difundirla entre uno o varios portales de empleo (Turijobs, Infoempleo, Buscaempleo, Ticjobs etc) y que sus candidatos más afines se multipliquen.<br class="no-desktop" /><br class="no-desktop" />
 					</div>
 					<div class="why-matchtalent__button button">
-						más detalles
+						<a href="#">más detalles</a>
 					</div>
 				</div>
 			</div>
@@ -179,15 +181,15 @@
 					<span class="text_em text_small">Sin contrato, sin obligación</span>
 				</div>
 				<div class="contact-with-us__button button button_inverse">
-					solicitar demo
+					<a href="#">solicitar demo</a>
 				</div>
 			</div>
 		</section>
 
 		<section class="solutions-for inner">
-			<h1 class="solutions-for__headline text_center text_uppercase">
+			<h2 class="solutions-for__headline text_center text_uppercase">
 				Soluciones para
-			</h1>
+			</h2>
 			<div class="grid grid_3-columns">
 				<div class="solutions-for__item solutions-for__item_left grid__column">
 					<div class="solutions-for__title solutions-for__title_icon-palm">
@@ -218,9 +220,9 @@
 
 		<section class="features section_inverse">
 			<div class="inner">
-				<h1 class="features__headline text_center text_uppercase">
+				<h2 class="features__headline text_center text_uppercase">
 						Ventajas de matchtalent
-				</h1>
+				</h2>
 				<div class="grid grid_2-columns">
 					<div class="features__item grid__column">
 						<div class="features__description features__description_icon-check">
@@ -244,13 +246,16 @@
 						</div>
 					</div>
 					<div class="features__button button button_inverse">
-						ver las ventajas
+						<a href="#">ver las ventajas</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="partners inner text_center">
+			<h2 class="partners__headline text_center text_uppercase">
+					Partners
+			</h2>
 			<div class="grid grid_flex">
 				<div class="partners__item grid__column">
 					<a href="#" class="partners__logo"><img src="" alt="" title="" />BUSCAREMPLEO logo</a>
@@ -321,8 +326,5 @@
 
 	</div>
 <script src="_dev/js/app.js"></script>
-<script>
-	$('.slider').slick();
-</script>
 </body>
 </html>

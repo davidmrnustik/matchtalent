@@ -14,32 +14,11 @@
 	utils.loadCSS = function(href) {
 		var link = window.document.createElement("link");
 		var ref = window.document.getElementsByTagName("script")[0];
-		var sheets = window.document.styleSheets;
 		
 		link.rel = "stylesheet";
 		link.href = href;
 		link.media = "all";
 		ref.parentNode.insertBefore(link, ref);
-
-		/*link.onloadcssdefined = function(cb){
-      var defined;
-      for( var i = 0; i < sheets.length; i++ ){
-        if( sheets[i].href && sheets[i].href === link.href ){
-          defined = true;
-        }
-      }
-      if(defined){
-        cb();
-      } else {
-        setTimeout(function() {
-          link.onloadcssdefined( cb );
-        });
-      }
-    };
-
-    link.onloadcssdefined(function() {
-      link.media = "all";
-    });*/
 
     return link;
 	};

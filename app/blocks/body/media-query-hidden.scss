@@ -1,0 +1,7 @@
+.no-desktop {
+	display: none;
+
+	@include custom-breakpoint-min($breakpoint-desktop) {
+		display: block;
+	}
+}

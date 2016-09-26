@@ -1,0 +1,38 @@
+$block: 'button';
+
+.#{$block} {
+	text-transform: uppercase;
+	display: inline-block;
+	border: 1px solid $color-blue;
+	@include font-size(14);
+
+	a {
+		padding: 7px 14px 5px 14px;
+		display: inline-block;
+		font-family: $font-secondary;
+		transition: background .5s, color .5s;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	&:not(.#{$block}_inverse) {
+		a {
+			background: transparent;
+
+			&:hover,
+			&:focus {
+				background: $color-blue;
+				color: white;
+			}
+		}
+	}
+	&.#{$block}_inverse {
+		a {
+			background: white;
+
+			&:hover,
+			&:focus {
+				background: transparent;
+				color: $color-blue;
+			}
+		}
+	}
+}

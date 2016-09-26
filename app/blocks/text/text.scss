@@ -10,4 +10,7 @@ $block: 'text';
 	&_uppercase {
 		text-transform: uppercase;
 	}
+	&_em {
+		font-weight: 400;
+	}
 }
