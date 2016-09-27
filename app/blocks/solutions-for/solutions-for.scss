@@ -1,0 +1,66 @@
+$block: 'solutions-for';
+
+.#{$block} {
+	&__headline {
+		margin: 0 auto 25px auto;
+
+		@include custom-breakpoint-min($breakpoint-tablet) {
+			@include font-size(24);
+			margin-bottom: 70px;
+			position: absolute;
+			left: 50%;
+			@include transform(translate, -50%, X);
+		}
+	}
+	&__title {
+		font-family: $font-primary;
+		font-weight: 500;
+		position: relative;
+		padding-left: 35px;
+		@include font-size(26);
+		padding-bottom: 10px;
+
+		&:before {
+			content: "";
+			top: -7px;
+			left: -5px;
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 40px;
+		}
+	}
+	&__item {
+		&:first-of-type {
+			.#{$block}__title {
+				&:before {
+					@include bg-image('palm.svg', left, center, cover);
+				}
+			}
+		}
+		&:nth-child(2) {
+			.#{$block}__title {
+				&:before {
+					@include bg-image('server.svg', left, center, cover);
+				}
+			}
+		}
+		&:last-of-type {
+			.#{$block}__title {
+				&:before {
+					@include bg-image('cross.svg', left, center, cover);
+				}
+			}
+		}
+		@include custom-breakpoint-min($breakpoint-tablet) {
+			&:first-of-type,
+			&:last-of-type {
+				margin-top: 80px;
+			}
+			&:nth-child(2) {
+				position: relative;
+				margin-top: 250px;
+			}
+		}
+	}
+}

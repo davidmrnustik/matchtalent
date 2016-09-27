@@ -37,6 +37,43 @@ $block: 'grid';
 			@include custom-breakpoint-min($breakpoint-tablet) {
 				width: 33.33%;
 			}
+
+			&:first-of-type {
+				@include custom-breakpoint-min($breakpoint-desktop) {
+					padding-right: $grid-gap;
+				}
+				@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-desktop) {
+					padding-right: ($grid-gap / 4);
+				}
+			}
+			&:nth-child(2) {
+				@include custom-breakpoint-max($breakpoint-phablet) {
+					margin: ($grid-gap / 2) 0px;
+				}
+				@include custom-breakpoint-min($breakpoint-desktop) {
+					padding-left: ($grid-gap / 2);
+					padding-right: ($grid-gap / 2);
+				}
+				@include custom-breakpoint-min-max($breakpoint-tablet, $breakpoint-desktop) {
+					padding-left: ($grid-gap / 4);
+					padding-right: ($grid-gap / 4);
+				}
+				@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
+					padding-left: ($grid-gap / 4);
+					padding-right: 0px;
+				}
+			}
+			&:last-of-type {
+				@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
+					margin-top: ($grid-gap / 2);
+				}
+				@include custom-breakpoint-min($breakpoint-desktop) {
+					padding-left: $grid-gap;
+				}
+				@include custom-breakpoint-min-max($breakpoint-tablet, $breakpoint-desktop) {
+					padding-left: ($grid-gap / 4);
+				}
+			}
 		}
 	}
 }

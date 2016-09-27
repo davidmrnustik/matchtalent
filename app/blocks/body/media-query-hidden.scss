@@ -5,3 +5,10 @@
 		display: block;
 	}
 }
+.no-tablet {
+	display: none;
+
+	@include custom-breakpoint-min($breakpoint-tablet) {
+		display: block;
+	}
+}

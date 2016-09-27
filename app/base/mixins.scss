@@ -24,3 +24,33 @@
 @mixin custom-breakpoint-min-max($min-width, $max-width) {
 	@media (min-width: $min-width) and (max-width: ($max-width - 1)) { @content ; }
 }
+@mixin rotate($value){
+	-webkit-transform: rotate($value);
+		 -moz-transform: rotate($value);
+			-ms-transform: rotate($value);
+			 -o-transform: rotate($value);
+					transform: rotate($value);
+}
+@mixin transform($action, $value, $xy:false){
+	// Usage - example 1: @include transform(translate, -50%, X);
+	// Usage - example 2: @include transform(translate, (-50%, -50%));
+
+	@if($xy){
+		-moz-transform: $action + $xy + "(" + $value + ")";
+		 -ms-transform: $action + $xy + "(" + $value + ")";
+			-o-transform: $action + $xy + "(" + $value + ")";
+				 transform: $action + $xy + "(" + $value + ")";
+	} @else {
+		-moz-transform: $action + "(" + $value + ")";
+		 -ms-transform: $action + "(" + $value + ")";
+			-o-transform: $action + "(" + $value + ")";
+				 transform: $action + "(" + $value + ")";
+	}
+	
+}
+@mixin bg-image($file, $positionX, $positionY, $size: initial) {
+	background-image: url('../img/#{$file}');
+	background-repeat: no-repeat;
+	background-position: $positionX $positionY;
+	background-size: $size;
+}
