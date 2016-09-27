@@ -1,8 +1,13 @@
 $block: 'why-matchtalent';
 
 .#{$block} {
+
+	&__headline {
+		margin-bottom: 50px;
+	}
 	&__title {
-		padding-bottom: 30px;
+		padding-top: 10px;
+		padding-bottom: 40px;
 
 		&:after {
 			content: "";
@@ -17,17 +22,58 @@ $block: 'why-matchtalent';
 		}
 	}
 	&__item:first-of-type {
-		padding-right: 60px;
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			padding-right: 60px;
+		}
+		@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-desktop) {
+			padding-right: 15px;
+		}
 	}
 	&__item:nth-child(2) {
-		padding-left: 30px;
-		padding-right: 30px;
+		@include custom-breakpoint-max($breakpoint-phablet) {
+			margin: 30px 0px;
+		}
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			padding-left: 30px;
+			padding-right: 30px;
+			position: relative;
+
+			&:before,
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 100%;
+				top: 0px;
+				width: 1px;
+				background: #dadada;
+			}
+			&:before {
+				left: -15px;
+			}
+			&:after {
+				right: -15px;
+			}
+		}
+		@include custom-breakpoint-min-max($breakpoint-tablet, $breakpoint-desktop) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
+			padding-left: 15px;
+			padding-right: 0px;
+		}
 	}
 	&__item:last-of-type {
-		padding-left: 60px;
-	}
-	&__description {
-		br {}
+		@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
+			margin-top: 30px;
+		}
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			padding-left: 60px;
+		}
+		@include custom-breakpoint-min-max($breakpoint-tablet, $breakpoint-desktop) {
+			padding-left: 15px;
+		}
 	}
 	&__button {
 		margin-top: 25px;

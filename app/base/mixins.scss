@@ -22,5 +22,5 @@
 	@media (min-width: $min-width) { @content ; }
 }
 @mixin custom-breakpoint-min-max($min-width, $max-width) {
-	@media (min-width: $min-width) and (max-width: $max-width) { @content ; }
+	@media (min-width: $min-width) and (max-width: ($max-width - 1)) { @content ; }
 }
