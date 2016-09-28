@@ -20,9 +20,17 @@ $block: 'grid';
 	&_2-columns {
 		& > .#{$block}__column {
 			width: 100%;
+			padding-bottom: 20px;
 
-			@include custom-breakpoint-min($breakpoint-phablet) {
+			@include custom-breakpoint-min($breakpoint-tablet) {
 				width: 50%;
+
+				&:nth-child(odd) {
+					padding-right: ($grid-gap / 2);
+				}
+				&:nth-child(even) {
+					padding-left: ($grid-gap / 2);
+				}
 			}
 		}
 	}
