@@ -28,11 +28,6 @@ $block: 'footer';
 			width: 100%;
 		}
 	}
-	&__copyright {
-		@include custom-breakpoint-min($breakpoint-tablet) {
-			//padding-top: 40px;
-		}
-	}
 }
 .#{$block}__grid_2-column {
 	@include custom-breakpoint-max($breakpoint-tablet) {
