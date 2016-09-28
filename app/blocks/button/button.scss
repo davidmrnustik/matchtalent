@@ -28,11 +28,12 @@ $block: 'button';
 		a {
 			background: white;
 			border: 1px solid #fff;
+			color: $link-color !important;
 
 			&:hover,
 			&:focus {
 				background: transparent;
-				color: #fff;
+				color: #fff !important;
 			}
 		}
 	}

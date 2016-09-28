@@ -1,22 +1,42 @@
 $block: 'footer';
 
 .#{$block} {
-	background: green;
+	background-color: $color-blue;
+	@include font-size(14);
+	padding: 45px 20px 10px 20px;
 
 	&__grid_3-column {
 		& > .grid__column {
 			&:first-child,
 			&:last-child {
 				@include custom-breakpoint-min($breakpoint-tablet) {
-					background: blue;
 					min-width: 160px;
 				}
 			}
 		}
 	}
-}
+	&__logo {
+		width: 120px;
+		height: 26px;
+		margin-right: 10px;
 
+		@include custom-breakpoint-max($breakpoint-tablet) {
+			width: 200px;
+			margin: 0 auto 35px auto;
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
+.#{$block}__grid_2-column {
+	@include custom-breakpoint-max($breakpoint-tablet) {
+		text-align: center;
+	}
+}
 .#{$block}__grid_3-column {
+	margin-bottom: 30px;
+
 	@include custom-breakpoint-max($breakpoint-tablet) {
 		text-align: center;
 		display: block !important;

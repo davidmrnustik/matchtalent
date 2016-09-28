@@ -1,0 +1,31 @@
+$block: 'footer__nav';
+
+.#{$block} {
+
+	@include custom-breakpoint-max($breakpoint-tablet) {
+		text-align: center;
+		@include font-size(16);
+	}
+	a {
+		text-decoration: underline;
+		background: transparent;
+		display: inline-block;
+		padding: 4px 9px;
+		transition: background .5s, color .5s;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover {
+			background: #fff;
+			color: $color-blue !important;
+			text-decoration: none;
+		}
+	}
+	.nav__item {
+		@include custom-breakpoint-max($breakpoint-tablet) {
+			margin: 5px 0px;
+		}
+	}
+	.nav__item_highlighted {
+		font-weight: 700;
+	}
+}

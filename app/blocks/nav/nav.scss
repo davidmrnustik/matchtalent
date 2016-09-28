@@ -5,7 +5,7 @@ $block: 'nav';
 
 	&__item {
 		@include custom-breakpoint-min($breakpoint-phablet) {
-			float: left;
+			display: inline-block;
 		}
 	}
 }

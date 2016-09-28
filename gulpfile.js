@@ -18,7 +18,7 @@ var src = {
 		'./app/components/picturefill/dist/picturefill.js'
 	],
 	slick: './app/components/slick-carousel/slick/ajax-loader.gif',
-	fonts: './app/fonts/*',
+	fonts: ['./app/fonts/*', './app/components/font-awesome/fonts/*'],
 	jslegacy: ['./app/components/respond/dest/respond.src.js'],
 	img: './app/img/**/*',
 	dev: '_dev',
@@ -44,6 +44,7 @@ gulp.task('sass:dev', function(){
 	.pipe(gp.sourcemaps.init())
 	.pipe(gp.sass())
 	.pipe(gp.cssnano())
+	.pipe(gp.pixrem())
 	.pipe(gp.plumber.stop())
 	.pipe(gp.sourcemaps.write())
 	.pipe(gulp.dest(src.dev + '/css'));
