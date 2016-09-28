@@ -1,0 +1,20 @@
+$block: 'partners';
+
+.#{$block} {
+	&__headline {
+		padding-bottom: 20px;
+
+		@include custom-breakpoint-min($breakpoint-tablet) {
+			padding-bottom: 40px;
+		}
+	}
+
+	& > .grid_flex {
+		align-items: center;
+	}
+
+	&__item {
+		//flex-basis: 10em;
+		padding: 2px 0px;
+	}
+}

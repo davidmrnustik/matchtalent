@@ -9,6 +9,9 @@ $block: 'grid';
 	&_space-between {
 		justify-content: space-between;
 	}
+	&_center {
+		justify-content: center;
+	}
 	&_nowrap {
 		flex-wrap: nowrap;
 	}
