@@ -16,7 +16,7 @@
 	font-size: calc-em($size);
 }
 @mixin custom-breakpoint-max($max-width) {
-	@media (max-width: $max-width) { @content ; }
+	@media (max-width: ($max-width - 1)) { @content ; }
 }
 @mixin custom-breakpoint-min($min-width) {
 	@media (min-width: $min-width) { @content ; }
