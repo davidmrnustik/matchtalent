@@ -1,0 +1,13 @@
+$block: 'clients';
+
+.#{$block} {
+	background: #f3f3f3;
+	color: $color-grey;
+	@include font-size(15);
+
+	&__logo {
+		img {
+			width: 144px;
+		}
+	}
+}
