@@ -20,6 +20,15 @@ $grid: 'grid';
 				}
 			}
 		}
+		&_width-auto.#{$grid}_2-columns {
+			& > .#{$grid}__column {
+				padding-bottom: 0px;
+				
+				@include custom-breakpoint-min($breakpoint-tablet) {
+					width: 50%;
+				}
+			}
+		}
 		&_3-columns {
 			float:none;
 

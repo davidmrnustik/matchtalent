@@ -1,7 +1,9 @@
 $block: 'footer__nav';
 
 .#{$block} {
-
+	@include custom-breakpoint-min($breakpoint-tablet) {
+		max-width: calc(100% - 320px);
+	}
 	@include custom-breakpoint-max($breakpoint-tablet) {
 		text-align: center;
 		@include font-size(16);
