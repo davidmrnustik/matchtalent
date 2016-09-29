@@ -18,6 +18,9 @@ $block: 'grid';
 	&_flex-end {
 		align-items: flex-end;
 	}
+	&_items-center {
+		align-items: center;
+	}
 
 	@include custom-breakpoint-max($breakpoint-phablet) {
 		display: block;
@@ -40,7 +43,15 @@ $block: 'grid';
 			}
 		}
 	}
-
+	&_width-auto.#{$block}_2-columns {
+		& > .#{$block}__column {
+			padding-bottom: 0px;
+			
+			@include custom-breakpoint-min($breakpoint-tablet) {
+				width: auto;
+			}
+		}
+	}
 	&_3-columns {
 		& > .#{$block}__column {
 			width: 100%;

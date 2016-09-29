@@ -1,13 +1,47 @@
 $block: 'clients';
 
 .#{$block} {
+	.grid {
+		@include custom-breakpoint-max($breakpoint-phablet) {
+			display: flex;
+		}
+	}
 	background: #f3f3f3;
-	color: $color-grey;
+	color: lighten($color-grey, 30%);
 	@include font-size(15);
+	padding: 20px 0px;
 
 	&__logo {
+		position: relative;
+		padding: 5px 0px;
+
+		&:after {
+			@include custom-breakpoint-min($breakpoint-desktop) {
+				content: "";
+				position: absolute;
+				top: 50%;
+				@include transform(translate, -50%, Y);
+				right: 0px;
+				height: 45px;
+				width: 1px;
+				background: #dadada;
+			}
+		}
 		img {
-			width: 144px;
+			width: 140px;
+		}
+	}
+	&__item {
+		@include custom-breakpoint-min-max(420px, $breakpoint-tablet) {
+			width: 50% !important;
+		}
+		@include custom-breakpoint-max($breakpoint-phablet) {
+			&:first-child {
+				margin-bottom: 4px;
+			}
+			&:last-child {
+				margin-top: 4px;
+			}
 		}
 	}
 }
