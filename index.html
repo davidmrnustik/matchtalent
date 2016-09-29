@@ -20,7 +20,7 @@
 			<option value="english">English</option>
 		</select>
 		<ul class="nav mobile-menu__nav">
-			<li class="nav__item nav__item_active"><a href="#">Inicio</a></li> <!-- Opcional -->
+			<!--<li class="nav__item nav__item_active"><a href="#">Inicio</a></li>--> <!-- Opcional -->
 			<li class="nav__item"><a href="#">Ventajas</a></li>
 			<li class="nav__item"><a href="#">Precios</a></li>
 			<li class="nav__item"><a href="#">Contacto</a></li>
@@ -30,28 +30,46 @@
 	</div>
 
 	<div class="content" id="mainContent">
-		<header class="header">
+		<header class="header text_white">
+			<div class="inner">
+				<div class="menu-icon header__menu-icon only-desktop" id="menu">
+					<div class="menu-icon__content">
+						<span class="menu-icon__line"></span>
+						<span class="menu-icon__line"></span>
+						<span class="menu-icon__line"></span>
+					</div>
+				</div>
 
-			<div class="menu-icon header__menu-icon" id="menu">
-				<div class="menu-icon__content">
-					<span class="menu-icon__line"></span>
-					<span class="menu-icon__line"></span>
-					<span class="menu-icon__line"></span>
+				<div class="logo header__logo">
+					<a href="./">
+						<picture>
+							<!--[if IE 9]><video style="display: none;"><![endif]-->
+							<source srcset="_dev/img/logo_matchtalent.svg" type="image/svg+xml">
+							<!--[if IE 9]></video><![endif]-->
+							<img srcset="_dev/img/logo_matchtalent.png" alt="">
+						</picture>
+					</a>
+				</div>
+
+				<ul class="nav header__nav no-desktop">
+					<!--<li class="nav__item nav__item_active"><a href="#">Inicio</a></li>--> <!-- Opcional -->
+					<li class="nav__item"><a href="#">Ventajas</a></li>
+					<li class="nav__item"><a href="#">Precios</a></li>
+					<li class="nav__item"><a href="#">Contacto</a></li>
+					<li class="nav__item"><a href="#">Integraciones</a></li>
+					<li class="nav__item nav__item_highlighted"><a href="#">Prueba gratuita</a></li>
+				</ul>
+
+				<ul class="nav-lang header__nav-lang">
+					<li class="nav-lang__item nav-lang__item_highlighted">Español</li>
+					<li class="nav-lang__item"><a href="#">English</a></li>
+				</ul>
+
+				<div class="header__icon-call only-desktop">
+					<a href="tel:123 456 789"><i class="fa fa-phone" aria-hidden="true"></i></a>
 				</div>
 			</div>
 
-			<div class="logo header__logo">
-				logo
-			</div>
-
-			<ul class="nav header__nav">
-				<li class="nav__item nav__item_active"><a href="#">Inicio</a></li> <!-- Opcional -->
-				<li class="nav__item"><a href="#">Ventajas</a></li>
-				<li class="nav__item"><a href="#">Precios</a></li>
-				<li class="nav__item"><a href="#">Contacto</a></li>
-				<li class="nav__item"><a href="#">Integraciones</a></li>
-				<li class="nav__item nav__item_highlighted"><a href="#">Prueba gratuita</a></li>
-			</ul>
 		</header>
 
 		<section class="hero">
@@ -318,7 +336,7 @@
 				
 				<div class="grid grid_space-between grid_nowrap grid_3-column footer__grid_3-column">
 					<div class="logo footer__logo grid__column">
-						<a href="#">
+						<a href="./">
 							<picture>
 								<!--[if IE 9]><video style="display: none;"><![endif]-->
 								<source srcset="_dev/img/logo_matchtalent.svg" type="image/svg+xml">
@@ -359,7 +377,7 @@
 					</div>
 					<div class="footer__designby grid__column">
 						<p class="text_xsmall">Desarrollado por:</p>
-						<a href="#">
+						<a href="http://www.memorandum.net" target="_blank">
 							<picture>
 								<!--[if IE 9]><video style="display: none;"><![endif]-->
 								<source srcset="_dev/img/logo_memorandum.svg" type="image/svg+xml">

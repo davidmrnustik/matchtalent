@@ -21,8 +21,8 @@ $block: 'text';
 	}
 	&_white {
 		color: #fff;
-	
-		div:not(.button) a {
+
+		*:not(.button) a {
 			color: #fff;
 		}
 	}

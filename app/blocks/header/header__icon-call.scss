@@ -1,0 +1,9 @@
+$block: 'header__icon-call';
+
+.#{$block} {
+	@include font-size(30);
+	position: absolute;
+	right: 0px;
+	top: calc(50% - 14px);
+	margin-left: 0px !important;
+}

@@ -1,0 +1,25 @@
+$block: 'header__logo';
+$logo-top-width-phone: ($logo-top-width / 1.3);
+
+.#{$block} {
+	position: absolute;
+	top: calc(50% - 23px);
+	left: calc(50% - (#{$logo-top-width} / 2));
+	width: $logo-top-width;
+	height: 47px;
+	text-align: center;
+	margin: 0 auto !important;
+
+	@include custom-breakpoint-max($breakpoint-phone) {
+		width: $logo-top-width-phone;
+		top: calc(50% - 18px);
+		left: calc(50% - (#{$logo-top-width-phone} / 2));
+	}
+	@include custom-breakpoint-min($breakpoint-desktop) {
+		left: 0px;
+	}
+
+	img {
+		width: 100%;
+	}
+}

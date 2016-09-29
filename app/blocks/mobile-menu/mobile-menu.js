@@ -11,10 +11,12 @@
 	}
 
 	function eventListener(el, func) { // this function fixes bug for IE8
-		if (document.getElementById(el).addEventListener){
-			document.getElementById(el).addEventListener('click', func);
+		var elem = document.getElementById(el);
+		
+		if (elem.addEventListener){
+			elem.addEventListener('click', func);
 		} else {
-			document.getElementById(el).attachEvent('click', func);
+			elem.attachEvent('click', func);
 		}
 	}
 
