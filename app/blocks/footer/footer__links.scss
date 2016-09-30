@@ -1,0 +1,44 @@
+$block: 'footer__links';
+
+.#{$block} {
+
+	@include custom-breakpoint-max($breakpoint-phablet) {
+		padding-top: 15px;
+	}
+	&-title {
+		color: #fff;
+		@include font-size(18);
+		text-transform: uppercase;
+		padding: 15px 0px 18px 0px;
+		background: darken($color-blue, 4%);
+		border-color: darken($color-blue, 6%);
+		border-style: solid;
+		border-top-width: 1px;
+		border-bottom-width: 1px;
+		cursor: pointer;
+		transition: background .5s;
+
+		&:hover {
+			background: darken($color-blue, 6%);
+		}
+
+		.fa {
+			@include font-size(24);
+			position: relative;
+			top: 2px;
+			padding-left: 5px;
+		}
+	}
+}
+.open-footer-menu {
+	.fa-angle-down {
+		transform: rotate(180deg);
+		top: 3px;
+		left: 4px;
+	}
+	.footer__nav {
+		@include custom-breakpoint-max($breakpoint-phablet) {
+			display: block;
+		}
+	}
+}

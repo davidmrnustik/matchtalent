@@ -5,6 +5,14 @@ $block: 'footer';
 	@include font-size(14);
 	padding: 45px 20px 10px 20px;
 
+	@include custom-breakpoint-max($breakpoint-phablet) {
+		padding: 45px 0px 10px 0px;
+
+		.grid {
+			margin: 0px !important;
+		}
+	}
+
 	&__grid_3-column {
 		& > .grid__column {
 			&:first-child,
@@ -39,5 +47,10 @@ $block: 'footer';
 		margin-bottom: 30px;
 		text-align: center;
 		display: block !important;
+	}
+	.grid__column:nth-child(2){
+		@include custom-breakpoint-min($breakpoint-tablet) {
+			max-width: calc(100% - 320px);
+		}
 	}
 }
