@@ -10,11 +10,8 @@ $block: 'footer__links';
 		@include font-size(18);
 		text-transform: uppercase;
 		padding: 15px 0px 18px 0px;
+		@include navLinks($color-blue, 6%);
 		background: darken($color-blue, 4%);
-		border-color: darken($color-blue, 6%);
-		border-style: solid;
-		border-top-width: 1px;
-		border-bottom-width: 1px;
 		cursor: pointer;
 		transition: background .5s;
 

@@ -14,19 +14,32 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="mobile-menu" id="mobileMenu">
-		<select name="mobile-language" class="mobile-menu__lang-switcher">
-			<option value="spanish" selected>Español</option>
-			<option value="english">English</option>
-		</select>
-		<ul class="nav mobile-menu__nav">
-			<!--<li class="nav__item nav__item_active"><a href="#">Inicio</a></li>--> <!-- Opcional -->
-			<li class="nav__item"><a href="#">Ventajas</a></li>
-			<li class="nav__item"><a href="#">Precios</a></li>
-			<li class="nav__item"><a href="#">Contacto</a></li>
-			<li class="nav__item"><a href="#">Integraciones</a></li>
-			<li class="nav__item nav__item_highlighted"><a href="#">Prueba gratuita</a></li>
-		</ul>
+	<div class="mobile-menu text_white" id="mobileMenu">
+		<div class="inner">
+			<ul class="nav mobile-menu__nav">
+				<li class="nav__item nav__item_active"><a href="#">Inicio</a></li> <!-- Opcional -->
+				<li class="nav__item"><a href="#">Ventajas</a></li>
+				<li class="nav__item"><a href="#">Precios</a></li>
+				<li class="nav__item"><a href="#">Contacto</a></li>
+				<li class="nav__item"><a href="#">Integraciones</a></li>
+				<li class="nav__item nav__item_highlighted"><a href="#">Prueba gratuita</a></li>
+			</ul>
+			<select name="mobile-language" class="input input_select mobile-menu__lang-switcher">
+				<option value="spanish" selected>Español</option>
+				<option value="english">English</option>
+			</select>
+			<div class="designby mobile-menu__designby grid__column">
+				<p class="text_xsmall">Desarrollado por:</p>
+				<a href="http://www.memorandum.net" target="_blank">
+					<picture>
+						<!--[if IE 9]><video style="display: none;"><![endif]-->
+						<source srcset="_dev/img/logo_memorandum.svg" type="image/svg+xml">
+						<!--[if IE 9]></video><![endif]-->
+						<img srcset="_dev/img/logo_memorandum.png" alt="">
+					</picture>
+				</a>
+			</div>
+		</div>
 	</div>
 
 	<div class="content" id="mainContent">
@@ -52,7 +65,7 @@
 				</div>
 
 				<ul class="nav header__nav no-desktop">
-					<!--<li class="nav__item nav__item_active"><a href="#">Inicio</a></li>--> <!-- Opcional -->
+					<li class="nav__item nav__item_active"><a href="#">Inicio</a></li> <!-- Opcional -->
 					<li class="nav__item"><a href="#">Ventajas</a></li>
 					<li class="nav__item"><a href="#">Precios</a></li>
 					<li class="nav__item"><a href="#">Contacto</a></li>
@@ -60,14 +73,14 @@
 					<li class="nav__item nav__item_highlighted"><a href="#">Prueba gratuita</a></li>
 				</ul>
 
-				<ul class="nav-lang header__nav-lang">
+				<ul class="nav-lang header__nav-lang no-desktop">
 					<li class="nav-lang__item nav-lang__item_highlighted">Español</li>
 					<li class="nav-lang__item"><a href="#">English</a></li>
 				</ul>
 
-				<div class="header__icon-call only-desktop">
+				<!-- <div class="header__icon-call only-desktop">
 					<a href="tel:123 456 789"><i class="fa fa-phone" aria-hidden="true"></i></a>
-				</div>
+				</div> -->
 			</div>
 
 		</header>
@@ -378,7 +391,7 @@
 					<div class="footer__copyright grid__column">
 						Copyright &copy; MatchTalent, 2016. <br class="only-phablet" />All Rights Reserved.
 					</div>
-					<div class="footer__designby grid__column">
+					<div class="designby footer__designby grid__column">
 						<p class="text_xsmall">Desarrollado por:</p>
 						<a href="http://www.memorandum.net" target="_blank">
 							<picture>

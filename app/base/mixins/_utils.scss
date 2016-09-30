@@ -1,0 +1,16 @@
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		line-height: 0px;
+	}
+	&:after {
+		clear: both;
+	}
+}
+@mixin navLinks($borderColor, $opacity) {
+	border-color: rgba($borderColor, $opacity);
+	border-style: solid;
+	border-bottom-width: 1px;
+}

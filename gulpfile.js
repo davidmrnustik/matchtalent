@@ -87,7 +87,8 @@ gulp.task('serve', ['build'], function(){
 	browserSync({
 		server: {
 			baseDir: './'
-		}
+		},
+		notify: false
 	});
 
 	gulp.watch([src.scss, './app/*.scss'], ['sass:dev', reload]);

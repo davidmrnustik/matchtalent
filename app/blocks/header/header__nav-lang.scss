@@ -1,5 +1,28 @@
 $block: 'nav-lang';
 
 .#{$block} {
-	//
+	@include font-size(12);
+	position: absolute;
+	right: 0px;
+	top: 18px;
+
+	.#{$block}__item {
+		display: inline-block;
+		margin-left: 8px;
+
+	}
+
+	.#{$block}__item_highlighted {
+		font-weight: 700;
+	}
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.header_fixed & {
+		display: none;
+	}
 }

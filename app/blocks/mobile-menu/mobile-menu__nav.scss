@@ -1,0 +1,21 @@
+$block: 'mobile-menu__nav';
+
+.#{$block} {
+	padding-top: 20px !important;
+	text-transform: uppercase;
+	font-family: $font-secondary;
+
+	a {
+		display: block;
+		padding: 14px 0px;
+		@include navLinks(#fff, .2);
+
+		&:hover,
+		&:focus {
+			background: rgba(darken($color-blue, 2%), .6);
+		}
+	}
+	.nav__item {
+		display: block;
+	}
+}

@@ -6,9 +6,6 @@ $block: 'footer__designby';
 	@include custom-breakpoint-max($breakpoint-tablet) {
 		text-align: center;
 	}
-	p {
-		padding-bottom: 5px;
-	}
 	a {
 		width: 110px;
 		height: 27px;

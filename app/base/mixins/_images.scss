@@ -1,0 +1,27 @@
+$img-url: 'img';
+
+@mixin bg-image($file, $positionX, $positionY, $size: initial) {
+	background-image: url('../#{$img-url}/#{$file}');
+	background-repeat: no-repeat;
+	background-position: $positionX $positionY;
+	background-size: $size;
+}
+
+$img-extralarge: 'extralarge';
+$img-large: 'large';
+$img-medium: 'medium';
+
+@mixin bg-resp-image($file, $positionX, $positionY, $size: initial) {
+	background-repeat: no-repeat;
+	background-position: $positionX $positionY;
+	background-size: $size;
+	background-image: url('../#{$img-url}/#{$img-medium}/#{$file}');
+
+	@include custom-breakpoint-min($breakpoint-phablet) {
+		background-image: url('../#{$img-url}/#{$img-large}/#{$file}');
+	}
+	@include custom-breakpoint-min($breakpoint-desktop) {
+		background-image: url('../#{$img-url}/#{$img-extralarge}/#{$file}');
+	}
+
+}

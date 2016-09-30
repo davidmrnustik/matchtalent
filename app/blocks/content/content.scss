@@ -8,9 +8,9 @@ $block: 'content';
 	z-index: 1;
 
 	&.menu-open {
-		transform: translateX(-($menu-icon-width * 2)) translateX($mobile-menu-width) ;
+		transform: translateX(-$mobile-menu-width) translateX(($menu-icon-width * 2)) ;
 
-		@include custom-breakpoint-min($breakpoint-phablet) {
+		@include custom-breakpoint-min($breakpoint-desktop) {
 			transform: translateX(0);
 		}
 	}

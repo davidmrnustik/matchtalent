@@ -9,15 +9,13 @@ $block: 'footer__nav';
 		a {
 			display: block;
 			padding: 12px 0px;
-			background: darken($color-blue, 2%);
-			border-color: darken($color-blue, 6%);
-			border-style: solid;
-			border-bottom-width: 1px;
+			@include navLinks(darken($color-blue, 100%), .1);
+			//background: darken($color-blue, 2%);
 			cursor: pointer;
 			transition: background .5s;
 
 			&:hover {
-				background: transparent;
+				background: darken($color-blue, 2%);
 			}
 		}
 	}

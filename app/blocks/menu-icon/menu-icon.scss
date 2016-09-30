@@ -3,7 +3,7 @@ $block: 'menu-icon';
 .#{$block} {
 	position: absolute;
 	width: $menu-icon-width;
-	left: 0px;
+	right: 0px;
 	top: calc(50% - 20px);
 	height: $menu-icon-width;
 	background-color: #fff;
