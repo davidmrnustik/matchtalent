@@ -20,6 +20,12 @@ $block: 'content';
 		@include custom-breakpoint-min($breakpoint-tablet) {
 			margin: 60px auto;
 		}
-
 	}
+	& > section.remove_margin-top {
+		margin-top: 0px;
+	}
+	& > section.remove_margin-bottom {
+		margin-bottom: 0px;
+	}
+	
 }

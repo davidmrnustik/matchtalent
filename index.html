@@ -85,17 +85,29 @@
 
 		</header>
 
-		<section class="hero">
-			<div class="slider hero__slider text_center" data-slick='{"arrows": false, "dots": true, "dotsClass": "slider__dotnav"}'>
+		<section class="hero remove_margin-bottom">
+			<div class="slider text_white hero__slider text_center" data-slick='{"arrows": false, "dots": true, "dotsClass": "slider__dotnav"}'>
 				<div class="slider__item">
-					<div class="slider__title">
-						Gestión de ofertas
+					<div class="slider__image">
+						<picture>
+							<!--[if IE 9]><video style="display: none;"><![endif]-->
+							<source srcset="_dev/img/extralarge/slide_01.jpg" media="(min-width: 1023px)">
+							<source srcset="_dev/img/large/slide_01.jpg" media="(min-width: 799px)">
+							<source srcset="_dev/img/medium/slide_01.jpg" media="(min-width: 639px)">
+							<!--[if IE 9]></video><![endif]-->
+							<img srcset="_dev/img/small/slide_01.jpg" alt="" title="" class="image">
+						</picture>
 					</div>
-					<div class="slider__description">
-						Gestione sus ofertas de empleo y candidatos desde su propia web de la mano de los portales de empleo que elija.
-					</div>
-					<div class="slider__button button button_inverse">
-						<a href="#" onclick='alert("SOLICITAR DEMO")'>Solicitar demo</a>
+					<div class="slider__text-content slider__text-content_slide-01">
+						<div class="slider__title">
+							Gestión de ofertas
+						</div>
+						<div class="slider__description">
+							Gestione sus ofertas de empleo y candidatos desde su propia web de la mano de los portales de empleo que elija.
+						</div>
+						<div class="slider__button button button_inverse">
+							<a href="#" onclick='alert("SOLICITAR DEMO")'>Solicitar demo</a>
+						</div>
 					</div>
 				</div>
 				<div class="slider__item">
@@ -134,7 +146,7 @@
 			</div>
 		</section>
 
-		<section class="clients  text_center">
+		<section class="clients text_center remove_margin-top">
 			<div class="inner">
 				<div class="grid grid_2-columns grid_center grid_width-auto grid_items-center">
 					<div class="clients__item grid__column">

@@ -1,0 +1,7 @@
+$block: 'slider__image';
+
+.#{$block} {
+	img {
+		@include centerMiddle();
+	}
+}

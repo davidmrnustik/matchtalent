@@ -1,8 +1,9 @@
 $block: 'header';
 
 .#{$block} {
-	height: $header-height-fixed;
-	background: blue;
+	position: relative;
+	z-index: 3;
+	height: $header-height-small;
 
 	@include custom-breakpoint-min($breakpoint-desktop) {
 		height: $header-height;
@@ -19,7 +20,7 @@ $block: 'header';
 		left: 0px;
 		top: -$header-height-fixed;
 		z-index: 10;
-		background: rgba($color-blue, .8);
+		background: rgba($color-blue, .87);
 		transition: transform .5s;
 		@include transform(translate, $header-height-fixed, Y);
 	}

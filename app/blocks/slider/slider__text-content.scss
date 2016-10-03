@@ -1,0 +1,59 @@
+$block: 'slider__text-content';
+
+.#{$block} {
+	position: absolute;
+	text-align: left;
+	width: 70%;
+	left: 50%;
+	@include transform(translate, -50%, X);
+
+	@include custom-breakpoint-max($breakpoint-phablet) {
+		bottom: 30px;
+  }
+	@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-desktop) {
+		top: 55%;
+  }
+	@include custom-breakpoint-min($breakpoint-desktop) {
+		max-width: 500px;
+		transform: none;
+  }
+
+	&_slide-01 {
+
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			top: 55%;
+			left: 40%;
+	  }
+	}
+	.slider__title {
+		@include font-size(40);
+		display: inline-block;
+		font-family: $font-secondary;
+		line-height: 1.0em;
+		padding-bottom: 10px;
+		
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			@include font-size(53);
+		}
+
+		&:after {
+			content: "";
+			height: 4px;
+			background-color: #fff;
+			display: block;
+			width: 100%;
+			position: relative;
+			top: 4px;
+		}
+	}
+	.slider__description {
+		margin-top: 5px;
+		margin-bottom: 15px;
+		@include font-size(16);
+
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			@include font-size(18);
+			margin-bottom: 20px;
+		}
+	}
+}

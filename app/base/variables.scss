@@ -27,18 +27,19 @@ $inner-max-width: 1080px;
 $grid-gap: 60px !default;
 
 // Slider slick [https://github.com/kenwheeler/slick/] - dot nav
-$dotnav-bg-color: #b4b4b4;
+$dotnav-bg-color: #fff;
 $slick-opacity-on-hover: 1 !default;
 $slick-dot-character: "" !default;
 $slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
+$slick-opacity-default: 1 !default;
 $slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: 0.25 !default;
+$slick-opacity-not-active: 0.4 !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
 
 // Header
 $header-height: 160px;
+$header-height-small: 110px;
 $header-height-fixed: 70px;
 $logo-top-width: 217px;
 

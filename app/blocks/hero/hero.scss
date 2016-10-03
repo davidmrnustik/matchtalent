@@ -1,4 +1,15 @@
 $block: 'hero';
 
 .#{$block} {
+	height: 640px;
+	background-color: orange;
+	margin-top: -$header-height !important;
+
+	@include custom-breakpoint-max($breakpoint-desktop) {
+    height: 520px;
+  }
+
+  @include custom-breakpoint-max($breakpoint-phone) {
+    height: 480px;
+  }
 }

@@ -10,6 +10,7 @@ $block: 'clients';
 	color: lighten($color-grey, 30%);
 	@include font-size(15);
 	padding: 20px 0px;
+	margin-bottom: 30px !important;
 
 	&__logo {
 		position: relative;

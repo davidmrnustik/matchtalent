@@ -5,17 +5,16 @@
 	header.init = function init(){
 		var headerElement = $("header.header"),
     headerFixedClass = "header_fixed",
-    hero = $('.hero'),
-    heroMarginTop = 60,
+    body = $('body'),
     headerHeight = $('header').outerHeight();
 
 		$(window).scroll(function() {
 		  if( $(this).scrollTop() > headerHeight ) {
 		    headerElement.addClass(headerFixedClass);
-		    hero.css('marginTop', headerHeight + heroMarginTop);
+		    body.css('marginTop', headerHeight);
 		  } else {
 		    headerElement.removeClass(headerFixedClass);
-		    hero.css('marginTop', heroMarginTop);
+		    body.css('marginTop', 0);
 		  }
 		});
 
