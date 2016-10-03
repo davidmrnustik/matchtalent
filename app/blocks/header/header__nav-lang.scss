@@ -4,7 +4,7 @@ $block: 'nav-lang';
 	@include font-size(12);
 	position: absolute;
 	right: 0px;
-	top: 18px;
+	top: 20px;
 
 	.#{$block}__item {
 		display: inline-block;
