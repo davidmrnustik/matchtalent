@@ -5,8 +5,9 @@ $block: 'mobile-menu';
 
 		&_show {
 			@include custom-breakpoint-min($breakpoint-desktop) {
-				height: 0;
-				transition: visibility 0s .5s, height 0s .5s;
+				opacity: 0;
+				z-index: 1;
+				transition: visibility .5s, opacity .5s, z-index .5s;
 				visibility: hidden;
 			}
 		}
@@ -16,20 +17,24 @@ $block: 'mobile-menu';
 .#{$block} {
 	background: $color-blue url('../img/pattern_diagonal_line.png') repeat top left;
 	bottom: 0px;
-	height: 0;
+	height: 100%;
 	right: 0;
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 	position: fixed;
 	text-align: center;
-	left: $menu-icon-width * 2;
+	left: 0px;
 	top: 0;
-	transition: visibility .5s, height 0s .5s;
+	z-index: 1;
+	transition: visibility .5s, opacity .5s, z-index .5s;
 	visibility: hidden;
+	opacity: 0;
 
 	&_show {
 		height: 100%;
-		transition: visibility 0s 0s, height 0s 0s;
+		z-index: 3;
+		opacity: 1;
+		transition: visibility .5s, opacity .5s, z-index .5s;
 		visibility: visible;
 	}
 	&__designby {

@@ -10,10 +10,8 @@ body {
 	text-size-adjust: none;
 
 	.menu-open & {
-		@include custom-breakpoint-max($breakpoint-phablet) {
-      height: 100%;
-      overflow: hidden;
-    }
+		height: 100%;
+    overflow: hidden;
 	}
 }
 .clearfix {

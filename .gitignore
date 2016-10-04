@@ -7,3 +7,4 @@ _dev/
 uow-hack.js
 bem.txt
 html/
+.DS_Store
