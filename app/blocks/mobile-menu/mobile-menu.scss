@@ -33,10 +33,7 @@ $block: 'mobile-menu';
 		visibility: visible;
 	}
 	&__designby {
-		position: absolute;
-		bottom: 20px;
-		margin: 0px !important;
-		left: 50%;
-		@include transform(translate, -50%, X);
+		position: relative;
+		padding-top: 25px;
 	}
 }

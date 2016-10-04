@@ -1,7 +1,9 @@
 $block: 'slider__image';
 
 .#{$block} {
-	img {
-		@include centerMiddle();
-	}
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
 }

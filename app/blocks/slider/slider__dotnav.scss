@@ -17,7 +17,7 @@ $dot-size: 15px;
 	margin: 0;
 	//width: 100%;
 
-	@include custom-breakpoint-min($breakpoint-tablet) {
+	@include custom-breakpoint-min(768px) {
 		display: block  !important;
   }
 
