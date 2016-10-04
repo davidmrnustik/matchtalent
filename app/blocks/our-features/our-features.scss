@@ -1,0 +1,34 @@
+$block: 'our-features';
+
+.#{$block} {
+	p {
+		margin-bottom: 10px;
+
+		&:last-of-type {
+			margin-bottom: 0px;
+		}
+	}	
+	.#{$block}__grid_2-columns {
+		& > .grid__column {
+			padding-bottom: 0px;
+
+			@include custom-breakpoint-min($breakpoint-tablet) {
+				&:first-of-type {
+					width: 35%;
+				}
+				&:last-of-type {
+					width: 65%;
+				}
+			}
+		}
+	}
+	&__title {
+		h2 {
+			@include font-size(26);
+			margin-bottom: 10px;
+		}
+	}
+	&__item {
+		margin-bottom: 60px;
+	}
+}

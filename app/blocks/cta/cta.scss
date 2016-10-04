@@ -1,0 +1,9 @@
+$block: 'cta';
+
+.#{$block} {
+	.cta__button {
+		a {
+			text-decoration: none;
+		}
+	}
+}

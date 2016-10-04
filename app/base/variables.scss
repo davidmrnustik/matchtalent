@@ -22,6 +22,7 @@ $breakpoint-big: 1300px;
 
 // Inner
 $inner-max-width: 1080px;
+$inner-max-width-smaller: 960px;
 
 // Grid
 $grid-gap: 60px !default;
@@ -46,3 +47,6 @@ $logo-top-width: 217px;
 // Mobile menu
 $mobile-menu-width: 100%;
 $menu-icon-width: 40px;
+
+// Content
+$content-header-height: 320px;

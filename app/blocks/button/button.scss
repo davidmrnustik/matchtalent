@@ -28,12 +28,25 @@ $block: 'button';
 		a {
 			background: white;
 			border: 1px solid #fff;
-			color: $link-color !important;
+			color: $link-color;
 
 			&:hover,
 			&:focus {
 				background: transparent;
-				color: #fff !important;
+				color: #fff;
+			}
+		}
+	}
+	&.#{$block}_inverse_blue {
+		a {
+			background: $color-blue;
+			border: 1px solid $color-blue;
+			color: #fff;
+
+			&:hover,
+			&:focus {
+				background: #fff;
+				color: $color-blue;
 			}
 		}
 	}

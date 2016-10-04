@@ -1,0 +1,18 @@
+$block: 'nav__item';
+
+.#{$block} {
+	@include custom-breakpoint-min($breakpoint-phablet) {
+		display: inline-block;
+	}
+
+	&_active {
+		&:after {
+			content: "";
+			height: 3px;
+			background-color: #fff;
+			display: block;
+			margin: 0px auto;
+			width: calc(100% - 18px);
+		}
+	}
+}

@@ -1,0 +1,29 @@
+$block: 'content-text';
+
+.#{$block} {
+	&__text {
+		p {
+			margin-bottom: 10px;
+		}
+		a {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.#{$block}__grid_2-columns {
+		& > .grid__column {
+
+			@include custom-breakpoint-min($breakpoint-tablet) {
+				&:first-of-type {
+					width: 69%;
+				}
+				&:last-of-type {
+					width: 31%;
+				}
+			}
+		}
+	}
+}

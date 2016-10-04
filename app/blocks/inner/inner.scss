@@ -4,6 +4,10 @@ $block: 'inner';
 	margin: 0 auto;
 	max-width: $inner-max-width;
 
+	&_smaller {
+		max-width: $inner-max-width-smaller;
+	}
+
 	& > div:not(.button),
 	& > ul {
 		@include custom-breakpoint-max($inner-max-width + 20) {

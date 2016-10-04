@@ -3,9 +3,7 @@ $block: 'nav';
 .#{$block} {
 	@include clearfix();
 
-	&__item {
-		@include custom-breakpoint-min($breakpoint-phablet) {
-			display: inline-block;
-		}
+	a {
+		color: #fff;
 	}
 }

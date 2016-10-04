@@ -1,0 +1,7 @@
+$block: 'our-features__icon';
+
+.#{$block} {
+	@include custom-breakpoint-min($breakpoint-desktop) {
+		text-align: right;
+	}
+}

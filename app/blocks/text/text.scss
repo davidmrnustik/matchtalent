@@ -21,9 +21,8 @@ $block: 'text';
 	}
 	&_white {
 		color: #fff;
-
-		*:not(.button) a {
-			color: #fff;
-		}
+	}
+	&_blue {
+		color: $color-blue;
 	}
 }
