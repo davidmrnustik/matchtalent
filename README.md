@@ -23,12 +23,10 @@ Por ejemplo esta class:
 
 ## Estructura ##
 
-/app - ubicación de las páginas web  
-/app/base - js y scss comunes  
-/app/blocks/ - elementos con sus recursos js y scss  
-/app/fonts - fuentes  
-/app/img - imagenes  
-/app/templates - plantillas html
-
-
-
+/app *- ubicación de las páginas web*  
+/app/base *- js y scss comunes*  
+/app/blocks/ *- elementos con sus recursos js y scss*  
+/app/components/ *- componentes gestionados por bower*  
+/app/fonts *- fuentes*  
+/app/img *- imagenes*  
+/app/templates *- plantillas html*
