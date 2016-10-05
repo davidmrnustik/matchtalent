@@ -10,9 +10,14 @@ $ bower install
 $ npm install  
 $ gulp *- hace build en /_dev a lanza servidor en localhost:3000*  
 $ gulp build *- hace build en /_dev*  
-$ surge _dev --domain matchtalent.surge.sh *- hace despliegue a matchtalent.surge.sh (preproducción), hay que instalar surge http://surge.sh/: "npm install --global surge" *
 
-## Metodología ##
+## Preproducción ##
+Hay que instalar surge, http://surge.sh/: "npm install --global surge".  
+Registrate en surge y pide permisos para este subdominio a David Mrnustik.  
+$ gulp build *- hay que hacer build antes despliegue a preproducción*  
+$ surge _dev --domain matchtalent.surge.sh *- hace despliegue a matchtalent.surge.sh.*  
+
+# Metodología #
 Estructura del proyecto sigue la metodología BEM:  
 https://en.bem.info/methodology/quick-start/
 
@@ -21,7 +26,7 @@ Cada elemento (header, footer, button, ...) tiene sus recursos (js/scss) en su c
 Por ejemplo esta class:  
 "**our-features__icon_social-networks**", nombre de block es "**our-features**", su element es "**icon**" y modifier "**social-networks**".
 
-## Estructura ##
+# Estructura #
 
 /app *- ubicación de las páginas web*  
 /app/base *- js y scss comunes*  
