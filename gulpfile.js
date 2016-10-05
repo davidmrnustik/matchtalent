@@ -23,7 +23,8 @@ var src = {
 	img: './app/img/**/*',
 	dev: '_dev',
 	build: '_build',
-	jade: './**/*.jade'
+	jade: './**/*.jade',
+	templates: './app/templates/**/*.html'
 };
 
 gulp.task('clean', function(){
@@ -83,17 +84,21 @@ gulp.task('jslegacy', function(){
 	.pipe(gulp.dest(src.dev + '/js'));
 });
 
+gulp.task('templates', function(){
+	gulp.src(src.templates)
+	.pipe(gulp.dest(src.dev));
+});
+
 gulp.task('serve', ['build'], function(){
 	browserSync({
-		server: {
-			baseDir: './'
-		},
+		server: [src.dev],
 		notify: false
 	});
 
 	gulp.watch([src.scss, './app/*.scss'], ['sass:dev', reload]);
 	gulp.watch([src.js], ['js', reload]);
 	gulp.watch([src.img], ['images', reload]);
+	gulp.watch([src.templates], ['templates', reload]);
 });
 
 gulp.task('slick', function(){
@@ -111,7 +116,6 @@ gulp.task('images', function(){
 	.pipe(gulp.dest(src.dev + '/img'));
 });
 
-
 gulp.task('fonts', function(){
 	return gulp.src(src.fonts)
 	.pipe(gulp.dest(src.dev + '/fonts'));
@@ -122,7 +126,7 @@ gulp.task('watch:jade', function(){
 });
 
 gulp.task('build', ['clean'], function(){
-	runSequence('sass:dev', 'js', 'jscomponents', 'jscomponentsie', 'jslegacy', 'slick', 'fonts', 'images');
+	runSequence('templates', 'sass:dev', 'js', 'jscomponents', 'jscomponentsie', 'jslegacy', 'slick', 'fonts', 'images');
 });
 
 gulp.task('jade', function(){
@@ -130,5 +134,12 @@ gulp.task('jade', function(){
 	.pipe(gp.jade())
 	.pipe(gulp.dest('./html'));
 });
+
+gulp.task('deploy:dev', ['build'], function(){
+  return gp.surge({
+    project: src.dev,
+    domain: 'matchtalent.surge.sh'
+  })
+})
 
 gulp.task('default', ['serve'], function(){});

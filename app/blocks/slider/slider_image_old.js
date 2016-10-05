@@ -1,6 +1,6 @@
 /*(function(global){
 	var sliderImage = {},
-			imgPath = "_dev/img/",
+			imgPath = "/img/",
 			imgBreakpoints = ['small', 'medium', 'large', 'extralarge'],
 			breakpoints = [400, 640, 800, 1024, 1300],
 			ticking = false,

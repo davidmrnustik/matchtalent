@@ -8,7 +8,7 @@
 			},
 			currentWidth = 0,
 			currentBreakpoint = "",
-			imgPath = "_dev/img/",
+			imgPath = "/img/",
 			breakpointMethods = [];
 
 	function getViewport() {
