@@ -9,7 +9,7 @@
 
 		//utils.toggleClass(mainContent, 'menu-open');
 		utils.toggleClass(mobileMenu, 'mobile-menu_show');
-		utils.toggleClass(document.documentElement, 'menu-open');
+		utils.toggleClass(document.body, 'menu-open');
 
 		if(!utils.hasClass(header, 'header_fixed')){
 			menuIcon.style.marginTop = "20px";

@@ -1,0 +1,27 @@
+$block: 'slider__title';
+
+.#{$block} {
+	@include font-size(30);
+	display: inline-block;
+	font-family: $font-secondary;
+	line-height: 1.0em;
+	padding-bottom: 10px;
+
+	@include custom-breakpoint-min($breakpoint-phablet) {
+		@include font-size(40);
+	}
+	
+	@include custom-breakpoint-min($breakpoint-desktop) {
+		@include font-size(53);
+	}
+
+	&:after {
+		content: "";
+		height: 4px;
+		background-color: #fff;
+		display: block;
+		width: 100%;
+		position: relative;
+		top: 4px;
+	}
+}

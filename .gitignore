@@ -5,6 +5,5 @@ _dev/
 *.sublime*
 .sass-cache/
 uow-hack.js
-bem.txt
 html/
 .DS_Store

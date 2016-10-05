@@ -90,11 +90,17 @@
 		</header>
 
 		<section class="content-header remove_margin-top remove_margin-bottom">
+			<div class="content-header__image">
+				<picture>
+					<!--[if IE 9]><video style="display: none;"><![endif]-->
+					<source srcset="_dev/img/extralarge/header_image_ventajas.jpg" media="(min-width: 1024px)">
+					<source srcset="_dev/img/large/header_image_ventajas.jpg" media="(min-width: 800px)">
+					<source srcset="_dev/img/medium/header_image_ventajas.jpg" media="(min-width: 640px)">
+					<!--[if IE 9]></video><![endif]-->
+					<img srcset="_dev/img/small/header_image_ventajas.jpg" alt="">
+				</picture>
+			</div>
 			<div class="inner">
-				<div class="content-header__image">
-
-					content image
-				</div>
 				<div class="content-header__title">
 					<h1>Nuestras ventajas</h1>
 				</div>
@@ -104,19 +110,9 @@
 		<section class="content-text inner inner_smaller">
 			<div class="content-text__grid_2-columns grid grid_2-columns content-text__text grid_items-center">
 				<div class="grid__column">
-					<p><strong>Lorem ipsum dolor sit</strong> amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation <strong>ullamco laboris</strong> nisi ut aliquip ex ea commodo
-					consequat. <strong>Duis aute irure dolor</strong> in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Nuestra herramienta se <strong>integra dentro de la página web</strong> de su empresa y desde allí le permite <strong>acceder a las ofertas y currículos</strong> de los candidatos, gestionarlos, filtrarlos y eliminarlos según lo desee.</p>
 
-					<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco <strong>laboris nisi ut aliquip</strong> ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Así mismo, le ofrecemos la posibilidad de <strong>integrar la plataforma con los portales de empleo</strong> que crea necesario para dar mayor difusión a las ofertas de empleo o buscar candidatos más específicos según su formación.</p>
 				</div>
 				<div class="grid__column">
 					<div class="content-text__cta cta text_center">
@@ -134,9 +130,7 @@
 		<section class="our-features">
 			<div class="inner inner_smaller">
 				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
-					<div class="our-features__icon grid__column">
-						icon
-					</div>
+					<div class="our-features__icon our-features__icon_dashboard grid__column"></div>
 					<div class="our-features__content grid__column">
 						<div class="our-features__title">
 							<h2>Panel de empleo</h2>
@@ -146,13 +140,10 @@
 							<p>En cada perfil de candidatos dispondrá de toda la información necesaria, perfil de candidato, currículum, ofertas a las que se han inscrito etc. Pudiendo editar esta información siempre que quiera.</p>
 							<p>Podrá personalizar el panel de empleo y publicar automáticamente en su web y en los portales que desee.</p>
 						</div>
-						
 					</div>
 				</div>
 				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
-					<div class="our-features__icon grid__column">
-						icon
-					</div>
+					<div class="our-features__icon our-features__icon_social-networks grid__column"></div>
 					<div class="our-features__content grid__column">
 						<div class="our-features__title">
 							<h2>Total interacción con redes sociales</h2>
@@ -160,10 +151,42 @@
 						<div class="our-features__description">
 							<p>Las ofertas de empleo se publican también en las Redes Sociales que crea conveniente (Facebook, Twitter, Linkedin).</p>
 						</div>
-						
 					</div>
 				</div>
-				
+				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
+					<div class="our-features__icon our-features__icon_mobile grid__column"></div>
+					<div class="our-features__content grid__column">
+						<div class="our-features__title">
+							<h2>Acceso móvil</h2>
+						</div>
+						<div class="our-features__description">
+							<p>Sus candidatos podrán inscribirse a sus ofertas desde cualquier dispositivo móvil.</p>
+						</div>
+					</div>
+				</div>
+				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
+					<div class="our-features__icon our-features__icon_candidate grid__column"></div>
+					<div class="our-features__content grid__column">
+						<div class="our-features__title">
+							<h2>Acceso al candidato</h2>
+						</div>
+						<div class="our-features__description">
+							<p>Podrá conocer el estado en el que se encuentra cada candidatura de cada oferta de empleo, los comentarios que ha recibido de cada candidato así como los puestos cubiertos y las vacantes por cubrir.</p>
+						</div>
+					</div>
+				</div>
+				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
+					<div class="our-features__icon our-features__icon_subscriptions grid__column"></div>
+					<div class="our-features__content grid__column">
+						<div class="our-features__title">
+							<h2>Inscripciones simultaneas</h2>
+						</div>
+						<div class="our-features__description">
+							<p>Publique, con un solo clic, sus ofertas de empleo en el portal o portales elegidos así como en las Redes Sociales preferidas, tantas simultáneas como necesite.</p>
+							<p>La integración con estos portales permite, que al realizar cualquier cambio en su plataforma se cambie automáticamente en el resto de portales.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -179,21 +202,77 @@
 			</div>
 		</section>
 
-		<section class="content-text inner">
-			<div class="content-text__text">
-				<p><strong>Lorem ipsum dolor sit</strong> amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation <strong>ullamco laboris</strong> nisi ut aliquip ex ea commodo
-				consequat. <strong>Duis aute irure dolor</strong> in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco <strong>laboris nisi ut aliquip</strong> ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<section class="our-features">
+			<div class="inner inner_smaller">
+				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
+					<div class="our-features__icon our-features__icon_unique-db grid__column"></div>
+					<div class="our-features__content grid__column">
+						<div class="our-features__title">
+							<h2>Base de datos única</h2>
+						</div>
+						<div class="our-features__description">
+							<p>Utilizando una única base de datos puede recopilar, gestionar y volcar al destino que desee todos los currículos generados en su plataforma o en el portal de empleo y editarlos, modificarlos borrarlos etc. desde el mismo lugar. Podrá buscar por palabras clave y filtrar, evitando duplicidades y pérdidas de tiempo.</p>
+							<p>Estas búsquedas dentro de la base de datos podrá hacerlas con toda la precisión que sea necesaria, cruzando datos o a través de cualquier palabra clave dentro del texto de los currículos.</p>
+							<p>Así mismo la herramienta dispone de un conjunto de funcionalidades que permiten realizar tareas como, seleccionar candidatos favoritos, hacer comentarios sobre cada uno, almacenar comentarios y valoraciones, agregarlos para un proceso en particular, marcarlos con otros fines, reenviar su currículum a un tercero, descargarlo, enviarles emails personalizados y SMS, moverlos a una oferta en concreto etc.</p>
+						</div>
+					</div>
+				</div>
+				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
+					<div class="our-features__icon our-features__icon_interaction grid__column"></div>
+					<div class="our-features__content grid__column">
+						<div class="our-features__title">
+							<h2>Interaccción con candidatos</h2>
+						</div>
+						<div class="our-features__description">
+							<p>La plataforma permite:</p>
+							<ul class="our-features__list list">
+								<li class="list__item">Configurar respuestas automáticas. Cada vez que un candidato cambia de estado dentro de una oferta se le puede avisar por email. Igualmente se puede enviar una respuesta automática a todo aquel que envíe un currículum o se interese por una oferta.</li>
+								<li class="list__item">Enviar respuestas personalizadas, individuales o a varios candidatos dentro de la misma oferta. La plataforma también dispone de plantillas de correo electrónico para optimizar tiempo en los envíos, también es posible crear nuevas.</li>
+								<li class="list__item">Gestionar la agenda de entrevistas, una herramienta potente permite dar cita previa a cada uno de los preseleccionados con notificación al candidato y opción de cambiar horario en función de la disponibilidad establecida.</li>
+								<li class="list__item">Entrevistar por videoconferencia a los candidatos preseleccionados en tiempo real. El módulo de videoconferencia permite establecer una comunicación directa con el candidato a través de videoconferencia y sin necesidad de software o descargas adicionales, una característica que en conjunto con la gestión de agenda resulta extremadamente útil en los procesos de selección y entrevista.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
+					<div class="our-features__icon our-features__icon_reports grid__column"></div>
+					<div class="our-features__content grid__column">
+						<div class="our-features__title">
+							<h2>Informes</h2>
+						</div>
+						<div class="our-features__description">
+							<p>Todo el rendimiento del proceso de selección y oferta de empleo, se pueden analizar a través de los informes que la herramienta genera. Se pueden utilizar los estándares o crear nuevos.</p>
+							<p>Con ellos podrá saber, que canal genera más actividad, más candidatos, cuáles son los más adecuados para un puesto, que oficina es la más efectiva etc. Y todo a través de todos los gráficos que precise.</p>
+						</div>
+					</div>
+				</div>
+				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
+					<div class="our-features__icon our-features__icon_lopd grid__column"></div>
+					<div class="our-features__content grid__column">
+						<div class="our-features__title">
+							<h2>LOPD</h2>
+						</div>
+						<div class="our-features__description">
+							<p>La Ley Orgánica de Protección de datos es fundamentar en nuestro sector. En Matchtalent no dejamos nada al azar en este aspecto:</p>
+							<ul class="our-features__list list">
+								<li class="list__item">Los candidatos rellenan un compromiso de confidencialidad. Se le envían recordatorios constantes hasta que está realizado.</li>
+								<li class="list__item">Las empresas cumplen todas con sus obligaciones a este respecto.</li>
+								<li class="list__item">Somos muy estrictos a la hora de comprobar que todos los portales y entidades externos, cumplen con la LOPD como corresponde.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="our-features__grid_2-columns grid grid_2-columns our-features__item">
+					<div class="our-features__icon our-features__icon_video grid__column"></div>
+					<div class="our-features__content grid__column">
+						<div class="our-features__title">
+							<h2>Video presentación</h2>
+						</div>
+						<div class="our-features__description">
+							<p>La plataforma permite poner el enlace de la videopresentación en el perfil del candidato.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 

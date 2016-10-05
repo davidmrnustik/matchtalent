@@ -1,7 +1,51 @@
 $block: 'our-features__icon';
+$iconWidth: 70px;
 
 .#{$block} {
-	@include custom-breakpoint-min($breakpoint-desktop) {
+	position: relative;
+	text-align: center;
+
+	@include custom-breakpoint-min($breakpoint-phablet) {
+		width: 70px;
+		height: 70px;
+	}
+
+	@include custom-breakpoint-max($breakpoint-tablet) {
+		margin-bottom: 8px;
+	}
+
+	&:after {
+		@include custom-breakpoint-min($breakpoint-phablet) {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: $iconWidth;
+			height: $iconWidth;
+			background-image: url('../img/css_sprite_features.svg');
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+
+		@include custom-breakpoint-min($breakpoint-tablet) {
+			right: 40px;
+			left: initial;
+		}
+	}
+
+	@include custom-breakpoint-min($breakpoint-tablet) {
 		text-align: right;
+	}
+
+	@each $i, $icon in (0: 'dashboard', 1:'social-networks', 2:'mobile', 3:'candidate', 4: 'subscriptions', 5: 'unique-db', 6: 'interaction', 7: 'reports', 8: 'lopd', 9: 'video') {
+		&_#{$icon} {
+			&:after {
+				@if ($i > 0) {
+					background-position: -calc((#{$iconWidth} * #{$i})) 0;
+				} @else {
+					background-position: 0 0;
+				}
+			}
+		}
 	}
 }

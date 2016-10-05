@@ -1,6 +1,7 @@
 $block: 'content-header';
 
 .#{$block} {
+	position: relative;
 	height: $content-header-height - ($header-height - $header-height-small);
 	background-color: $color-blue;
 	margin-top: -$header-height !important;
@@ -24,6 +25,7 @@ $block: 'content-header';
 			text-align: center;
 			@include font-size(30);
 			@include centerMiddle();
+			top: 60%;
 
 			@include custom-breakpoint-max($breakpoint-tablet) {
 				margin-top: 30px;

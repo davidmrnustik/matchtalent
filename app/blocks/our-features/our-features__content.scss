@@ -4,7 +4,9 @@ $block: 'our-features__content';
 	position: relative;
 	padding-top: 5px;
 
-	@include custom-breakpoint-min($breakpoint-desktop) {
+	@include custom-breakpoint-min($breakpoint-tablet) {
+		padding-right: 60px;
+
 		&:before {
 			content: "";
 			display: block;

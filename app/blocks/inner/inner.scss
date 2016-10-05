@@ -11,10 +11,12 @@ $block: 'inner';
 	& > div:not(.button),
 	& > ul {
 		@include custom-breakpoint-max($inner-max-width + 20) {
-			margin: 0px 40px;
+			margin-left: 40px;
+			margin-right: 40px;
 		}
 		@include custom-breakpoint-max($breakpoint-phablet) {
-			margin: 0px 20px;
+			margin-left: 20px;
+			margin-right: 20px;
 		}
 	}
 }

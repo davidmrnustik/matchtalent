@@ -14,10 +14,10 @@ $block: 'our-features';
 
 			@include custom-breakpoint-min($breakpoint-tablet) {
 				&:first-of-type {
-					width: 35%;
+					width: 30%;
 				}
 				&:last-of-type {
-					width: 65%;
+					width: 70%;
 				}
 			}
 		}
@@ -29,6 +29,10 @@ $block: 'our-features';
 		}
 	}
 	&__item {
-		margin-bottom: 60px;
+		margin-bottom: 20px;
+
+		@include custom-breakpoint-min($breakpoint-tablet) {
+			margin-bottom: 60px;
+		}
 	}
 }

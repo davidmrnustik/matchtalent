@@ -5,7 +5,7 @@ $block: 'nav__item';
 		display: inline-block;
 	}
 
-	&_active {
+	.header__nav &_active {
 		&:after {
 			content: "";
 			height: 3px;
@@ -14,5 +14,8 @@ $block: 'nav__item';
 			margin: 0px auto;
 			width: calc(100% - 18px);
 		}
+	}
+	.mobile-menu__nav &_active {
+		background: rgba(darken($color-blue, 2%), 1);
 	}
 }
