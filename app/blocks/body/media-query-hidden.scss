@@ -27,3 +27,10 @@
 		display: block !important;
 	}
 }
+.only-phablet-landscape {
+	display: none;
+
+	@media (max-height: 450px) and (orientation: landscape) {
+		display: block !important;
+	}
+}

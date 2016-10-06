@@ -118,6 +118,15 @@ content
 		our-features__description
 		our-features__list
 
+
+# temp page #
+temp-page
+	temp-page__content
+	temp-page__logo
+	temp-page__title
+	temp-page__text
+	temp-page__designby
+
 ==========================
 
 # helper blocks #
