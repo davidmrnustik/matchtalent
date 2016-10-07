@@ -28,6 +28,8 @@ html(lang="es")
       <script src="/js/legacy.js"></script> 
     <![endif]-->
 
+  include mixin.pug
+
   body
     #mobileMenu.mobile-menu.text_white
       .mobile-menu__menu-icon.menu-icon
@@ -54,39 +56,20 @@ html(lang="es")
             href='http://www.memorandum.net'
             target='_blank'
           )
-            picture
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              source(
-                srcset='/img/logo_memorandum.svg'
-                type='image/svg+xml'
-              )
-              <!--[if IE 9]></video><![endif]-->
-              img(
-                srcset='/img/logo_memorandum.png'
-                alt=''
-              )
+            +picture("/img/logo_memorandum.svg")
 
     #mainContent.content
       header.header.text_white
         .inner
           .menu-icon.header__menu-icon.only-desktop
-            .menu-icon__content            
+            .menu-icon__content
               span.menu-icon__line
               span.menu-icon__line
               span.menu-icon__line
           .logo.header__logo
             a(href='./')
-              picture
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              source(
-                srcset='/img/logo_matchtalent.svg'
-                type='image/svg+xml'
-              )
-              <!--[if IE 9]></video><![endif]-->
-              img(
-                srcset='/img/logo_matchtalent.png'
-                alt=''
-              )
+              +picture("/img/logo_matchtalent.svg")
+
           ul.nav.header__nav.no-desktop
             li.nav__item: a(href='./') Inicio
             li.nav__item: a(href='./ventajas.html') Ventajas
@@ -164,6 +147,139 @@ html(lang="es")
                   | Paradores - Hoteles &amp; Restaurantes 1928
 
       section.why-matchtalent.inner.text_center
+        h2.why-matchtalent__headline.text_uppercase
+          | ¿Por qué matchtalent?
+        .grid.grid_3-columns
+          .why-matchtalent__item.grid__column
+            .why-matchtalent__icon
+              +picture("/img/optimize.svg")
+            h3.why-matchtalent__title
+              | Optimiza recursos
+            .why-matchtalent__description
+              | El Departamento de RRHH dispondrá de una herramienta para gestionar Ofertas y Candidatos desde su propia Web, con el ahorro de tiempo que ello supone para todos los miembros del Departamento. Un portal de empleo dentro de su propia Web.
+            .why-matchtalent__button.button
+              a(href='#') más detalles
+          .why-matchtalent__item.grid__column
+            .why-matchtalent__icon
+              +picture("/img/magnifier.svg")
+            h3.why-matchtalent__title
+              | Mejores resultados
+            .why-matchtalent__description
+              | Podrá trabajar todas sus ofertas de empleo de una manera fácil y sencilla, sin depender del elevado coste de un tercero, con un software pensado para optimizar todos los pasos de un proceso de selección.
+            .why-matchtalent__button.button
+              a(href='#') más detalles
+          .why-matchtalent__item.grid__column
+            .why-matchtalent__icon
+              +picture("/img/target.svg")
+            h3.why-matchtalent__title
+              | Mayor alcance
+            .why-matchtalent__description
+              | Según el tipo de oferta de empleo que quiera lanzar, podremos difundirla entre uno o varios portales de empleo (Turijobs, Infoempleo, Buscaempleo, Ticjobs etc) y que sus candidatos más afines se multipliquen.
+            .why-matchtalent__button.button
+              a(href='#') más detalles
 
+      section.contact-with-us.text_white.text_center
+        .inner
+          .contact-with-us__text
+            | Contacta con nosotros <strong>987&nbsp;654&nbsp;321</strong> o solicita demo:
+            .contact-with-us__text_small.text_em.text_small
+            | Sin contrato, sin obligación
+          .contact-with-us__button.button.button_inverse
+            a(href='#') solicitar demo
 
+      section.solutions-for.inner
+        h2.solutions-for__headline.text_center.text_uppercase
+          span.solutions-for__arrow.solutions-for__arrow_bottom
+            | Soluciones<br class="no-tablet" /> para
+            span.solutions-for__arrow.solutions-for__arrow_left_right
+        .grid.grid_3-columns
+          .solutions-for__item.solutions-for__item_left.grid__column
+            h3.solutions-for__title.solutions-for__title_icon-palm
+              | Sector turístico
+            .solutions-for__description
+              | Nuestra integración con Turijobs.com nos permite disponer de la mejor solución a la hora de encontrar personal relacionado con hostelería. Cualquier candidato inscrito en esta Web estará a su disposición para cubrir cualquier vacante.
+          .solutions-for__item.solutions-for__item_left.grid__column
+            h3.solutions-for__title.solutions-for__title_icon-rack
+              | Sector tecnológico
+            .solutions-for__description
+              | A través de Ticjobs podrá disponer en su plataforma del personal más cualificado en cuanto a perfiles tecnológicos se refiere.
+          .solutions-for__item.solutions-for__item_left.grid__column
+            h3.solutions-for__title.solutions-for__title_icon-knot
+              | Intersectorial
+            .solutions-for__description
+              | Disponemos de integraciones con la mayoría de portales de empleo de internet (InfoJobs, Monster, InfoEmpleo, Trabajando, Laboris), así como con redes sociales (LinkedIn, Facebook, XING, Twitter) y otros focos de interés.
 
+      section.features.text_white
+        .inner
+          h2.features__headline.text_center.text_uppercase.text_white
+            | Ventajas de matchtalent
+          .grid.grid_2-columns
+            .features__item.grid__column
+              .features__description.features__description_icon-check
+                | Publica ofertas de empleo simultáneamente en múltiples portales de empleo con un solo clic, alcanzando la máxima difusión.
+            .features__item.grid__column
+              .features__description.features__description_icon-check
+                | Gestiona todos tus anuncios y ofertas de empleo desde un solo sitio web, reduciendo tiempos y optimizando el proceso de selección.
+            .features__item.grid__column
+              .features__description.features__description_icon-check
+                | Administra tu agenda de entrevistas a candidatos y facilita la conciliación horaria con los mismos.
+            .features__item.grid__column
+              .features__description.features__description_icon-check
+                | Conoce a tus candidatos mediante entrevista online, a través de videoconferencia, desde tu sitio web.
+            .features__button.button.button_inverse.text_center
+              a(href='/ventajas.html') ver las ventajas
+
+      section.partners.inner.text_center
+        h2.partners__headline.text_center.text_uppercase
+          | Partners
+        .grid.grid_flex.grid_center
+            - partners = ["/img/partner_buscarempleo.jpg", "/img/partner_ticjob.jpg", "/img/partner_infoempleo.jpg", "/img/partner_disjob.jpg", "/img/partner_fjobs.jpg", "/img/partner_trabajando.jpg", "/img/partner_turijobs.jpg"]
+            each item in partners
+              .partners__item.grid__column
+                a.partners__logo(href='#')
+                  img(src=item)/
+
+      footer.footer.text_white
+        .inner
+          .grid.grid_space-between.grid_nowrap.grid_3-column.footer__grid_3-column
+            .logo.footer__logo.grid__column
+              +picture('/img/logo_matchtalent.svg')
+            .grid__column.footer__links
+              h4.footer__links-title.only-phablet
+                | MatchTalent <i class="fa fa-angle-down" aria-hidden="true"></i>
+              ul.nav.footer__nav
+                li.nav__item: a(href='./') Inicio
+                li.nav__item: a(href='./ventajas.html') Ventajas
+                li.nav__item: a(href='#') Precios
+                li.nav__item: a(href='#') Contacto
+                li.nav__item: a(href='#') Integraciones
+                li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+                li.nav__item.nav__item_highlighted: a(href='tel:987 654 321') Llamar 987 654 321
+                li.nav__item: a(href='#') Política de cookies
+                li.nav__item: a(href='#') Aviso legal
+            .footer__socialnet.grid__column
+              .footer__icon.footer__icon_facebook
+                a(href='#')
+                  | <i class="fa fa-facebook" aria-hidden="true"></i>
+              .footer__icon.footer__icon_twitter
+                a(href='#')
+                  | <i class="fa fa-twitter" aria-hidden="true"></i>
+              .footer__icon.footer__icon_googleplus
+                a(href='#')
+                  | <i class="fa fa-googleplus" aria-hidden="true"></i>
+              .footer__icon.footer__icon_instagram
+                a(href='#')
+                  | <i class="fa fa-instagram" aria-hidden="true"></i>
+          .grid.grid_2-columns.footer__grid_2-column.grid_flex-end
+            .footer__copyright.grid__column
+              | Copyright &copy; MatchTalent, 2016. <br class="only-phablet" />All Rights Reserved.
+            .designby.footer__designby.grid__column
+              p.text_xsmall
+                | Desarrollado por:
+              a(
+                href='http://www.memorandum.net'
+                target='_blank'
+              )
+                +picture('/img/logo_memorandum.svg')
+
+    script(src='/js/app.js')
