@@ -1,0 +1,169 @@
+doctype html
+html(lang="es")
+  head
+    title= "MatchTalent - Plataforma de empleo"
+    meta(charset='utf-8')
+    meta(
+      name='content'
+      description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+    )
+    meta(
+      name='viewport'
+      description='width=device-width, initial-scale=1, maximum-scale=1'
+    )
+    link(
+      rel='stylesheet'
+      type='text/css'
+      href='/css/app.css'
+    )
+    <!--[if !IE]>
+      <!--><script src="/js/components.js"></script>
+    <!--<![endif]-->
+    <!--[if IE 9]>
+      <!--><script src="/js/components.js"></script>
+    <!--<![endif]-->
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="/css/no-flexbox.css">
+      <script src="/js/components_ie.js"></script> 
+      <script src="/js/legacy.js"></script> 
+    <![endif]-->
+
+  body
+    #mobileMenu.mobile-menu.text_white
+      .mobile-menu__menu-icon.menu-icon
+        .menu-icon__content
+          span.menu-icon__line
+          span.menu-icon__line
+          span.menu-icon__line
+      .inner
+        ul.nav.mobile-menu__nav
+          li.nav__item: a(href='./') Inicio
+          li.nav__item: a(href='./ventajas.html') Ventajas
+          li.nav__item: a(href='#') Precios
+          li.nav__item: a(href='#') Contacto
+          li.nav__item: a(href='#') Integraciones
+          li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+        
+        select.input.input_select.mobile-menu__lang-switcher(name='mobile-language')
+          option(value='spanish' selected) Español
+          option(value='english' selected) English
+        
+        .designby.mobile-menu__designby.grid__column
+          p.text_xsmall Desarrollado por:
+          a(
+            href='http://www.memorandum.net'
+            target='_blank'
+          )
+            picture
+              <!--[if IE 9]><video style="display: none;"><![endif]-->
+              source(
+                srcset='/img/logo_memorandum.svg'
+                type='image/svg+xml'
+              )
+              <!--[if IE 9]></video><![endif]-->
+              img(
+                srcset='/img/logo_memorandum.png'
+                alt=''
+              )
+
+    #mainContent.content
+      header.header.text_white
+        .inner
+          .menu-icon.header__menu-icon.only-desktop
+            .menu-icon__content            
+              span.menu-icon__line
+              span.menu-icon__line
+              span.menu-icon__line
+          .logo.header__logo
+            a(href='./')
+              picture
+              <!--[if IE 9]><video style="display: none;"><![endif]-->
+              source(
+                srcset='/img/logo_matchtalent.svg'
+                type='image/svg+xml'
+              )
+              <!--[if IE 9]></video><![endif]-->
+              img(
+                srcset='/img/logo_matchtalent.png'
+                alt=''
+              )
+          ul.nav.header__nav.no-desktop
+            li.nav__item: a(href='./') Inicio
+            li.nav__item: a(href='./ventajas.html') Ventajas
+            li.nav__item: a(href='#') Precios
+            li.nav__item: a(href='#') Contacto
+            li.nav__item: a(href='#') Integraciones
+            li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+          ul.nav-lang.header__nav-lang.no-desktop
+            li.nav-lang__item.nav-lang__item_highlighted Español
+            li.nav-lang__item English
+      
+      section.hero.remove_margin-bottom
+        .slider.text_white.hero__slider.text_center(data-slick!={"arrows": false, "dots": true, "dotsClass": "slider__dotnav", "lazyLoad": "progressive", "infinite": false})
+          .slider__item
+            .slider__image(data-img-src='slide_01.jpg')
+              .slider__text-content.slider__text-content_slide-01
+                .slider__title
+                  | Gestión de ofertas
+                .slider__description
+                  | Gestione sus ofertas de empleo y candidatos desde su propia web de la mano de los portales de empleo que elija.
+                .slider__button.button.button_inverse
+                  a(
+                    href='#'
+                    onclick!='alert("SOLICITAR DEMO")'
+                  ) Solicitar demo
+          .slider__item
+            .slider__image(data-img-src='slide_02.jpg')
+              .slider__text-content.slider__text-content_slide-02
+                .slider__title
+                  | Ahorro de tiempo con la máxima difusión
+                .slider__description
+                  | Ahorre tiempo y dinero tenienido todos los currículos a un click (editar, eliminar, clasificar etc) recibidos desde cualqier portal de empleo.
+                .slider__button.button.button_inverse
+                  a(href='#') Solicitar demo
+          .slider__item
+            .slider__image(data-img-src='slide_03.jpg')
+              .slider__text-content.slider__text-content_slide-03
+                .slider__title
+                  | Proceso automatizado
+                .slider__description
+                  | Consiga que las ofertas y candidatos de cualquier portal de empleo lleguen a su web automaticamente.
+                .slider__button.button.button_inverse
+                  a(href='#') Solicitar demo
+          .slider__item
+            .slider__image(data-img-src='slide_04.jpg')
+              .slider__text-content.slider__text-content_slide-04
+                .slider__title
+                  | Entrevistas por videoconferencia
+                .slider__description
+                  | Gestione la agenda de entrevistas a candidatos y conózcalos a través de videoconferencia.
+                .slider__button.button.button_inverse
+                  a(href='#') Solicitar demo
+      section.clients.text_center.remove_margin-top
+        .inner
+          .grid.grid_2-columns.grid_center.grid_width-auto.grid_items-center
+            .clients__item.grid__column
+              .grid.grid_2-columns.grid_center.grid_width-auto.grid_items-center
+                .clients__logo.grid__column
+                  img(
+                    src='/img/clientes_roommate.png'
+                    alt=''
+                    title=''
+                  )
+                .clients__name.grid__column.no-desktop
+                  | Room Mate Hotels
+            .clients__item.grid__column
+              .grid.grid_2-columns.grid_center.grid_width-auto.grid_items-center
+                .clients__logo.grid__column
+                  img(
+                    src='/img/clientes_paradores.png'
+                    alt=''
+                    title=''
+                  )
+                .clients__name.grid__column.no-desktop
+                  | Paradores - Hoteles &amp; Restaurantes 1928
+
+      section.why-matchtalent.inner.text_center
+
+
+

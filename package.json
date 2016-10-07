@@ -24,13 +24,12 @@
     "gulp-phantom": "0.0.6",
     "gulp-pixrem": "^1.0.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-surge": "^0.1.0",
     "gulp-uglify": "^2.0.0",
     "run-sequence": "^1.2.2"
   },
-  "dependencies": {
-    "gulp-jade": "^1.1.0"
-  }
+  "dependencies": {}
 }
