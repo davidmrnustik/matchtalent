@@ -2,7 +2,8 @@
 
 mobile-menu
 	mobile-menu_show
-	mobile-menu__lang-switcher
+	//mobile-menu__lang-switcher
+	mobile-menu__nav-lang
 	designby mobile-menu__designby
 	nav mobile-menu__nav
 		nav__item
@@ -16,8 +17,9 @@ content
 		menu-icon header__menu-icon
 			menu-icon__content
 				menu-icon__line
-		header__nav-lang
-			header__nav-lang-item
+		header__nav-lang nav-lang
+			nav-lang__item
+			nav-lang__item_highlighted
 		nav header__nav
 			nav__item
 			nav__item_active
@@ -126,6 +128,27 @@ temp-page
 	temp-page__title
 	temp-page__text
 	temp-page__designby
+
+
+# precios #
+	content-header
+		content-header__image
+		content-header__title
+	our-plans inner inner_smaller
+		our-plans__grid_3-columns
+		our-plans__item
+			our-plans__item_highlighted
+			our-plans__grid_3-columns
+			our-plans__title
+			our-plans__price
+			our-plans__period
+			our-plans__features
+			our-plans__button button button_inverse
+	plans-include inner
+	plans-include__headline
+		plans-include__item
+		plans-include__title
+		plans-include__description
 
 ==========================
 

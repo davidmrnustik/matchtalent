@@ -26,4 +26,10 @@ $block: 'nav-lang';
 	.header_fixed & {
 		display: none;
 	}
+	.mobile-menu & {
+		position: relative;
+		@include font-size(16);
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
 }

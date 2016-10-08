@@ -1,0 +1,99 @@
+mixin picture(img, title)
+  picture
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    source(
+      srcset= img
+      type='image/svg+xml'
+    )
+    <!--[if IE 9]></video><![endif]-->
+    img(
+      srcset= img
+      alt= title
+      title= title
+    )
+
+mixin menu-icon(parentClass)
+  .menu-icon(class=parentClass)
+    .menu-icon__content
+      span.menu-icon__line
+      span.menu-icon__line
+      span.menu-icon__line
+
+mixin slider-item(pos, img, title, description)
+  .slider__item
+    .slider__image(data-img-src=img)
+      .slider__text-content(class='slider__text-content_slide-0' + pos)
+        .slider__title= title
+        .slider__description= description
+        .slider__button.button.button_inverse
+          a(href='#') Solicitar demo
+
+mixin clients-item(img, name)
+  .clients__item.grid__column
+    .grid.grid_2-columns.grid_center.grid_width-auto.grid_items-center
+      .clients__logo.grid__column
+        img(
+          src='/img/' + img
+          alt= name
+          title= name
+        )
+      .clients__name.grid__column.no-desktop= name
+
+mixin why-matchtalent-item(img, title, description, url)
+  .why-matchtalent__item.grid__column
+    .why-matchtalent__icon
+      +picture(img, title)
+    h3.why-matchtalent__title= title
+    .why-matchtalent__description= description
+    .why-matchtalent__button.button
+      a(href=url) más detalles
+
+mixin solution-for-item(icon, title, description)
+  .solutions-for__item.solutions-for__item_left.grid__column
+    h3.solutions-for__title(class='solutions-for__title_icon-' + icon)= title
+    .solutions-for__description= description
+
+mixin features-item(description)
+  .features__item.grid__column
+    .features__description.features__description_icon-check= description
+
+mixin partners(items)
+  each item in items
+    .partners__item.grid__column
+      img.partners__logo(src=item)/
+
+mixin social-networks(items)
+  each url, icon in items
+    .footer__icon(class='footer__icon_' + icon)
+      a(href=url)
+        i.fa(class='fa-' + icon, aria-hidden='true')
+
+mixin content-header-image(img)
+  picture
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    source(
+      srcset= '/img/extralarge/' + img
+      media= '(min-width: 1024px)'
+    )
+    source(
+      srcset= '/img/large/' + img
+      media= '(min-width: 800px)'
+    )
+    source(
+      srcset= '/img/medium/' + img
+      media= '(min-width: 640px)'
+    )
+    <!--[if IE 9]></video><![endif]-->
+    img(
+      srcset='/img/small/' + img
+      alt=''
+      title=''
+    )
+
+mixin our-features-item(icon, title, description)
+  .our-features__grid_2-columns.grid.grid_2-columns.our-features__item
+    .our-features__icon.grid__column(class='our-features__icon_' + icon)
+    .our-features__content.grid__column
+      .our-features__title
+        h2= title
+      .our-features__description!= description

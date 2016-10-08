@@ -24,4 +24,7 @@ $block: 'header';
 		transition: transform .5s;
 		@include transform(translate, $header-height-fixed, Y);
 	}
+	&.header_fixed .nav-lang {
+		display: none;
+	}
 }
