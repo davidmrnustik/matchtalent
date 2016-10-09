@@ -4,4 +4,15 @@
 	footerLinks.init();
 	header.init();
 	sliderImage.init();
+	ourPlans.init();
+	contactForm.init();
+	smoothScroll.init({
+	  selector: '[data-scroll]',
+	  selectorHeader: '[data-scroll-header]',
+	  speed: 1000,
+	  easing: 'easeInOutQuad',
+	  offset: 100,
+	  updateURL: true,
+	  callback: function ( anchor, toggle ) {}
+	});
 })();

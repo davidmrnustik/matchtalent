@@ -1,0 +1,146 @@
+doctype html
+html(lang="es")
+  head
+    title= "Contant MatchTalent - Plataforma de empleo"
+    meta(charset='utf-8')
+    meta(
+      name='content'
+      description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+    )
+    meta(
+      name='viewport'
+      description='width=device-width, initial-scale=1, maximum-scale=1'
+    )
+    link(
+      rel='stylesheet'
+      type='text/css'
+      href='/css/app.css'
+    )
+    <!--[if !IE]>
+      <!--><script src="/js/components.js"></script>
+    <!--<![endif]-->
+    <!--[if IE 9]>
+      <!--><script src="/js/components.js"></script>
+    <!--<![endif]-->
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="/css/no-flexbox.css">
+      <script src="/js/components_ie.js"></script> 
+      <script src="/js/legacy.js"></script> 
+    <![endif]-->
+
+  include inc/mixin.pug
+
+  body
+    #mobileMenu.mobile-menu.text_white
+      +menu-icon('mobile-menu__menu-icon')
+      .inner
+        ul.nav.mobile-menu__nav
+          li.nav__item: a(href='./') Inicio
+          li.nav__item: a(href='./ventajas.html') Ventajas
+          li.nav__item: a(href='./precios.html') Precios
+          li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
+          li.nav__item: a(href='#') Integraciones
+          li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+          
+        ul.nav-lang.mobile-menu__nav-lang
+          li.nav-lang__item.nav-lang__item_highlighted Español
+          li.nav-lang__item
+            a(href='#') English
+        
+        .designby.mobile-menu__designby.grid__column
+          p.text_xsmall Desarrollado por:
+          a(
+            href='http://www.memorandum.net'
+            target='_blank'
+          )
+            +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+
+    #mainContent.content
+      header.header.text_white
+        .inner
+          +menu-icon('header__menu-icon no-desktop')
+          .logo.header__logo
+            a(href='./')
+              +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
+          ul.nav.header__nav.only-desktop
+            li.nav__item: a(href='./') Inicio
+            li.nav__item: a(href='./ventajas.html') Ventajas
+            li.nav__item: a(href='./precios.html') Precios
+            li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
+            li.nav__item: a(href='#') Integraciones
+            li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+
+          ul.nav-lang.header__nav-lang.only-desktop
+            li.nav-lang__item.nav-lang__item_highlighted Español
+            li.nav-lang__item: a(href='#') English
+
+      section.content-header.remove_margin-top.remove_margin-bottom
+        .content-header__image
+          +content-header-image('header_image_ventajas.jpg')
+        .inner
+          .content-header__title
+            h1 Contacta con nosotros
+
+      section.content-text.inner.inner_smaller.contacto
+        .content-text__text
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+          form#ContactForm.contacto__form(method='POST', action='')
+            fieldset
+              input(type='text',name='formName',id='formName',placeholder='Enter your name')
+              .error.text_error(data-error-type='ErrorNameShort', data-error-msg='Name is too short.', hidden)
+              .error.text_error(data-error-type='ErrorNameEmpty', data-error-msg='Name field is empty, please enter your name.', hidden)
+            fieldset
+              input(type='text',name='formEmail',id='formEmail',placeholder='Enter your email')
+              .error.text_error(data-error-type='ErrorEmailFormat', data-error-msg='Email has bad format.', hidden)
+              .error.text_error(data-error-type='ErrorEmailEmpty', data-error-msg='Email field is empty, please enter your email.', hidden)
+            fieldset
+              input(type='decimal',name='formPhoneNumber',id='formPhoneNumber',placeholder='Place your phone number')
+              .error.text_error(data-error-type='ErrorPhoneNumberEmpty', data-error-msg='Phone number field is empty, please enter your phone number.', hidden)
+              .error.text_error(data-error-type='ErrorPhoneNumberFormat', data-error-msg='Phone number has bad format, please enter decimals only.', hidden)
+            fieldset
+              textarea(cols=40,rows=10,name='formTextarea',id='formTextarea',placeholder='Write your message.')
+              .error.text_error(data-error-type='ErrorTextShort', data-error-msg='Text is too short.', hidden)
+              .error.text_error(data-error-type='ErrorTextEmpty', data-error-msg='Text is empty, please enter your message.', hidden)
+            fieldset
+              input(type='checkbox',name='formCheckboxConditions',id='formCheckboxConditions',placeholder='Place your phone number')
+              label(for='formCheckboxConditions') I accept all conditions...
+              .error.text_error(data-error-type='ErrorCheckboxConditions', data-error-msg='You have to apply conditions.', hidden)
+            input(type='submit', id="formButton", value='Send')
+
+      footer.footer.text_white
+        .inner
+          .grid.grid_space-between.grid_nowrap.grid_3-column.footer__grid_3-column
+            .logo.footer__logo.grid__column
+              a(href='./')
+                +picture('/img/logo_matchtalent.svg')
+            .grid__column.footer__links
+              h4.footer__links-title.only-phablet
+                | MatchTalent <i class="fa fa-angle-down" aria-hidden="true"></i>
+              ul.nav.footer__nav
+                li.nav__item: a(href='./') Inicio
+                li.nav__item: a(href='./ventajas.html') Ventajas
+                li.nav__item: a(href='./precios.html') Precios
+                li.nav__item: a(href='./contacto.html') Contacto
+                li.nav__item: a(href='#') Integraciones
+                li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+                li.nav__item.nav__item_highlighted: a(href='tel:987 654 321') Llamar 987 654 321
+                li.nav__item: a(href='#') Política de cookies
+                li.nav__item: a(href='#') Aviso legal
+            .footer__socialnet.grid__column
+              +social-networks({'facebook':'#', 'twitter': '#', 'google-plus':'#', 'instagram':'#'})
+
+          .grid.grid_2-columns.footer__grid_2-column.grid_flex-end
+            .footer__copyright.grid__column
+              | Copyright &copy; MatchTalent, 2016. <br class="only-phablet" />All Rights Reserved.
+            .designby.footer__designby.grid__column
+              p.text_xsmall
+                | Desarrollado por:
+              a(
+                href='http://www.memorandum.net'
+                target='_blank'
+              )
+                +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+
+    script(src='/js/app.js')

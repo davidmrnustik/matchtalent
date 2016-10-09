@@ -38,7 +38,7 @@ html(lang="es")
           li.nav__item: a(href='./') Inicio
           li.nav__item.nav__item_active: a(href='./ventajas.html') Ventajas
           li.nav__item: a(href='./precios.html') Precios
-          li.nav__item: a(href='#') Contacto
+          li.nav__item: a(href='./contacto.html') Contacto
           li.nav__item: a(href='#') Integraciones
           li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
           
@@ -58,21 +58,21 @@ html(lang="es")
     #mainContent.content
       header.header.text_white
         .inner
-          +menu-icon('header__menu-icon only-desktop')
+          +menu-icon('header__menu-icon no-desktop')
           .logo.header__logo
             a(href='./')
               +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
-          ul.nav.header__nav.no-desktop
+          ul.nav.header__nav.only-desktop
             li.nav__item: a(href='./') Inicio
             li.nav__item.nav__item_active: a(href='./ventajas.html') Ventajas
             li.nav__item: a(href='./precios.html') Precios
-            li.nav__item: a(href='#') Contacto
+            li.nav__item: a(href='./contacto.html') Contacto
             li.nav__item: a(href='#') Integraciones
             li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
 
-          ul.nav-lang.header__nav-lang.no-desktop
+          ul.nav-lang.header__nav-lang.only-desktop
             li.nav-lang__item.nav-lang__item_highlighted Español
-            li.nav-lang__item English
+            li.nav-lang__item: a(href='#') English
 
       section.content-header.remove_margin-top.remove_margin-bottom
         .content-header__image
@@ -166,7 +166,7 @@ html(lang="es")
                 li.nav__item: a(href='./') Inicio
                 li.nav__item: a(href='./ventajas.html') Ventajas
                 li.nav__item: a(href='./precios.html') Precios
-                li.nav__item: a(href='#') Contacto
+                li.nav__item: a(href='./contacto.html') Contacto
                 li.nav__item: a(href='#') Integraciones
                 li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
                 li.nav__item.nav__item_highlighted: a(href='tel:987 654 321') Llamar 987 654 321

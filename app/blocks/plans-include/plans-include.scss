@@ -1,0 +1,26 @@
+$block: 'plans-include';
+
+.#{$block} {
+	&__headline {
+		margin-bottom: 20px;
+
+		@include custom-breakpoint-min($breakpoint-desktop) {
+	    margin-bottom: 30px;
+	  }
+	}
+	&__title {
+		@include font-size(25);
+	}
+}
+.#{$block} .grid__column,
+.#{$block} .grid__column:nth-child(2) {
+	margin-top: 0px;
+	margin-bottom: 10px;
+
+	@include custom-breakpoint-min($breakpoint-desktop) {
+    margin-bottom: 20px;
+  }
+}
+.content > section.#{$block} {
+	margin-top: 50px;
+}

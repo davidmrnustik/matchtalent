@@ -15,7 +15,8 @@ var src = {
 		'./app/components/modernizr-load/modernizr.js',
 		'./app/components/jquery/jquery.js',
 		'./app/components/slick-carousel/slick/slick.js',
-		'./app/components/picturefill/dist/picturefill.js'
+		'./app/components/picturefill/dist/picturefill.js',
+		'./app/components/smooth-scroll/dist/js/smooth-scroll.js'
 	],
 	slick: './app/components/slick-carousel/slick/ajax-loader.gif',
 	fonts: ['./app/fonts/*', './app/components/font-awesome/fonts/*'],

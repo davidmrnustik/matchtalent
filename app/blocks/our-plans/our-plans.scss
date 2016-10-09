@@ -1,0 +1,44 @@
+$block: 'our-plans';
+
+.#{$block} {
+
+	@include custom-breakpoint-min($breakpoint-desktop) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	&__header {
+		padding: 30px;
+		background-color: lighten($color-grey, 66%);
+	}
+	&__item_highlighted {
+		.#{$block}__header {
+			background-color: lighten($color-blue, 53%);
+		}
+	}
+	&__title {
+		font-family: $font-secondary;
+		color: $color-blue;
+		@include font-size(20);
+	}
+	&__button {
+		margin-top: 20px;
+	}
+	&__period {
+		display: inline-block;
+		margin: 0px 6px;
+
+		label {
+			padding-left: 5px;
+		}
+	}
+	&__grid_3-columns {
+		.grid__column {
+			@include grid_3-columns(15px);
+
+			@include custom-breakpoint-max($breakpoint-tablet) {
+				padding-bottom: 20px;
+			}
+		}
+	}
+
+}

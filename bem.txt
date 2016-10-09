@@ -141,6 +141,7 @@ temp-page
 			our-plans__grid_3-columns
 			our-plans__title
 			our-plans__price
+			our-plans__currency
 			our-plans__period
 			our-plans__features
 			our-plans__button button button_inverse
@@ -149,6 +150,13 @@ temp-page
 		plans-include__item
 		plans-include__title
 		plans-include__description
+
+# contacto #
+	content-header
+		content-header__image
+		content-header__title
+	contacto
+		contacto__form
 
 ==========================
 
@@ -182,6 +190,9 @@ button
 	button_inverse_blue
 inner
 	inner_smaller
+
+hr
+	hr_fullwidth
 	
 ==========================
 

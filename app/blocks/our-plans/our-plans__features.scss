@@ -1,0 +1,18 @@
+$block: 'our-plans__features';
+
+.#{$block} {
+	li {
+		padding: 15px 5px;
+		border-bottom: 1px solid #dedede;
+	}
+	li:first-of-type {
+		border-top: 1px solid #dedede;
+	}
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

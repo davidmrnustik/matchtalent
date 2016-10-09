@@ -25,4 +25,7 @@ $block: 'text';
 	&_blue {
 		color: $color-blue;
 	}
+	&_error {
+		color: red;
+	}
 }
