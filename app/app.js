@@ -5,7 +5,7 @@
 	header.init();
 	sliderImage.init();
 	ourPlans.init();
-	contactForm.init();
+	contact.init();
 	smoothScroll.init({
 	  selector: '[data-scroll]',
 	  selectorHeader: '[data-scroll-header]',

@@ -1,7 +1,7 @@
 doctype html
 html(lang="es")
   head
-    title= "Contact MatchTalent - Plataforma de empleo"
+    title= "Integraciones MatchTalent - Plataforma de empleo"
     meta(charset='utf-8')
     meta(
       name='content'
@@ -38,8 +38,8 @@ html(lang="es")
           li.nav__item: a(href='./') Inicio
           li.nav__item: a(href='./ventajas.html') Ventajas
           li.nav__item: a(href='./precios.html') Precios
-          li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
-          li.nav__item: a(href='./portales.html') ​Portales de Empleo
+          li.nav__item: a(href='./contacto.html') Contacto
+          li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
           li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
           
         ul.nav-lang.mobile-menu__nav-lang
@@ -65,8 +65,8 @@ html(lang="es")
           ul.nav.header__nav.only-desktop
             li.nav__item: a(href='./ventajas.html') Ventajas
             li.nav__item: a(href='./precios.html') Precios
-            li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
-            li.nav__item: a(href='./portales.html') ​Portales de Empleo
+            li.nav__item: a(href='./contacto.html') Contacto
+            li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
             li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
 
           ul.nav-lang.header__nav-lang.only-desktop
@@ -75,38 +75,19 @@ html(lang="es")
 
       section.content-header.remove_margin-top.remove_margin-bottom
         .content-header__image
-          +content-header-image('header_image_contacto.jpg')
+          +content-header-image('header_image_empleo.jpg')
         .inner
           .content-header__title
-            h1 Contacta con nosotros
+            h1 ​Portales de Empleo
 
-      section.content-text.inner.inner_smaller.contacto
+      section.content-text.inner.inner_smaller.contacto.remove_margin-bottom
         .content-text__text
           p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-          form#ContactForm.contacto__form(method='POST', action='')
-            fieldset
-              input(type='text',name='formName',id='formName',placeholder='Enter your name')
-              .error.text_error(data-error-type='ErrorNameShort', data-error-msg='Name is too short.', hidden)
-              .error.text_error(data-error-type='ErrorNameEmpty', data-error-msg='Name field is empty, please enter your name.', hidden)
-            fieldset
-              input(type='text',name='formEmail',id='formEmail',placeholder='Enter your email')
-              .error.text_error(data-error-type='ErrorEmailFormat', data-error-msg='Email has bad format.', hidden)
-              .error.text_error(data-error-type='ErrorEmailEmpty', data-error-msg='Email field is empty, please enter your email.', hidden)
-            fieldset
-              input(type='decimal',name='formPhoneNumber',id='formPhoneNumber',placeholder='Place your phone number')
-              .error.text_error(data-error-type='ErrorPhoneNumberEmpty', data-error-msg='Phone number field is empty, please enter your phone number.', hidden)
-              .error.text_error(data-error-type='ErrorPhoneNumberFormat', data-error-msg='Phone number has bad format, please enter decimals only.', hidden)
-            fieldset
-              textarea(cols=40,rows=10,name='formTextarea',id='formTextarea',placeholder='Write your message.')
-              .error.text_error(data-error-type='ErrorTextShort', data-error-msg='Text is too short.', hidden)
-              .error.text_error(data-error-type='ErrorTextEmpty', data-error-msg='Text is empty, please enter your message.', hidden)
-            fieldset
-              input(type='checkbox',name='formCheckboxConditions',id='formCheckboxConditions',placeholder='Place your phone number')
-              label(for='formCheckboxConditions') I accept all conditions...
-              .error.text_error(data-error-type='ErrorCheckboxConditions', data-error-msg='You have to apply conditions.', hidden)
-            input#formButton(type='submit', value='Send')
+      section.partners.inner.text_center
+        .grid.grid_flex.grid_center
+          +partners(["/img/portal_buscarempleo.jpg", "/img/portal_ticjob.jpg", "/img/portal_monster.jpg", "/img/portal_infoempleo.jpg", "/img/portal_linkedinjobs.jpg", "/img/portal_xing.jpg", "/img/portal_disjob.jpg", "/img/portal_fjobs.jpg", "/img/portal_trabajando.jpg", "/img/portal_turijobs.jpg", "/img/portal_jobatus.jpg", "/img/portal_indeed.jpg", "/img/portal_jobware.jpg", "/img/portal_jobandtalent.jpg", "/img/portal_laboris.jpg", "/img/portal_bebee.jpg", "/img/portal_experteer.jpg", "/img/portal_51job.jpg", "/img/portal_tecnoempleo.jpg", "/img/portal_universia.jpg", "/img/portal_universitariocontrabajo.jpg", "/img/portal_idoneum.jpg", "/img/portal_soloingenieria.jpg"])
 
       footer.footer.text_white
         .inner

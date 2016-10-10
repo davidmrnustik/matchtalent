@@ -12,9 +12,12 @@ $block: 'partners';
 	& > .grid_flex {
 		align-items: center;
 	}
-
+	&__button {
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			margin-top: 20px;
+		}
+	}
 	&__item {
-		//flex-basis: 10em;
 		padding: 2px 0px;
 	}
 }

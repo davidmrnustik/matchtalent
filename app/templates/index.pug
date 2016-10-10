@@ -9,7 +9,7 @@ html(lang="es")
     )
     meta(
       name='viewport'
-      description='width=device-width, initial-scale=1, maximum-scale=1'
+      content='width=device-width, initial-scale=1, maximum-scale=1'
     )
     link(
       rel='stylesheet'
@@ -39,7 +39,7 @@ html(lang="es")
           li.nav__item: a(href='./ventajas.html') Ventajas
           li.nav__item: a(href='./precios.html') Precios
           li.nav__item: a(href='./contacto.html') Contacto
-          li.nav__item: a(href='#') Integraciones
+          li.nav__item: a(href='./portales.html') ​Portales de Empleo
           li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
 
         ul.nav-lang.mobile-menu__nav-lang
@@ -64,11 +64,10 @@ html(lang="es")
               +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
 
           ul.nav.header__nav.only-desktop
-            li.nav__item: a(href='./') Inicio
             li.nav__item: a(href='./ventajas.html') Ventajas
             li.nav__item: a(href='./precios.html') Precios
             li.nav__item: a(href='./contacto.html') Contacto
-            li.nav__item: a(href='#') Integraciones
+            li.nav__item: a(href='./portales.html') ​Portales de Empleo
             li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
 
           ul.nav-lang.header__nav-lang.only-desktop
@@ -149,9 +148,11 @@ html(lang="es")
 
       section.partners.inner.text_center
         h2.partners__headline.text_center.text_uppercase
-          | Partners
+          | ​Portales de Empleo
         .grid.grid_flex.grid_center
-          +partners(["/img/partner_buscarempleo.jpg", "/img/partner_ticjob.jpg", "/img/partner_infoempleo.jpg", "/img/partner_disjob.jpg", "/img/partner_fjobs.jpg", "/img/partner_trabajando.jpg", "/img/partner_turijobs.jpg"])
+          +partners(["/img/portal_buscarempleo.jpg", "/img/portal_ticjob.jpg", "/img/portal_monster.jpg", "/img/portal_infoempleo.jpg", "/img/portal_linkedinjobs.jpg", "/img/portal_xing.jpg", "/img/portal_disjob.jpg", "/img/portal_fjobs.jpg"])
+        .button.partners__button
+          a(href='/portales.html') ver todos portales
 
       footer.footer.text_white
         .inner
@@ -166,7 +167,7 @@ html(lang="es")
                 li.nav__item: a(href='./ventajas.html') Ventajas
                 li.nav__item: a(href='./precios.html') Precios
                 li.nav__item: a(href='./contacto.html') Contacto
-                li.nav__item: a(href='#') Integraciones
+                li.nav__item: a(href='./portales.html') ​Portales de Empleo
                 li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
                 li.nav__item.nav__item_highlighted: a(href='tel:987 654 321') Llamar 987 654 321
                 li.nav__item: a(href='#') Política de cookies

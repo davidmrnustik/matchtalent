@@ -1,5 +1,5 @@
 (function(global){
-	var contactForm = {},
+	var contact = {},
 			errors = {},
 			contactForm = document.getElementById('ContactForm'),
 			formName = document.getElementById('formName'),
@@ -137,10 +137,13 @@
 		}
 	}
 
-	contactForm.init = function init(){
-		document.getElementById('formButton').addEventListener('click', validate);
+	contact.init = function init(){
+
+		if(document.getElementById('formButton') != null) {
+			document.getElementById('formButton').addEventListener('click', validate);
+		}
 	};
 
-	global.contactForm = contactForm;
+	global.contact = contact;
 
 })(this);
