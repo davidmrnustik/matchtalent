@@ -1,0 +1,15 @@
+$block: 'clients__item';
+
+.#{$block} {
+	@include custom-breakpoint-min-max(420px, $breakpoint-tablet) {
+		width: 50% !important;
+	}
+	@include custom-breakpoint-max($breakpoint-phablet) {
+		&:first-child {
+			margin-bottom: 4px;
+		}
+		&:last-child {
+			margin-top: 4px;
+		}
+	}
+}

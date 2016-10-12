@@ -1,0 +1,31 @@
+form#ContactForm.contacto__form(method='POST', action='')
+  fieldset
+    label(for='formName') Nombre:
+    input(type='text',name='formName',id='formName',placeholder='Nombre')
+    .error.text_error(data-error-type='ErrorNameShort', data-error-msg='Name is too short.', hidden)
+    .error.text_error(data-error-type='ErrorNameEmpty', data-error-msg='Name field is empty, please enter your name.', hidden)
+  fieldset
+    label(for='formCompany') Empresa:
+    input(type='text',name='formCompany',id='formCompany',placeholder='Empresa')
+    .error.text_error(data-error-type='ErrorCompanyShort', data-error-msg='Company is too short.', hidden)
+    .error.text_error(data-error-type='ErrorCompanyEmpty', data-error-msg='Company field is empty, please enter name of your company.', hidden)
+  fieldset
+    label(for='formPhoneNumber') Teléfono:
+    input(type='decimal',name='formPhoneNumber',id='formPhoneNumber',placeholder='Teléfono')
+    .error.text_error(data-error-type='ErrorPhoneNumberEmpty', data-error-msg='Phone number field is empty, please enter your phone number.', hidden)
+    .error.text_error(data-error-type='ErrorPhoneNumberFormat', data-error-msg='Phone number has bad format, please enter decimals only.', hidden)
+  fieldset
+    label(for='formEmail') Email:
+    input(type='text',name='formEmail',id='formEmail',placeholder='Email')
+    .error.text_error(data-error-type='ErrorEmailFormat', data-error-msg='Email has bad format.', hidden)
+    .error.text_error(data-error-type='ErrorEmailEmpty', data-error-msg='Email field is empty, please enter your email.', hidden)
+  fieldset
+    label(for='formTextarea') Consulta:
+    textarea(cols=40,rows=10,name='formTextarea',id='formTextarea',placeholder='Consulta')
+    .error.text_error(data-error-type='ErrorTextShort', data-error-msg='Text is too short.', hidden)
+    .error.text_error(data-error-type='ErrorTextEmpty', data-error-msg='Text is empty, please enter your message.', hidden)
+  fieldset
+    input(type='checkbox',name='formCheckboxConditions',id='formCheckboxConditions')
+    label(for='formCheckboxConditions') I accept all conditions...
+    .error.text_error(data-error-type='ErrorCheckboxConditions', data-error-msg='You have to apply conditions.', hidden)
+  button#formButton.button Send

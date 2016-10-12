@@ -1,0 +1,22 @@
+$block: 'clients__logo';
+
+.#{$block} {
+	position: relative;
+	padding: 5px 0px;
+
+	&:after {
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			content: "";
+			position: absolute;
+			top: 50%;
+			@include transform(translate, -50%, Y);
+			right: 0px;
+			height: 45px;
+			width: 1px;
+			background: #dadada;
+		}
+	}
+	img {
+		width: 140px;
+	}
+}

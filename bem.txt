@@ -193,6 +193,10 @@ inner
 
 hr
 	hr_fullwidth
+
+modal
+	modal__content
+	modal__close
 	
 ==========================
 

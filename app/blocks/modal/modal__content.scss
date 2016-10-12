@@ -1,0 +1,22 @@
+$block: 'modal__content';
+
+.#{$block} {
+	position: relative;
+	background-color: #fff;
+	width: auto;
+	margin: 10px auto;
+	padding: 25px 35px 25px 25px;
+	height: auto;
+	overflow-y: auto;
+	max-width: calc(60% - 25px);
+
+	@include custom-breakpoint-max($breakpoint-phablet) {
+		max-width: calc(100% - 25px);
+	}
+	@media (min-width: $breakpoint-phablet) and (max-width: $breakpoint-tablet) and (orientation: portrait) {
+		max-width: calc(80% - 25px);
+	}
+	@include custom-breakpoint-min($breakpoint-desktop) {
+		max-width: calc(50% - 25px);
+	}
+}

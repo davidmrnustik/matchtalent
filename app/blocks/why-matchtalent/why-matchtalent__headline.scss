@@ -1,0 +1,11 @@
+$block: 'why-matchtalent__headline';
+
+.#{$block} {
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	@include custom-breakpoint-min($breakpoint-tablet) {
+		padding-bottom: 40px;
+	}
+}

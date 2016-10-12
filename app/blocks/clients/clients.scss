@@ -11,38 +11,4 @@ $block: 'clients';
 	@include font-size(15);
 	padding: 20px 0px;
 	margin-bottom: 30px !important;
-
-	&__logo {
-		position: relative;
-		padding: 5px 0px;
-
-		&:after {
-			@include custom-breakpoint-min($breakpoint-desktop) {
-				content: "";
-				position: absolute;
-				top: 50%;
-				@include transform(translate, -50%, Y);
-				right: 0px;
-				height: 45px;
-				width: 1px;
-				background: #dadada;
-			}
-		}
-		img {
-			width: 140px;
-		}
-	}
-	&__item {
-		@include custom-breakpoint-min-max(420px, $breakpoint-tablet) {
-			width: 50% !important;
-		}
-		@include custom-breakpoint-max($breakpoint-phablet) {
-			&:first-child {
-				margin-bottom: 4px;
-			}
-			&:last-child {
-				margin-top: 4px;
-			}
-		}
-	}
 }

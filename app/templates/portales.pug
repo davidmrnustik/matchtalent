@@ -1,7 +1,7 @@
 doctype html
 html(lang="es")
   head
-    title= "Integraciones MatchTalent - Plataforma de empleo"
+    title= "Portales de empleo MatchTalent - Plataforma de empleo"
     meta(charset='utf-8')
     meta(
       name='content'
@@ -40,7 +40,7 @@ html(lang="es")
           li.nav__item: a(href='./precios.html') Precios
           li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
           li.nav__item: a(href='./contacto.html') Contacto
-          li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+          li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
           
         ul.nav-lang.mobile-menu__nav-lang
           li.nav-lang__item.nav-lang__item_highlighted Español
@@ -67,7 +67,7 @@ html(lang="es")
             li.nav__item: a(href='./precios.html') Precios
             li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
             li.nav__item: a(href='./contacto.html') Contacto
-            li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+            li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
 
           ul.nav-lang.header__nav-lang.only-desktop
             li.nav-lang__item.nav-lang__item_highlighted Español
@@ -83,9 +83,10 @@ html(lang="es")
       section.content-text.inner.inner_smaller.contacto.remove_margin-bottom
         .content-text__text
           p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            | Reciba candidatos de los principales portales de empleo, tanto generales como sectoriales. Si desea añadir alguna otra entidad, centro formativo, portal etc, que no esté en este listado, lo incluiremos dentro de su plataforma.
+          hr.hr
 
-      section.partners.inner.text_center
+      section.partners.inner.text_center.remove_margin-top
         .grid.grid_flex.grid_center
           +partners(["/img/portal_buscarempleo.jpg", "/img/portal_ticjob.jpg", "/img/portal_monster.jpg", "/img/portal_infoempleo.jpg", "/img/portal_linkedinjobs.jpg", "/img/portal_xing.jpg", "/img/portal_disjob.jpg", "/img/portal_fjobs.jpg", "/img/portal_trabajando.jpg", "/img/portal_turijobs.jpg", "/img/portal_jobatus.jpg", "/img/portal_indeed.jpg", "/img/portal_jobware.jpg", "/img/portal_jobandtalent.jpg", "/img/portal_laboris.jpg", "/img/portal_bebee.jpg", "/img/portal_experteer.jpg", "/img/portal_51job.jpg", "/img/portal_tecnoempleo.jpg", "/img/portal_universia.jpg", "/img/portal_universitariocontrabajo.jpg", "/img/portal_idoneum.jpg", "/img/portal_soloingenieria.jpg"])
 
@@ -104,7 +105,7 @@ html(lang="es")
                 li.nav__item: a(href='./precios.html') Precios
                 li.nav__item: a(href='./portales.html') ​Portales de Empleo
                 li.nav__item: a(href='./contacto.html') Contacto
-                li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+                li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
                 li.nav__item.nav__item_highlighted: a(href='tel:987 654 321') Llamar 987 654 321
                 li.nav__item: a(href='#') Política de cookies
                 li.nav__item: a(href='#') Aviso legal
@@ -123,4 +124,6 @@ html(lang="es")
               )
                 +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
 
+    include inc/modal-prueba-gratuita.pug
+    
     script(src='/js/app.js')

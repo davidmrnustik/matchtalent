@@ -1,13 +1,10 @@
 (function(global) {
-	var openMenu = {};
+	var openMenu = {},
+			mobileMenu = document.getElementById('mobileMenu'),
+			menuIcon = document.querySelector('.mobile-menu__menu-icon'),
+			header = document.querySelector('.header');
 
-	function toggleMenu() {
-		//var mainContent = document.getElementById('mainContent');
-		var mobileMenu = document.getElementById('mobileMenu'),
-				menuIcon = document.querySelector('.mobile-menu__menu-icon'),
-				header = document.querySelector('.header');
-
-		//utils.toggleClass(mainContent, 'menu-open');
+	openMenu.toggle = function toggle() {
 		utils.toggleClass(mobileMenu, 'mobile-menu_show');
 		utils.toggleClass(document.body, 'menu-open');
 
@@ -31,7 +28,7 @@
 	}
 
 	openMenu.init = function init() {
-		document.getElementById('mobileMenu') !== null && eventListener('.menu-icon', toggleMenu);
+		document.getElementById('mobileMenu') !== null && eventListener('.menu-icon', openMenu.toggle);
 	};
 
 	global.openMenu = openMenu;

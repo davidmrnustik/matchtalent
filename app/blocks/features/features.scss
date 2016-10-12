@@ -4,14 +4,6 @@ $block: 'features';
 	position: relative;
 	@include bg-resp-image('inicio_ventajas_bg.jpg', center, center, cover);
 
-	&__headline {
-		padding-bottom: 20px;
-
-		@include custom-breakpoint-min($breakpoint-tablet) {
-			padding-bottom: 40px;
-		}
-	}
-
 	&:before {
 		content: "";
 		display: block;
@@ -27,31 +19,6 @@ $block: 'features';
 
 		@include custom-breakpoint-min($breakpoint-tablet) {
 			padding: 60px 0px;
-		}
-	}
-	&__button {
-
-		display: block;
-
-		@include custom-breakpoint-min($breakpoint-tablet) {
-			margin-top: 20px;
-		}
-	}
-	&__description {
-		position: relative;
-		padding-left: 42px;
-
-		&_icon-check {
-			&:before {
-				content: "";
-				top: -8px;
-				left: 0px;
-				position: absolute;
-				display: block;
-				width: 40px;
-				height: 40px;
-				@include bg-image('checkbox.svg', left, top, cover);
-			}
 		}
 	}
 }

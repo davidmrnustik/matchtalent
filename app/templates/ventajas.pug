@@ -40,7 +40,7 @@ html(lang="es")
           li.nav__item: a(href='./precios.html') Precios
           li.nav__item: a(href='./portales.html') ​Portales de Empleo
           li.nav__item: a(href='./contacto.html') Contacto
-          li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+          li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
           
         ul.nav-lang.mobile-menu__nav-lang
           li.nav-lang__item.nav-lang__item_highlighted Español
@@ -67,7 +67,7 @@ html(lang="es")
             li.nav__item: a(href='./precios.html') Precios
             li.nav__item: a(href='./portales.html') ​Portales de Empleo
             li.nav__item: a(href='./contacto.html') Contacto
-            li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+            li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
 
           ul.nav-lang.header__nav-lang.only-desktop
             li.nav-lang__item.nav-lang__item_highlighted Español
@@ -93,7 +93,7 @@ html(lang="es")
                 p
                   | Contacta con nosotros <strong><a href="tel:987 654 321">987&nbsp;654&nbsp;321</a></strong> o solicita demo:
                 .cta__button.button.button_inverse.button_inverse_blue
-                  a(href='#') solicitar demo
+                  a(href='#modal-prueba-gratuita', data-modal) solicitar demo
 
       section.our-features
         .inner.inner_smaller
@@ -167,7 +167,7 @@ html(lang="es")
                 li.nav__item: a(href='./precios.html') Precios
                 li.nav__item: a(href='./portales.html') ​Portales de Empleo
                 li.nav__item: a(href='./contacto.html') Contacto
-                li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+                li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
                 li.nav__item.nav__item_highlighted: a(href='tel:987 654 321') Llamar 987 654 321
                 li.nav__item: a(href='#') Política de cookies
                 li.nav__item: a(href='#') Aviso legal
@@ -185,5 +185,7 @@ html(lang="es")
                 target='_blank'
               )
                 +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+
+    include inc/modal-prueba-gratuita.pug
 
     script(src='/js/app.js')

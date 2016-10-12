@@ -2,7 +2,7 @@ $block: 'our-plans__price';
 
 .#{$block} {
 	margin-top: 15px;
-	margin-bottom: 1px;
+	margin-bottom: 6px;
 	@include font-size(35);
 	font-family: $font-secondary;
 

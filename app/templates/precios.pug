@@ -1,7 +1,7 @@
 doctype html
 html(lang="es")
   head
-    title= "Ventajas de MatchTalent - Plataforma de empleo"
+    title= "Precios de MatchTalent - Plataforma de empleo"
     meta(charset='utf-8')
     meta(
       name='content'
@@ -40,7 +40,7 @@ html(lang="es")
           li.nav__item.nav__item_active: a(href='./precios.html') Precios
           li.nav__item: a(href='./portales.html') ​Portales de Empleo
           li.nav__item: a(href='./contacto.html') Contacto
-          li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+          li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
           
         ul.nav-lang.mobile-menu__nav-lang
           li.nav-lang__item.nav-lang__item_highlighted Español
@@ -67,7 +67,7 @@ html(lang="es")
             li.nav__item.nav__item_active: a(href='./precios.html') Precios
             li.nav__item: a(href='./portales.html') ​Portales de Empleo
             li.nav__item: a(href='./contacto.html') Contacto
-            li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+            li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
 
           ul.nav-lang.header__nav-lang.only-desktop
             li.nav-lang__item.nav-lang__item_highlighted Español
@@ -118,7 +118,7 @@ html(lang="es")
               li Unlimited users
               li: a(href='#plansInclude', data-scroll) All features
             .our-plans__button.button.button_inverse_blue
-              a(href='#') Prueba gratuita
+              a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
           .our-plans__item.grid__column.our-plans__item_highlighted
             .our-plans__header
               .our-plans__title Experto
@@ -155,11 +155,11 @@ html(lang="es")
               li Unlimited users
               li: a(href='#plansInclude', data-scroll) All features
             .our-plans__button.button.button_inverse_blue
-              a(href='#') Prueba gratuita
+              a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
           .our-plans__item.grid__column
             .our-plans__header
               .our-plans__title Custom
-              .our-plans__price.text_blue: a(href='#') Contacta con nosotros
+              .our-plans__price.text_blue: a(href='./contacto.html') Contacta con nosotros
             ul.our-plans__features
               li
                 | <strong>Hasta 30 Active Jobs</strong>
@@ -169,7 +169,7 @@ html(lang="es")
               li Unlimited users
               li: a(href='#plansInclude', data-scroll) All features
             .our-plans__button.button.button_inverse_blue
-              a(href='#') Prueba gratuita
+              a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
 
       .hr.hr_fullwidth
 
@@ -236,7 +236,7 @@ html(lang="es")
                 li.nav__item: a(href='./precios.html') Precios
                 li.nav__item: a(href='./portales.html') ​Portales de Empleo
                 li.nav__item: a(href='./contacto.html') Contacto
-                li.nav__item.nav__item_highlighted: a(href='#') Prueba gratuita
+                li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
                 li.nav__item.nav__item_highlighted: a(href='tel:987 654 321') Llamar 987 654 321
                 li.nav__item: a(href='#') Política de cookies
                 li.nav__item: a(href='#') Aviso legal
@@ -254,5 +254,7 @@ html(lang="es")
                 target='_blank'
               )
                 +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+
+    include inc/modal-prueba-gratuita.pug
 
     script(src='/js/app.js')

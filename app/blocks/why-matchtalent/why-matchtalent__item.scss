@@ -1,0 +1,48 @@
+$block: 'why-matchtalent__item';
+
+.#{$block} {
+	&:nth-child(2) {
+		position: relative;	
+
+		@include custom-breakpoint-max($breakpoint-phablet) {
+			margin: 30px 0px 15px 0px !important;
+			padding: 15px 0px 30px 0px;
+
+			&:before,
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 100%;
+				top: 0px;
+				left: 0px;
+				height: 1px;
+				width: 100%;
+				background: #dadada;
+			}
+			&:after {
+				bottom: 0px;
+				top: initial;
+			}
+		}
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			&:before,
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 100%;
+				top: 0px;
+				width: 1px;
+				background: #dadada;
+			}
+			&:before {
+				left: -15px;
+			}
+			&:after {
+				right: -15px;
+			}
+		}
+	}
+}
+

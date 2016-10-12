@@ -6,6 +6,7 @@
 	sliderImage.init();
 	ourPlans.init();
 	contact.init();
+	modal.init();
 	smoothScroll.init({
 	  selector: '[data-scroll]',
 	  selectorHeader: '[data-scroll-header]',

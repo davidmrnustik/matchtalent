@@ -7,7 +7,6 @@ $block: 'temp-page';
 	top: 0px;
 	left: 0px;
 	overflow: auto;
-	//background-color: $color-blue;
 	background: $color-blue url('../img/pattern_diagonal_line.png') repeat top left;
 
 	a {
@@ -18,10 +17,6 @@ $block: 'temp-page';
 			text-decoration: none;
 		}
 	}
-	&__logo {
-		//margin-top: 50px;
-	}
-
 	&__content {
 		position: absolute;
 		top: 15%;

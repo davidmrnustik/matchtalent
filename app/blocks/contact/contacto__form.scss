@@ -1,0 +1,61 @@
+$block: 'contacto__form';
+
+.#{$block} {
+	width: auto;
+	max-width: 100%;
+	margin-top: 10px;
+
+	@include custom-breakpoint-min($breakpoint-desktop) {
+		max-width: 50%;
+
+		.modal-page & {
+			max-width: 100%;
+		}
+	}
+
+	label {
+		display: block;
+		font-weight: 700;
+		color: $color-blue;
+	}
+
+	label[for='formCheckboxConditions'] {
+		display: inline-block;
+		font-weight: 500;
+	}
+	fieldset {
+		margin-bottom: 20px;
+
+		&:nth-last-of-type(2) {
+			margin-bottom: 10px;
+
+			.error {
+				margin-bottom: 5px;
+			}
+		}
+	}
+	input,
+	textarea {
+		width: 100%;
+		border: 0px;
+		padding: 5px 0px;
+		border-bottom: 1px solid lighten($color-grey, 45%);
+		
+	}
+	input[type=checkbox] {
+		width: auto;
+		margin-right: 7px;
+	}
+	textarea {
+		padding: 5px 8px;
+		height: 200px;
+		border: 1px solid lighten($color-grey, 45%);
+		margin-top: 8px;
+	}
+	.text_error {
+		@include font-size(14);
+		font-weight: 700;
+		line-height: 1.4em;
+		margin-top: 5px;
+	}
+}

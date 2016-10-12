@@ -1,0 +1,25 @@
+$block: 'content-header__title';
+
+.#{$block} {
+	position: relative;
+	height: 100%;
+
+	h1 {
+		color: #fff;
+		width: 100%;
+		text-align: center;
+		@include font-size(30);
+		@include centerMiddle();
+		top: 60%;
+
+		@include custom-breakpoint-max($breakpoint-tablet) {
+			margin-top: 30px;
+		}
+		@include custom-breakpoint-min($breakpoint-tablet) {
+			@include font-size(40);
+		}
+		@include custom-breakpoint-min($breakpoint-desktop) {
+			@include font-size(53);
+	  }
+	}
+}

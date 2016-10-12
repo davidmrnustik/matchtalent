@@ -1,0 +1,31 @@
+$block: 'menu-icon';
+
+.#{$block}__content {
+	display: inline-block;
+	height: 40px;
+	position: relative;
+	vertical-align: middle;
+	width: 22px;
+
+	.#{$block}__line {
+		background-color: $color-blue;
+		display: block;
+		height: 2px;
+		width: 100%;
+	}
+	.#{$block}__line:nth-child(1){
+		margin-top: 20px;
+		transition: opacity .2s;
+	}
+	.#{$block}__line:nth-child(2),
+	.#{$block}__line:nth-child(3){
+		position: absolute;
+		transition: transform .3s;
+	}
+	.#{$block}__line:nth-child(2) {
+		transform: translateY(-430%);
+	}
+	.#{$block}__line:nth-child(3) {
+		transform: translateY(230%);
+	}
+}

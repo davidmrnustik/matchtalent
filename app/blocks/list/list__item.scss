@@ -1,0 +1,18 @@
+$block: 'list__item';
+
+.#{$block} {
+	position: relative;
+	padding-left: 12px;
+	padding-bottom: 15px;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 9px;
+		left: 0px;
+		width: 5px;
+		height: 5px;
+		background-color: $color-blue;
+	}
+}

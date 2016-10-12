@@ -1,0 +1,19 @@
+$block: 'features__description';
+
+.#{$block} {
+	position: relative;
+	padding-left: 42px;
+
+	&_icon-check {
+		&:before {
+			content: "";
+			top: -8px;
+			left: 0px;
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 40px;
+			@include bg-image('checkbox.svg', left, top, cover);
+		}
+	}
+}

@@ -1,12 +1,22 @@
 (function(global){
-	var header = {};
-
-	// jQuery solution
-	header.init = function init(){
-		var headerElement = $("header.header"),
+	var header = {},
+		headerElement = $("header.header"),
     headerFixedClass = "header_fixed",
     body = $('body'),
     headerHeight = $('header').outerHeight();
+
+	function headerWidth(){
+		var windowWidth = $(window).width();
+		headerElement.css('width', windowWidth);
+	}
+	
+	header.init = function init(){
+
+    headerWidth();
+
+    $(window).resize(function(){
+    	headerWidth();
+    })
 
 		$(window).scroll(function() {
 		  if( $(this).scrollTop() > headerHeight ) {

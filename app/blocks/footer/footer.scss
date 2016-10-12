@@ -7,50 +7,5 @@ $block: 'footer';
 
 	@include custom-breakpoint-max($breakpoint-phablet) {
 		padding: 45px 0px 10px 0px;
-
-		.grid {
-			margin: 0px !important;
-		}
-	}
-
-	&__grid_3-column {
-		& > .grid__column {
-			&:first-child,
-			&:last-child {
-				@include custom-breakpoint-min($breakpoint-tablet) {
-					min-width: 160px;
-				}
-			}
-		}
-	}
-	&__logo {
-		width: 160px;
-		height: 26px;
-		margin-right: 10px;
-
-		@include custom-breakpoint-max($breakpoint-tablet) {
-			width: 200px;
-			margin: 0 auto 35px auto;
-		}
-		img {
-			width: 100%;
-		}
-	}
-}
-.#{$block}__grid_2-column {
-	@include custom-breakpoint-max($breakpoint-tablet) {
-		text-align: center;
-	}
-}
-.#{$block}__grid_3-column {
-	@include custom-breakpoint-max($breakpoint-tablet) {
-		margin-bottom: 30px;
-		text-align: center;
-		display: block !important;
-	}
-	.grid__column:nth-child(2){
-		@include custom-breakpoint-min($breakpoint-tablet) {
-			max-width: calc(100% - 320px);
-		}
 	}
 }

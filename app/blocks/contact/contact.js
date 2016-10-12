@@ -3,6 +3,7 @@
 			errors = {},
 			contactForm = document.getElementById('ContactForm'),
 			formName = document.getElementById('formName'),
+			formCompany = document.getElementById('formCompany'),
 			formEmail = document.getElementById('formEmail'),
 			formPhoneNumber = document.getElementById('formPhoneNumber'),
 			formTextarea = document.getElementById('formTextarea'),
@@ -16,7 +17,9 @@
 				'ErrorPhoneNumberFormat',
 				'ErrorCheckboxConditions',
 				'ErrorTextShort',
-				'ErrorTextEmpty'
+				'ErrorTextEmpty',
+				'ErrorCompanyEmpty',
+				'ErrorCompanyShort'
 			];
 
 	function getDataElement(idAttr) {
@@ -108,6 +111,7 @@
 		formPhoneNumber.value = "";
 		formTextarea.value = "";
 		formCheckboxContitions.checked = false;
+		formCompany.value = "";
 	}
 	function sendFormValues() {
 		var values = {
@@ -129,6 +133,8 @@
 		validateCheckbox(formCheckboxContitions, errorField[6]);
 		validateLength(formTextarea, errorField[7], 10);
 		validateEmpty(formTextarea, errorField[8]);
+		validateEmpty(formCompany, errorField[9]);
+		validateLength(formCompany, errorField[10], 2);
 
 		if (errorsReturn()) {
 			contactForm.submit;

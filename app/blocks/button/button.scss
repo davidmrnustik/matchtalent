@@ -1,27 +1,41 @@
 $block: 'button';
-
-.#{$block} {
-	text-transform: uppercase;
+%buttonBasic {
+	padding: 7px 14px 5px 14px;
 	display: inline-block;
+	text-transform: uppercase;
+	border: 1px solid $color-blue;
+	font-family: $font-secondary;
+	transition: background .5s, color .5s, border .5s;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+%buttonBasicHover {
+	&:hover,
+	&:focus {
+		background: $color-blue;
+		color: white;
+	}
+}
+button.#{$block} {
+	@extend %buttonBasic;
+	background: none;
+	cursor: pointer;
+	color: $link-color;
+	padding-bottom: 7px;
+
+	@extend %buttonBasicHover;
+}
+.#{$block} {
+	
 	@include font-size(14);
 
 	a {
-		padding: 7px 14px 5px 14px;
-		display: inline-block;
-		border: 1px solid $color-blue;
-		font-family: $font-secondary;
-		transition: background .5s, color .5s, border .5s;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		@extend %buttonBasic;
 	}
 	&:not(.#{$block}_inverse) {
 		a {
 			background: transparent;
 
-			&:hover,
-			&:focus {
-				background: $color-blue;
-				color: white;
-			}
+			@extend %buttonBasicHover;
 		}
 	}
 	&.#{$block}_inverse {

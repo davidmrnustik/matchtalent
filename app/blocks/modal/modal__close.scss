@@ -1,0 +1,10 @@
+$block: 'modal__close';
+
+.#{$block} {
+	color: $color-grey;
+	float: right;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin: -25px -35px 0;
+	@include font-size(20);
+}
