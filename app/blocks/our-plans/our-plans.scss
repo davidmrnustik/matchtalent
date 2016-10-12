@@ -28,6 +28,7 @@ $block: 'our-plans';
 		margin: 0px 6px;
 
 		label {
+			@include font-size(13);
 			padding-left: 3px;
 			display: inline-block;
 		}
