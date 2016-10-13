@@ -11,6 +11,9 @@ var reload					= browserSync.reload;
 var src = {
 	scss: ['./app/**/*.scss'],
 	js: ['./app/base/utils/*.js','./app/base/*.js','./app/blocks/**/*.js','./app/app.js'],
+	css: [
+		'./app/components/leaflet/dist/leaflet.css'
+	],
 	jscomponents: [
 		'./app/components/modernizr-load/modernizr.js',
 		'./app/components/jquery/jquery.js',
@@ -18,10 +21,14 @@ var src = {
 		'./app/components/picturefill/dist/picturefill.js',
 		'./app/components/smooth-scroll/dist/js/smooth-scroll.js'
 	],
+	jsothers: [
+		'./app/components/leaflet/dist/leaflet.js'
+	],
 	slick: './app/components/slick-carousel/slick/ajax-loader.gif',
 	fonts: ['./app/fonts/*', './app/components/font-awesome/fonts/*'],
 	jslegacy: ['./app/components/respond/dest/respond.src.js'],
 	img: './app/img/**/*',
+	imgleaflet: './app/components/leaflet/dist/images/*',
 	dev: '_dev',
 	build: '_build',
 	pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}'],
@@ -52,6 +59,12 @@ gulp.task('sass:dev', function(){
 	.pipe(gulp.dest(src.dev + '/css'));
 });
 
+gulp.task('css', function(){
+	gulp.src(src.css)
+	.pipe(gp.cssnano())
+	.pipe(gulp.dest(src.dev + '/css'));
+});
+
 gulp.task('js', function(){
 	return gulp.src(src.js, { base: 'app' })
 	.pipe(gp.sourcemaps.init())
@@ -73,6 +86,13 @@ gulp.task('jscomponents', function(){
 gulp.task('jscomponentsie', function(){
 	return gulp.src(src.jscomponents, { base: 'app' })
 		.pipe(gp.concat('components_ie.js'))
+		.pipe(gulp.dest(src.dev + '/js'));
+});
+
+gulp.task('jsothers', function(){
+	return gulp.src(src.jsothers, { base: 'app' })
+		.pipe(gp.concat('modules.js'))
+		.pipe(gp.uglify())
 		.pipe(gulp.dest(src.dev + '/js'));
 });
 
@@ -118,6 +138,11 @@ gulp.task('images', function(){
 	.pipe(gulp.dest(src.dev + '/img'));
 });
 
+gulp.task('imgleaflet', function(){
+	gulp.src(src.imgleaflet)
+	.pipe(gulp.dest(src.dev + '/css/images'));
+});
+
 gulp.task('fonts', function(){
 	return gulp.src(src.fonts)
 	.pipe(gulp.dest(src.dev + '/fonts'));
@@ -128,7 +153,7 @@ gulp.task('watch:pug', function(){
 });
 
 gulp.task('build', ['clean'], function(){
-	runSequence('pug', 'sass:dev', 'js', 'jscomponents', 'jscomponentsie', 'jslegacy', 'slick', 'fonts', 'images');
+	runSequence('pug', 'sass:dev', 'css', 'js', 'jscomponents', 'jscomponentsie', 'jsothers', 'jslegacy', 'slick', 'fonts', 'images', 'imgleaflet');
 });
 
 gulp.task('pug', function buildHTML(){

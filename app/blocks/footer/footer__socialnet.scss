@@ -2,6 +2,10 @@ $block: 'footer__socialnet';
 $icon: 'footer__icon';
 
 .#{$block} {
+
+	@include custom-breakpoint-min($breakpoint-tablet) {
+		text-align: right;
+	}
 	.#{$icon} {
 		display: inline-block;
 		@include font-size(24);

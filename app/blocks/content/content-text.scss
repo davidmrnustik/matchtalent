@@ -2,6 +2,9 @@ $block: 'content-text';
 
 .#{$block} {
 	&__text {
+		h4 ~ p {
+			margin-top: 10px;
+		}
 		p {
 			margin-bottom: 10px;
 		}

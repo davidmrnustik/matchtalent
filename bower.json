@@ -20,6 +20,7 @@
     "jquery": "1.7.0",
     "picturefill": "^3.0.2",
     "font-awesome": "Font-Awesome#^4.6.3",
-    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^9.2.0"
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^9.2.0",
+    "leaflet": "^1.0.1"
   }
 }
