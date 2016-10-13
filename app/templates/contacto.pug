@@ -68,11 +68,11 @@ html(lang="es")
           .grid__column
             h4 Dirección
             p
-              | La Terminal, Centro de Arte y Tecnología 4ªpl.<br/>Avda. Ciudad de Soria, 8<br/>50003 Zaragoza
+              | <strong>MatchTalent</strong><br/>La Terminal, Centro de Arte y Tecnología 4ªpl.<br/>Avda. Ciudad de Soria, 8<br/>50003 Zaragoza
             p 
               | (+34) 876 01 99 22<br />memorandum@memorandum.net
             hr.hr
-            #mapid(style='height:400px;z-index:2')
+            #map
           .grid__column
             p
               | Si desea más información, resolver alguna duda o realizar una prueba con MatchTalent, rellene el siguiente formulario:
@@ -86,11 +86,12 @@ html(lang="es")
     script(src='/js/app.js')
     script(src='/js/modules.js')
     script.
-      var mymap = L.map('mapid', {
-        center: [41.659054, -0.9068540000000098],
-        zoom: 13
-      });
-      var marker = L.marker([41.659054, -0.9068540000000098]).addTo(mymap);
+      var center = [41.659054, -0.9068540000000098],
+          mymap = L.map('map', {
+            center: center,
+            zoom: 13
+          });
+      var marker = L.marker(center).addTo(mymap);
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: '',
         maxZoom: 18,
