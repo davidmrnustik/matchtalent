@@ -117,6 +117,7 @@
 		formTextarea.value = "";
 		formCheckboxContitions.checked = false;
 		formCompany.value = "";
+		formCaptcha.value = "";
 	}
 	function sendFormValues() {
 		sendValues = {
