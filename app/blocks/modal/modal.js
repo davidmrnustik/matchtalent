@@ -10,7 +10,7 @@
 
 			if(id == parent.getAttribute('id')) {
 				parent.addEventListener('click', function(e){
-					if(e.target.className == 'modal modal_open' || e.target.className == 'fa fa-close' || e.target.className == 'modal__close'){
+					if(e.target.className == 'modal modal_open' || e.target.classList.contains('js-modal-close') || e.target.className == 'modal__close'){
 						utils.removeClass(parent, 'modal_open');
 						utils.removeClass(document.documentElement, 'modal-page');
 						document.body.style.paddingRight = "";
@@ -42,7 +42,8 @@
 		var modalTriggers = document.querySelectorAll('a[data-modal]');
 
 		for(var i = 0, l = modalTriggers.length; i < l; i++) {
-			modalTriggers[i].addEventListener('click', function(){
+			modalTriggers[i].addEventListener('click', function(e){
+				e.preventDefault();
 				openModal(this.getAttribute('href').substr(1));
 			})
 		}

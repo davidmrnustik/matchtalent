@@ -28,4 +28,7 @@ $block: 'text';
 	&_error {
 		color: red;
 	}
+	&_success {
+		color: green;
+	}
 }

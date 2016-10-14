@@ -1,6 +1,8 @@
 (function(global){
 	var contact = {},
 			errors = {},
+			textSuccess = document.querySelector('.contacto__success'),
+			modalInitForm = document.querySelectorAll('[data-init-form]'),
 			contactForm = document.getElementById('ContactForm'),
 			formName = document.getElementById('formName'),
 			formCompany = document.getElementById('formCompany'),
@@ -138,12 +140,26 @@
 
 		if (errorsReturn()) {
 			contactForm.submit;
+			contactForm.setAttribute('hidden', 'hidden');
+			textSuccess.removeAttribute('hidden');
 			console.log("Contact form data are:" + sendFormValues());
 			resetForm();
 		}
 	}
 
+	function initForm(){
+
+		for(var i = 0, l = modalInitForm.length; i < l; i++){
+			modalInitForm[i].addEventListener('click', function(){
+				textSuccess.setAttribute('hidden', 'hidden');
+				contactForm.removeAttribute('hidden');
+			})
+		}
+	}
+
 	contact.init = function init(){
+
+		initForm();
 
 		if(document.getElementById('formButton') != null) {
 			document.getElementById('formButton').addEventListener('click', validate);

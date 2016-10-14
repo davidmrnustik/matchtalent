@@ -31,6 +31,8 @@ $block: 'our-plans';
 			@include font-size(13);
 			padding-left: 3px;
 			display: inline-block;
+			top: -3px;
+			position: relative;
 		}
 	}
 	&__grid_3-columns {

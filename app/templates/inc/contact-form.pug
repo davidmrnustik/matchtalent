@@ -1,3 +1,8 @@
+.contacto__success.text_success(hidden)
+  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  .button()
+    a.js-modal-close(href='#') Cerrar
+
 form#ContactForm.contacto__form(method='POST', action='')
   fieldset
     label(for='formName') Nombre:
@@ -11,12 +16,12 @@ form#ContactForm.contacto__form(method='POST', action='')
     .error.text_error(data-error-type='ErrorCompanyEmpty', data-error-msg='Company field is empty, please enter name of your company.', hidden)
   fieldset
     label(for='formPhoneNumber') Teléfono:
-    input(type='decimal',name='formPhoneNumber',id='formPhoneNumber',placeholder='Teléfono')
+    input(type='number',name='formPhoneNumber',id='formPhoneNumber',placeholder='Teléfono')
     .error.text_error(data-error-type='ErrorPhoneNumberEmpty', data-error-msg='Phone number field is empty, please enter your phone number.', hidden)
     .error.text_error(data-error-type='ErrorPhoneNumberFormat', data-error-msg='Phone number has bad format, please enter decimals only.', hidden)
   fieldset
     label(for='formEmail') Email:
-    input(type='text',name='formEmail',id='formEmail',placeholder='Email')
+    input(type='email',name='formEmail',id='formEmail',placeholder='Email')
     .error.text_error(data-error-type='ErrorEmailFormat', data-error-msg='Email has bad format.', hidden)
     .error.text_error(data-error-type='ErrorEmailEmpty', data-error-msg='Email field is empty, please enter your email.', hidden)
   fieldset
