@@ -10,7 +10,7 @@ var reload					= browserSync.reload;
 
 var src = {
 	scss: ['./app/**/*.scss'],
-	js: ['./app/base/utils/*.js','./app/base/*.js','./app/blocks/**/*.js','./app/app.js'],
+	js: ['./app/base/utils/*.js','./app/base/*.js','./app/blocks/**/*.js','./app/app.js', '!./app/anti-spam-email.js'],
 	css: [
 		'./app/components/leaflet/dist/leaflet.css'
 	],
@@ -22,13 +22,15 @@ var src = {
 		'./app/components/smooth-scroll/dist/js/smooth-scroll.js'
 	],
 	jsothers: [
-		'./app/components/leaflet/dist/leaflet.js'
+		'./app/components/leaflet/dist/leaflet.js',
+		'./app/base/anti-spam-email.js'
 	],
 	slick: './app/components/slick-carousel/slick/ajax-loader.gif',
 	fonts: ['./app/fonts/*', './app/components/font-awesome/fonts/*'],
 	jslegacy: ['./app/components/respond/dest/respond.src.js'],
-	img: './app/img/**/*',
+	img: ['./app/img/**/*', '!./app/img/fav*.*'],
 	imgleaflet: './app/components/leaflet/dist/images/*',
+	favicon: ['./app/img/favicon.ico', './app/img/fav-icon-16.png'],
 	dev: '_dev',
 	build: '_build',
 	pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}'],
@@ -90,10 +92,8 @@ gulp.task('jscomponentsie', function(){
 });
 
 gulp.task('jsothers', function(){
-	return gulp.src(src.jsothers, { base: 'app' })
-		.pipe(gp.concat('modules.js'))
-		.pipe(gp.uglify())
-		.pipe(gulp.dest(src.dev + '/js'));
+	gulp.src(src.jsothers)
+	.pipe(gulp.dest(src.dev + "/js"));
 });
 
 gulp.task('jslegacy', function(){
@@ -143,6 +143,11 @@ gulp.task('imgleaflet', function(){
 	.pipe(gulp.dest(src.dev + '/css/images'));
 });
 
+gulp.task('favicon', function(){
+	gulp.src(src.favicon)
+	.pipe(gulp.dest(src.dev));
+});
+
 gulp.task('fonts', function(){
 	return gulp.src(src.fonts)
 	.pipe(gulp.dest(src.dev + '/fonts'));
@@ -153,7 +158,7 @@ gulp.task('watch:pug', function(){
 });
 
 gulp.task('build', ['clean'], function(){
-	runSequence('pug', 'sass:dev', 'css', 'js', 'jscomponents', 'jscomponentsie', 'jsothers', 'jslegacy', 'slick', 'fonts', 'images', 'imgleaflet');
+	runSequence('pug', 'sass:dev', 'css', 'js', 'jscomponents', 'jscomponentsie', 'jsothers', 'jslegacy', 'slick', 'fonts', 'images', 'imgleaflet', 'favicon');
 });
 
 gulp.task('pug', function buildHTML(){

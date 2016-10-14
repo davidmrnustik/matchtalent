@@ -12,6 +12,7 @@ html(lang="es")
       type='text/css'
       href='/css/leaflet.css'
     )
+    script(src='/js/anti-spam-email.js')
 
   body
     #mobileMenu.mobile-menu.text_white
@@ -23,7 +24,6 @@ html(lang="es")
           li.nav__item: a(href='./precios.html') Precios
           li.nav__item: a(href='./portales.html') ​Portales de Empleo
           li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
-          li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
           
         ul.nav-lang.mobile-menu__nav-lang
           li.nav-lang__item.nav-lang__item_highlighted Español
@@ -50,7 +50,7 @@ html(lang="es")
             li.nav__item: a(href='./precios.html') Precios
             li.nav__item: a(href='./portales.html') ​Portales de Empleo
             li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
-            li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal) Prueba gratuita
+            li.nav__item.nav__item_highlighted: a(href='#ContactFormIntro', data-scroll) Prueba gratuita
 
           ul.nav-lang.header__nav-lang.only-desktop
             li.nav-lang__item.nav-lang__item_highlighted Español
@@ -70,21 +70,22 @@ html(lang="es")
             p
               | <strong>MatchTalent</strong><br/>La Terminal, Centro de Arte y Tecnología 4ªpl.<br/>Avda. Ciudad de Soria, 8<br/>50003 Zaragoza
             p 
-              | (+34) 876 01 99 22<br />memorandum@memorandum.net
+              | (+34) 876 01 99 22<br/>
+              script.
+                buildEmail('memorandum', 'memorandum.net');
+            
             hr.hr
             #map
           .grid__column
-            p
+            p#ContactFormIntro
               | Si desea más información, resolver alguna duda o realizar una prueba con MatchTalent, rellene el siguiente formulario:
 
             include inc/contact-form.pug
 
       include inc/footer.pug
-
-    include inc/modal-prueba-gratuita.pug
     
     script(src='/js/app.js')
-    script(src='/js/modules.js')
+    script(src='/js/leaflet.js')
     script.
       var center = [41.659054, -0.9068540000000098],
           mymap = L.map('map', {

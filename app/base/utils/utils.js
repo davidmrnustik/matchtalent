@@ -37,7 +37,7 @@
 		} else {
 			el.className = el.className.replace()
 		}
-	}
+	};
 
 	utils.toggleClass = function(el, className) {
 		if (el.classList) {
