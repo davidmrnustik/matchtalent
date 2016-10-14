@@ -50,7 +50,7 @@ html(lang="es")
             li.nav__item: a(href='./precios.html') Precios
             li.nav__item: a(href='./portales.html') ​Portales de Empleo
             li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
-            li.nav__item.nav__item_highlighted: a(href='#ContactFormIntro', data-scroll) Prueba gratuita
+            li.nav__item.nav__item_highlighted: a(href='#ContactFormIntro', data-scroll, data-init-form) Prueba gratuita
 
           ul.nav-lang.header__nav-lang.only-desktop
             li.nav-lang__item.nav-lang__item_highlighted Español
@@ -77,9 +77,6 @@ html(lang="es")
             hr.hr
             #map
           .grid__column
-            p#ContactFormIntro
-              | Si desea más información, resolver alguna duda o realizar una prueba con MatchTalent, rellene el siguiente formulario:
-
             include inc/contact-form.pug
 
       include inc/footer.pug

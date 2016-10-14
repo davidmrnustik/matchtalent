@@ -30,7 +30,11 @@ var src = {
 	jslegacy: ['./app/components/respond/dest/respond.src.js'],
 	img: ['./app/img/**/*', '!./app/img/fav*.*'],
 	imgleaflet: './app/components/leaflet/dist/images/*',
-	favicon: ['./app/img/favicon.ico', './app/img/fav-icon-16.png'],
+	root: [
+		'./app/img/favicon.ico',
+		'./app/img/fav-icon-16.png',
+		'./app/modules/**/*.php'
+	],
 	dev: '_dev',
 	build: '_build',
 	pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}'],
@@ -143,8 +147,8 @@ gulp.task('imgleaflet', function(){
 	.pipe(gulp.dest(src.dev + '/css/images'));
 });
 
-gulp.task('favicon', function(){
-	gulp.src(src.favicon)
+gulp.task('root', function(){
+	gulp.src(src.root)
 	.pipe(gulp.dest(src.dev));
 });
 
@@ -158,7 +162,7 @@ gulp.task('watch:pug', function(){
 });
 
 gulp.task('build', ['clean'], function(){
-	runSequence('pug', 'sass:dev', 'css', 'js', 'jscomponents', 'jscomponentsie', 'jsothers', 'jslegacy', 'slick', 'fonts', 'images', 'imgleaflet', 'favicon');
+	runSequence('pug', 'sass:dev', 'css', 'js', 'jscomponents', 'jscomponentsie', 'jsothers', 'jslegacy', 'slick', 'fonts', 'images', 'imgleaflet', 'root');
 });
 
 gulp.task('pug', function buildHTML(){

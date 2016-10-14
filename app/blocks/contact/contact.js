@@ -1,9 +1,11 @@
 (function(global){
 	var contact = {},
 			errors = {},
+			sendValues = {},
 			textSuccess = document.querySelector('.contacto__success'),
 			modalInitForm = document.querySelectorAll('[data-init-form]'),
 			contactForm = document.getElementById('ContactForm'),
+			contactFormIntro = document.getElementById('ContactFormIntro'),
 			formName = document.getElementById('formName'),
 			formCompany = document.getElementById('formCompany'),
 			formEmail = document.getElementById('formEmail'),
@@ -116,13 +118,14 @@
 		formCompany.value = "";
 	}
 	function sendFormValues() {
-		var values = {
+		sendValues = {
 			name: formName.value,
 			email: formEmail.value,
+			company: formCompany.value,
 			phoneNumber: formPhoneNumber.value,
-			text: formTextarea.value
+			message: formTextarea.value
 		};
-		return values;
+		return sendValues;
 	}
 	function validate(e) {
 		e.preventDefault();
@@ -139,11 +142,23 @@
 		validateLength(formCompany, errorField[10], 2);
 
 		if (errorsReturn()) {
-			contactForm.submit;
-			contactForm.setAttribute('hidden', 'hidden');
-			textSuccess.removeAttribute('hidden');
-			console.log("Contact form data are:" + sendFormValues());
-			resetForm();
+			
+			/*contactForm.submit();
+			console.log("Contact form data are:" + sendFormValues());*/
+
+			$.ajax({
+				type: 'POST',
+				url: './sendmail.php',
+				data: sendFormValues(),
+				cache: false,
+				success: function(){
+					contactForm.setAttribute('hidden', 'hidden');
+					contactFormIntro.setAttribute('hidden', 'hidden');
+					textSuccess.removeAttribute('hidden');
+					resetForm();
+					sendValues = {};
+				}
+			})
 		}
 	}
 
@@ -153,6 +168,7 @@
 			modalInitForm[i].addEventListener('click', function(){
 				textSuccess.setAttribute('hidden', 'hidden');
 				contactForm.removeAttribute('hidden');
+				contactFormIntro.removeAttribute('hidden');
 			})
 		}
 	}
