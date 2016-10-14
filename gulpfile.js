@@ -35,6 +35,7 @@ var src = {
 		'./app/img/fav-icon-16.png',
 		'./app/modules/**/*.php'
 	],
+	php: './app/modules/**/*.php',
 	dev: '_dev',
 	build: '_build',
 	pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}'],
@@ -125,6 +126,7 @@ gulp.task('serve', ['build'], function(){
 	gulp.watch([src.img], ['images', reload]);
 	//gulp.watch([src.templates], ['templates', reload]);
 	gulp.watch(['./app/templates/**/*.pug'], ['pug', reload]);
+	gulp.watch([src.php], ['root', reload]);
 });
 
 gulp.task('slick', function(){

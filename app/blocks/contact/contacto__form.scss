@@ -19,7 +19,7 @@ $block: 'contacto__form';
 		margin-bottom: 20px;
 
 		&:nth-last-of-type(2) {
-			margin-bottom: 10px;
+			//margin-bottom: 10px;
 
 			.error {
 				margin-bottom: 5px;
@@ -49,5 +49,11 @@ $block: 'contacto__form';
 		font-weight: 700;
 		line-height: 1.4em;
 		margin-top: 5px;
+	}
+	input#tmptxt {
+		border: 1px solid lighten($color-grey, 45%);
+		width: 80px;
+		padding: 2px 8px;
+		margin-left: 10px;
 	}
 }

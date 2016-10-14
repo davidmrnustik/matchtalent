@@ -12,6 +12,7 @@
 			formPhoneNumber = document.getElementById('formPhoneNumber'),
 			formTextarea = document.getElementById('formTextarea'),
 			formCheckboxContitions = document.getElementById('formCheckboxConditions'),
+			formCaptcha = document.getElementById('tmptxt'),
 			errorField = [
 				'ErrorNameEmpty',
 				'ErrorNameShort',
@@ -123,7 +124,8 @@
 			email: formEmail.value,
 			company: formCompany.value,
 			phoneNumber: formPhoneNumber.value,
-			message: formTextarea.value
+			message: formTextarea.value,
+			tmptxt: formCaptcha.value
 		};
 		return sendValues;
 	}
