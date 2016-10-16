@@ -1,0 +1,25 @@
+include inc/mixin.pug
+
+doctype html
+html(lang="es")
+  head
+    block title
+      title MatchTalent - Plataforma de empleo
+      meta(
+        name='content'
+        description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+      )
+
+    block head
+      include inc/head.pug
+
+  body
+    #mobileMenu.mobile-menu.text_white
+      block mobile-menu
+    #mainContent.content
+      block content
+      include inc/footer.pug
+    block modals
+      include inc/modal-prueba-gratuita.pug
+    block footer-script
+      script(src='/js/app.js')

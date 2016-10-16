@@ -1,75 +1,67 @@
-doctype html
-html(lang="es")
-  head
-    title= "Portales de empleo MatchTalent - Plataforma de empleo"
-    meta(
-      name='content'
-      description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
-    )
-    include inc/head.pug
+extends layout.pug
 
-  body
-    #mobileMenu.mobile-menu.text_white
-      +menu-icon('mobile-menu__menu-icon')
-      .inner
-        ul.nav.mobile-menu__nav
-          li.nav__item: a(href='./') Inicio
-          li.nav__item: a(href='./ventajas.html') Ventajas
-          li.nav__item: a(href='./precios.html') Precios
-          li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
-          li.nav__item: a(href='./contacto.html') Contacto
-          li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
-          
-        ul.nav-lang.mobile-menu__nav-lang
-          li.nav-lang__item.nav-lang__item_highlighted Español
-          li.nav-lang__item
-            a(href='#') English
-        
-        .designby.mobile-menu__designby.grid__column
-          p.text_xsmall Desarrollado por:
-          a(
-            href='http://www.memorandum.net'
-            target='_blank'
-          )
-            +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+block title
+  title Portales de empleo MatchTalent - Plataforma de empleo
+  meta(
+    name='content'
+    description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+  )
 
-    #mainContent.content
-      header.header.text_white
-        .inner
-          +menu-icon('header__menu-icon no-desktop')
-          .logo.header__logo
-            a(href='./')
-              +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
-          ul.nav.header__nav.only-desktop
-            li.nav__item: a(href='./ventajas.html') Ventajas
-            li.nav__item: a(href='./precios.html') Precios
-            li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
-            li.nav__item: a(href='./contacto.html') Contacto
-            li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
-
-          ul.nav-lang.header__nav-lang.only-desktop
-            li.nav-lang__item.nav-lang__item_highlighted Español
-            li.nav-lang__item: a(href='#') English
-
-      section.content-header.remove_margin-top.remove_margin-bottom
-        .content-header__image
-          +content-header-image('header_image_empleo.jpg')
-        .inner
-          .content-header__title
-            h1 ​Portales de Empleo
-
-      section.content-text.inner.inner_smaller.contacto.remove_margin-bottom
-        .content-text__text
-          p
-            | Reciba candidatos de los principales portales de empleo, tanto generales como sectoriales. Si desea añadir alguna otra entidad, centro formativo, portal etc, que no esté en este listado, lo incluiremos dentro de su plataforma.
-          hr.hr
-
-      section.partners.inner.text_center.remove_margin-top
-        .grid.grid_flex.grid_center
-          +partners(["/img/portal_buscarempleo.jpg", "/img/portal_ticjob.jpg", "/img/portal_monster.jpg", "/img/portal_infoempleo.jpg", "/img/portal_linkedinjobs.jpg", "/img/portal_xing.jpg", "/img/portal_disjob.jpg", "/img/portal_fjobs.jpg", "/img/portal_trabajando.jpg", "/img/portal_turijobs.jpg", "/img/portal_jobatus.jpg", "/img/portal_indeed.jpg", "/img/portal_jobware.jpg", "/img/portal_jobandtalent.jpg", "/img/portal_laboris.jpg", "/img/portal_bebee.jpg", "/img/portal_experteer.jpg", "/img/portal_51job.jpg", "/img/portal_tecnoempleo.jpg", "/img/portal_universia.jpg", "/img/portal_universitariocontrabajo.jpg", "/img/portal_idoneum.jpg", "/img/portal_soloingenieria.jpg"])
-
-      include inc/footer.pug
-
-    include inc/modal-prueba-gratuita.pug
+block mobile-menu
+  +menu-icon('mobile-menu__menu-icon')
+  .inner
+    ul.nav.mobile-menu__nav
+      li.nav__item: a(href='./') Inicio
+      li.nav__item: a(href='./ventajas.html') Ventajas
+      li.nav__item: a(href='./precios.html') Precios
+      li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
+      li.nav__item: a(href='./contacto.html') Contacto
+      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+      
+    ul.nav-lang.mobile-menu__nav-lang
+      li.nav-lang__item.nav-lang__item_highlighted Español
+      li.nav-lang__item
+        a(href='#') English
     
-    script(src='/js/app.js')
+    .designby.mobile-menu__designby.grid__column
+      p.text_xsmall Desarrollado por:
+      a(
+        href='http://www.memorandum.net'
+        target='_blank'
+      )
+        +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+
+block content
+  header.header.text_white
+    .inner
+      +menu-icon('header__menu-icon no-desktop')
+      .logo.header__logo
+        a(href='./')
+          +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
+      ul.nav.header__nav.only-desktop
+        li.nav__item: a(href='./ventajas.html') Ventajas
+        li.nav__item: a(href='./precios.html') Precios
+        li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
+        li.nav__item: a(href='./contacto.html') Contacto
+        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+
+      ul.nav-lang.header__nav-lang.only-desktop
+        li.nav-lang__item.nav-lang__item_highlighted Español
+        li.nav-lang__item: a(href='#') English
+
+  section.content-header.remove_margin-top.remove_margin-bottom
+    .content-header__image
+      +content-header-image('header_image_empleo.jpg')
+    .inner
+      .content-header__title
+        h1 ​Portales de Empleo
+
+  section.content-text.inner.inner_smaller.contacto.remove_margin-bottom
+    .content-text__text
+      p
+        | Reciba candidatos de los principales portales de empleo, tanto generales como sectoriales. Si desea añadir alguna otra entidad, centro formativo, portal etc, que no esté en este listado, lo incluiremos dentro de su plataforma.
+      hr.hr
+
+  section.partners.inner.text_center.remove_margin-top
+    .grid.grid_flex.grid_center
+      +partners(["/img/portal_buscarempleo.jpg", "/img/portal_ticjob.jpg", "/img/portal_monster.jpg", "/img/portal_infoempleo.jpg", "/img/portal_linkedinjobs.jpg", "/img/portal_xing.jpg", "/img/portal_disjob.jpg", "/img/portal_fjobs.jpg", "/img/portal_trabajando.jpg", "/img/portal_turijobs.jpg", "/img/portal_jobatus.jpg", "/img/portal_indeed.jpg", "/img/portal_jobware.jpg", "/img/portal_jobandtalent.jpg", "/img/portal_laboris.jpg", "/img/portal_bebee.jpg", "/img/portal_experteer.jpg", "/img/portal_51job.jpg", "/img/portal_tecnoempleo.jpg", "/img/portal_universia.jpg", "/img/portal_universitariocontrabajo.jpg", "/img/portal_idoneum.jpg", "/img/portal_soloingenieria.jpg"])

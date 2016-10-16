@@ -1,6 +1,9 @@
 $block: 'mobile-menu';
 
 .menu-open {
+	overflow: hidden;
+	margin-right: 15px;
+
 	& .#{$block} {
 
 		&_show {

@@ -179,6 +179,7 @@
 				textSuccess.removeAttribute('hidden');
 				resetForm();
 				sendValues = {};
+				smoothScroll.animateScroll('#ContactFormIntro');
 			}
 		});
 	}

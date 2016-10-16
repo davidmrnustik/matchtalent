@@ -1,98 +1,95 @@
-doctype html
-html(lang="es")
-  head
-    title= "Contact MatchTalent - Plataforma de empleo"
-    meta(
-      name='content'
-      description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
-    )
-    include inc/head.pug
-    link(
-      rel='stylesheet'
-      type='text/css'
-      href='/css/leaflet.css'
-    )
-    script(src='/js/anti-spam-email.js')
+extends layout.pug
 
-  body
-    #mobileMenu.mobile-menu.text_white
-      +menu-icon('mobile-menu__menu-icon')
-      .inner
-        ul.nav.mobile-menu__nav
-          li.nav__item: a(href='./') Inicio
-          li.nav__item: a(href='./ventajas.html') Ventajas
-          li.nav__item: a(href='./precios.html') Precios
-          li.nav__item: a(href='./portales.html') ​Portales de Empleo
-          li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
-          
-        ul.nav-lang.mobile-menu__nav-lang
-          li.nav-lang__item.nav-lang__item_highlighted Español
-          li.nav-lang__item
-            a(href='#') English
-        
-        .designby.mobile-menu__designby.grid__column
-          p.text_xsmall Desarrollado por:
-          a(
-            href='http://www.memorandum.net'
-            target='_blank'
-          )
-            +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
-
-    #mainContent.content
-      header.header.text_white
-        .inner
-          +menu-icon('header__menu-icon no-desktop')
-          .logo.header__logo
-            a(href='./')
-              +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
-          ul.nav.header__nav.only-desktop
-            li.nav__item: a(href='./ventajas.html') Ventajas
-            li.nav__item: a(href='./precios.html') Precios
-            li.nav__item: a(href='./portales.html') ​Portales de Empleo
-            li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
-            li.nav__item.nav__item_highlighted: a(href='#ContactFormIntro', data-scroll, data-init-form) Prueba gratuita
-
-          ul.nav-lang.header__nav-lang.only-desktop
-            li.nav-lang__item.nav-lang__item_highlighted Español
-            li.nav-lang__item: a(href='#') English
-
-      section.content-header.remove_margin-top.remove_margin-bottom
-        .content-header__image
-          +content-header-image('header_image_contacto.jpg')
-        .inner
-          .content-header__title
-            h1 Contacta con nosotros
-
-      section.content-text.inner.inner_smaller.contacto
-        .content-text__text.grid.grid_2-columns
-          .grid__column
-            h4 Dirección
-            p
-              | <strong>MatchTalent</strong><br/>La Terminal, Centro de Arte y Tecnología 4ªpl.<br/>Avda. Ciudad de Soria, 8<br/>50003 Zaragoza
-            p 
-              | (+34) 876 01 99 22<br/>
-              script.
-                buildEmail('memorandum', 'memorandum.net');
-            
-            hr.hr
-            #map
-          .grid__column
-            include inc/contact-form.pug
-
-      include inc/footer.pug
+block title
+  title Contact MatchTalent - Plataforma de empleo
+  meta(
+    name='content'
+    description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+  )
+append head
+  link(
+    rel='stylesheet'
+    type='text/css'
+    href='/css/leaflet.css'
+  )
+  script(src='/js/anti-spam-email.js')
+  
+block mobile-menu
+  +menu-icon('mobile-menu__menu-icon')
+  .inner
+    ul.nav.mobile-menu__nav
+      li.nav__item: a(href='./') Inicio
+      li.nav__item: a(href='./ventajas.html') Ventajas
+      li.nav__item: a(href='./precios.html') Precios
+      li.nav__item: a(href='./portales.html') ​Portales de Empleo
+      li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
+      
+    ul.nav-lang.mobile-menu__nav-lang
+      li.nav-lang__item.nav-lang__item_highlighted Español
+      li.nav-lang__item
+        a(href='#') English
     
-    script(src='/js/app.js')
-    script(src='/js/leaflet.js')
-    script.
-      var center = [41.659054, -0.9068540000000098],
-          mymap = L.map('map', {
-            center: center,
-            zoom: 13
-          });
-      var marker = L.marker(center).addTo(mymap);
-      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        attribution: '',
-        maxZoom: 18,
-        id: 'matchtalent.1l5h75a2',
-        accessToken: 'pk.eyJ1IjoibWF0Y2h0YWxlbnQiLCJhIjoiY2l1OGp2cnhjMDAwajJvcGpyOG80NXNxeCJ9.fqwgxtlKGyOpGeUXtQoeJA'
-       }).addTo(mymap);
+    .designby.mobile-menu__designby.grid__column
+      p.text_xsmall Desarrollado por:
+      a(
+        href='http://www.memorandum.net'
+        target='_blank'
+      )
+        +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+
+block content
+  header.header.text_white
+    .inner
+      +menu-icon('header__menu-icon no-desktop')
+      .logo.header__logo
+        a(href='./')
+          +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
+      ul.nav.header__nav.only-desktop
+        li.nav__item: a(href='./ventajas.html') Ventajas
+        li.nav__item: a(href='./precios.html') Precios
+        li.nav__item: a(href='./portales.html') ​Portales de Empleo
+        li.nav__item.nav__item_active: a(href='./contacto.html') Contacto
+        li.nav__item.nav__item_highlighted: a(href='#ContactFormIntro', data-scroll, data-init-form) Prueba gratuita
+
+      ul.nav-lang.header__nav-lang.only-desktop
+        li.nav-lang__item.nav-lang__item_highlighted Español
+        li.nav-lang__item: a(href='#') English
+
+  section.content-header.remove_margin-top.remove_margin-bottom
+    .content-header__image
+      +content-header-image('header_image_contacto.jpg')
+    .inner
+      .content-header__title
+        h1 Contacta con nosotros
+
+  section.content-text.inner.inner_smaller.contacto
+    .content-text__text.grid.grid_2-columns
+      .grid__column
+        h4 Dirección
+        p
+          | <strong>MatchTalent</strong><br/>La Terminal, Centro de Arte y Tecnología 4ªpl.<br/>Avda. Ciudad de Soria, 8<br/>50003 Zaragoza
+        p 
+          | (+34) 876 01 99 22<br/>
+          script.
+            buildEmail('memorandum', 'memorandum.net');
+        
+        hr.hr
+        #map
+      .grid__column
+        include inc/contact-form.pug
+
+append footer-script
+  script(src='/js/leaflet.js')
+  script.
+    var center = [41.659054, -0.9068540000000098],
+        mymap = L.map('map', {
+          center: center,
+          zoom: 13
+        });
+    var marker = L.marker(center).addTo(mymap);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+      attribution: '',
+      maxZoom: 18,
+      id: 'matchtalent.1l5h75a2',
+      accessToken: 'pk.eyJ1IjoibWF0Y2h0YWxlbnQiLCJhIjoiY2l1OGp2cnhjMDAwajJvcGpyOG80NXNxeCJ9.fqwgxtlKGyOpGeUXtQoeJA'
+     }).addTo(mymap);
