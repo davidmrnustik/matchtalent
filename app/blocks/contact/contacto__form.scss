@@ -50,6 +50,10 @@ $block: 'contacto__form';
 		line-height: 1.4em;
 		margin-top: 5px;
 	}
+	input#tmptxt + .text_error {
+		margin-top: 15px;
+		margin-left: 10px;
+	}
 	input#tmptxt {
 		border: 1px solid lighten($color-grey, 45%);
 		width: 80px;

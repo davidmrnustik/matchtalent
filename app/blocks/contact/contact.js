@@ -24,7 +24,8 @@
 				'ErrorTextShort',
 				'ErrorTextEmpty',
 				'ErrorCompanyEmpty',
-				'ErrorCompanyShort'
+				'ErrorCompanyShort',
+				'ErrorCaptchaWrongCode'
 			];
 
 	function getDataElement(idAttr) {
@@ -101,6 +102,28 @@
 			hideErrorMessage(el, dataEl);
 		}
 	}
+	function validateCaptcha(input, dataEl){
+		var el = getDataElement(dataEl);
+
+		$.ajax({
+			type: 'POST',
+			url: './check-captcha.php',
+			data: {tmptxt: formCaptcha.value},
+			cache: false,
+			success: function(msg){
+				if(msg == 0 || msg == "0"){
+					hideErrorMessage(el, dataEl);
+					if (errorsReturn()) {
+						setTimeout(function(){
+							sendMail();
+						}, 200);
+					}
+				} else {
+					showErrorMessage(el, dataEl);
+				}
+			}
+		});
+	}
 	function errorsReturn() {
 		var count = 0;
 		for (var i = 0, l = errorField.length; i < l; i++) {
@@ -125,8 +148,7 @@
 			email: formEmail.value,
 			company: formCompany.value,
 			phoneNumber: formPhoneNumber.value,
-			message: formTextarea.value,
-			tmptxt: formCaptcha.value
+			message: formTextarea.value
 		};
 		return sendValues;
 	}
@@ -143,28 +165,23 @@
 		validateEmpty(formTextarea, errorField[8]);
 		validateEmpty(formCompany, errorField[9]);
 		validateLength(formCompany, errorField[10], 2);
-
-		if (errorsReturn()) {
-			
-			/*contactForm.submit();
-			console.log("Contact form data are:" + sendFormValues());*/
-
-			$.ajax({
-				type: 'POST',
-				url: './sendmail.php',
-				data: sendFormValues(),
-				cache: false,
-				success: function(){
-					contactForm.setAttribute('hidden', 'hidden');
-					contactFormIntro.setAttribute('hidden', 'hidden');
-					textSuccess.removeAttribute('hidden');
-					resetForm();
-					sendValues = {};
-				}
-			})
-		}
+		validateCaptcha(formCaptcha, errorField[11]);
 	}
-
+	function sendMail(){
+		$.ajax({
+			type: 'POST',
+			url: './sendmail.php',
+			data: sendFormValues(),
+			cache: false,
+			success: function(){
+				contactForm.setAttribute('hidden', 'hidden');
+				contactFormIntro.setAttribute('hidden', 'hidden');
+				textSuccess.removeAttribute('hidden');
+				resetForm();
+				sendValues = {};
+			}
+		});
+	}
 	function initForm(){
 
 		for(var i = 0, l = modalInitForm.length; i < l; i++){

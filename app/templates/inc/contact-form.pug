@@ -38,5 +38,7 @@ form#ContactForm.contacto__form(method='POST', action='./sendmail.php')
   fieldset.clearfix
     img.float-left(src='./captcha.php')
     input#tmptxt.float-left(type='text',name='tmptxt')
-    //.error.text_error(data-error-type='ErrorCheckboxConditions', data-error-msg='You have to apply conditions.', hidden)
+    .error.text_error.float-left(data-error-type='ErrorCaptchaWrongCode', data-error-msg='Captcha code is wrong.', hidden)
   button#formButton.button Send
+
+  #results
