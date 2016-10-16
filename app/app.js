@@ -16,4 +16,5 @@
 	  updateURL: true,
 	  callback: function ( anchor, toggle ) {}
 	});
+	intro.init();
 })();
