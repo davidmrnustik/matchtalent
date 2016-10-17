@@ -6,7 +6,7 @@
   cookies.init = function init() {
     cookiesClose.addEventListener('click', function(e){
       e.preventDefault();
-      CookieLayerVisto()
+      CookieLayerVisto();
     });
 
     function getCookie_Layer(e){
