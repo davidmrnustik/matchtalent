@@ -197,6 +197,10 @@ hr
 modal
 	modal__content
 	modal__close
+
+cookies
+	cookies__alert
+	cookies__close
 	
 ==========================
 

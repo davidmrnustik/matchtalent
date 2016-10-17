@@ -33,7 +33,8 @@ var src = {
 	root: [
 		'./app/img/favicon.ico',
 		'./app/img/fav-icon-16.png',
-		'./app/modules/**/*.php'
+		'./app/modules/**/*.php',
+		'./.htaccess'
 	],
 	php: './app/modules/**/*.php',
 	dev: '_dev',

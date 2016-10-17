@@ -23,6 +23,18 @@ button.#{$block} {
 	padding-bottom: 7px;
 
 	@extend %buttonBasicHover;
+
+	&_inverse {
+		background: white;
+		border: 1px solid #fff;
+		color: $link-color;
+
+		&:hover,
+		&:focus {
+			background: transparent;
+			color: #fff;
+		}
+	}
 }
 .#{$block} {
 	

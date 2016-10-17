@@ -16,6 +16,7 @@ html(lang="es")
   body
     #intro
       +picture('/img/logo_matchtalent_blue.svg', 'MatchTalent - Plataforma de empleo')
+    
     #mobileMenu.mobile-menu.text_white
       block mobile-menu
     #mainContent.content
@@ -24,4 +25,5 @@ html(lang="es")
     block modals
       include inc/modal-prueba-gratuita.pug
     block footer-script
+      include inc/cookies.pug
       script(src='/js/app.js')

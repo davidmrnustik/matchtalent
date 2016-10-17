@@ -1,5 +1,6 @@
 (function() {
 	openMenu.init();
+	cookies.init();
 	slider.init();
 	footerLinks.init();
 	header.init();
