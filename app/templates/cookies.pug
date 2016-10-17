@@ -1,0 +1,69 @@
+extends layout.pug
+
+block title
+  title Política de Cookies MatchTalent - Plataforma de empleo
+  meta(
+    name='content'
+    description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+  )
+
+block mobile-menu
+  +menu-icon('mobile-menu__menu-icon')
+  .inner
+    ul.nav.mobile-menu__nav
+      li.nav__item: a(href='./') Inicio
+      li.nav__item: a(href='./ventajas.html') Ventajas
+      li.nav__item: a(href='./precios.html') Precios
+      li.nav__item: a(href='./portales.html') ​Portales de Empleo
+      li.nav__item: a(href='./contacto.html') Contacto
+      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+      
+    ul.nav-lang.mobile-menu__nav-lang
+      li.nav-lang__item.nav-lang__item_highlighted Español
+      li.nav-lang__item
+        a(href='#') English
+    
+    .designby.mobile-menu__designby.grid__column
+      p.text_xsmall Desarrollado por:
+      a(
+        href='http://www.memorandum.net'
+        target='_blank'
+      )
+        +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+
+block content
+  header.header.text_white
+    .inner
+      +menu-icon('header__menu-icon no-desktop')
+      .logo.header__logo
+        a(href='./')
+          +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
+      ul.nav.header__nav.only-desktop
+        li.nav__item: a(href='./ventajas.html') Ventajas
+        li.nav__item: a(href='./precios.html') Precios
+        li.nav__item: a(href='./portales.html') ​Portales de Empleo
+        li.nav__item: a(href='./contacto.html') Contacto
+        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+
+      ul.nav-lang.header__nav-lang.only-desktop
+        li.nav-lang__item.nav-lang__item_highlighted Español
+        li.nav-lang__item: a(href='#') English
+
+  section.content-header.remove_margin-top.remove_margin-bottom
+    .content-header__image
+      +content-header-image('header_image_contacto.jpg')
+    .inner
+      .content-header__title
+        h1 Política de Cookies
+
+  section.content-text.inner.inner_smaller.contacto.remove_margin-bottom
+    .content-text__text
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      hr.hr

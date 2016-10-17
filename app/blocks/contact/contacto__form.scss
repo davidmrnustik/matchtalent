@@ -9,6 +9,14 @@ $block: 'contacto__form';
 		display: block;
 		font-weight: 700;
 		color: $color-blue;
+
+		a {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 
 	label[for='formCheckboxConditions'] {
