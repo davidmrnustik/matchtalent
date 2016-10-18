@@ -48,6 +48,7 @@ var src = {
 	php: './app/mail/**/*.php',
 	dev: '_dev',
 	build: '_build',
+	translations: './app/translations/**',
 	pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}'],
 	templates: './app/templates/**/*.html'
 };
@@ -125,6 +126,11 @@ gulp.task('templates', function(){
 	.pipe(gulp.dest(src.dev));
 });
 
+gulp.task('translations', function(){
+	gulp.src(src.translations)
+	.pipe(gulp.dest(src.dev + '/lang'));
+});
+
 gulp.task('serve', ['build'], function(){
 	browserSync({
 		server: [src.dev],
@@ -137,6 +143,7 @@ gulp.task('serve', ['build'], function(){
 	//gulp.watch([src.templates], ['templates', reload]);
 	gulp.watch(['./app/templates/**/*.pug'], ['pug', reload]);
 	gulp.watch([src.php], ['root', reload]);
+	gulp.watch([src.translations], ['translations', reload]);
 });
 
 gulp.task('slick', function(){
@@ -174,7 +181,7 @@ gulp.task('watch:pug', function(){
 });
 
 gulp.task('build', ['clean'], function(){
-	runSequence('pug', 'sass:dev', 'css', 'js', 'jscomponents', 'jscomponentsie', 'jsothers', 'jslegacy', 'slick', 'fonts', 'images', 'imgleaflet', 'root');
+	runSequence('pug', 'sass:dev', 'css', 'js', 'jscomponents', 'jscomponentsie', 'jsothers', 'jslegacy', 'slick', 'fonts', 'images', 'imgleaflet', 'translations', 'root');
 });
 
 gulp.task('pug', function buildHTML(){

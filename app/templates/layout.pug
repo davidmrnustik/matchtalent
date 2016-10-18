@@ -1,7 +1,7 @@
 include inc/mixin.pug
 
 doctype html
-html(lang="es")
+html(lang="es", ng-app="MatchTalentApp")
   head
     block title
       title MatchTalent - Plataforma de empleo
@@ -14,16 +14,18 @@ html(lang="es")
       include inc/head.pug
 
   body(ng-controller="AppController")
-    #intro
-      +picture('/img/logo_matchtalent_blue.svg', 'MatchTalent - Plataforma de empleo')
-    
-    #mobileMenu.mobile-menu.text_white
-      block mobile-menu
-    #mainContent.content
-      block content
-      include inc/footer.pug
-    block modals
-      include inc/modal-prueba-gratuita.pug
-    block footer-script
-      include inc/cookies.pug
-      script(src='/js/app.js')
+    .ui-view
+      h1(translate="HELLO")
+      #intro
+        +picture('/img/logo_matchtalent_blue.svg', 'MatchTalent - Plataforma de empleo')
+      
+      #mobileMenu.mobile-menu.text_white
+        block mobile-menu
+      #mainContent.content
+        block content
+        include inc/footer.pug
+      block modals
+        include inc/modal-prueba-gratuita.pug
+      block footer-script
+        include inc/cookies.pug
+        script(src='/js/app.js')
