@@ -19,7 +19,16 @@ var src = {
 		'./app/components/jquery/jquery.js',
 		'./app/components/slick-carousel/slick/slick.js',
 		'./app/components/picturefill/dist/picturefill.js',
-		'./app/components/smooth-scroll/dist/js/smooth-scroll.js'
+		'./app/components/smooth-scroll/dist/js/smooth-scroll.js',
+		'./app/components/angular/angular.js',
+		'./app/components/angular-route/angular-route.js',
+		'./app/components/angular-translate/angular-translate.js',
+		'./app/components/angular-translate-handler-log/angular-translate-handler-log.js',
+		'./app/components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+		'./app/components/angular-cookies/angular-cookies.js',
+		'./app/components/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
+		'./app/components/angular-translate-storage-local/angular-translate-storage-local.js',
+		'./app/components/angular-ui-router/release/angular-ui-router.js'
 	],
 	jsothers: [
 		'./app/components/leaflet/dist/leaflet.js',
@@ -33,10 +42,10 @@ var src = {
 	root: [
 		'./app/img/favicon.ico',
 		'./app/img/fav-icon-16.png',
-		'./app/modules/**/*.php',
+		'./app/mail/**/*.php',
 		'./.htaccess'
 	],
-	php: './app/modules/**/*.php',
+	php: './app/mail/**/*.php',
 	dev: '_dev',
 	build: '_build',
 	pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}'],

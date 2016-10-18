@@ -21,6 +21,12 @@
     "picturefill": "^3.0.2",
     "font-awesome": "Font-Awesome#^4.6.3",
     "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^9.2.0",
-    "leaflet": "^1.0.1"
+    "leaflet": "^1.0.1",
+    "angular-translate": "^2.12.1",
+    "angular-route": "^1.5.8",
+    "angular-translate-handler-log": "^2.12.1",
+    "angular-translate-loader-static-files": "^2.12.1",
+    "angular-translate-storage-local": "^2.12.1",
+    "angular-ui-router": "^0.3.1"
   }
 }

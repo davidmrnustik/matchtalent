@@ -13,7 +13,7 @@ html(lang="es")
     block head
       include inc/head.pug
 
-  body
+  body(ng-controller="AppController")
     #intro
       +picture('/img/logo_matchtalent_blue.svg', 'MatchTalent - Plataforma de empleo')
     
