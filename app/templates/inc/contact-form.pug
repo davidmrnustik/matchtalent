@@ -33,7 +33,7 @@ form#ContactForm.contacto__form(method='POST', action='./sendmail.php')
     .error.text_error(data-error-type='ErrorTextEmpty', data-error-msg='La consulta no puede estar vacía.', hidden)
   fieldset
     input(type='checkbox',name='formCheckboxConditions',id='formCheckboxConditions')
-    label(for='formCheckboxConditions') He leído y acepto los <a href="./condiciones.html" target="_blank">términos y condiciones</a>
+    label(for='formCheckboxConditions') He leído y acepto los <a href="./aviso-legal.html" target="_blank">términos y condiciones</a>
     .error.text_error(data-error-type='ErrorCheckboxConditions', data-error-msg='Debe aceptar las condiciones.', hidden)
   fieldset.clearfix
     img.float-left(src='./captcha.php')
