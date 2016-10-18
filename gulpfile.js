@@ -47,10 +47,6 @@ gulp.task('clean', function(){
 	return del.sync([src.dev, src.build]);
 });
 
-gulp.task('clean:dev', function(){
-	return del.sync(src.dev);
-});
-
 gulp.task('sass:dev', function(){
 	return gulp.src(['./app/*.scss'])
 	.pipe(gp.plumber({
@@ -231,10 +227,6 @@ gulp.task('fonts:build', function(){
 	.pipe(gulp.dest(src.build + '/fonts'));
 });
 
-gulp.task('watch:pug', function(){
-	gulp.watch([src.pug], ['pug']);
-});
-
 gulp.task('pug:dev', function buildHTML(){
 	return gulp.src(src.pug)
 	.pipe(gp.pug())
@@ -271,8 +263,8 @@ gulp.task('default', ['dev'], function(){
 	});
 
 	gulp.watch([src.scss, './app/*.scss'], ['sass:dev', reload]);
-	gulp.watch([src.js], ['js', reload]);
-	gulp.watch([src.img], ['images', reload]);
-	gulp.watch(['./app/templates/**/*.pug'], ['pug', reload]);
-	gulp.watch([src.php], ['root', reload]);
+	gulp.watch([src.js], ['js:dev', reload]);
+	gulp.watch([src.img], ['images:dev', reload]);
+	gulp.watch(['./app/templates/**/*.pug'], ['pug:dev', reload]);
+	gulp.watch([src.php], ['root:dev', reload]);
 });
