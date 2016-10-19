@@ -40,7 +40,7 @@ Por ejemplo esta class:
 /app/components/ *- componentes gestionados por bower*  
 /app/fonts *- fuentes*  
 /app/img *- imagenes*  
-/app/templates *- plantillas pug*
+/app/templates *- plantillas pug*  
 /app/translations *- traducciones en JSON
 
 # Plantilas #
