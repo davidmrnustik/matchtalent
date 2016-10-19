@@ -8,47 +8,10 @@ block title
   )
 
 block mobile-menu
-  +menu-icon('mobile-menu__menu-icon')
-  .inner
-    ul.nav.mobile-menu__nav
-      li.nav__item: a(href=URL.INICIO) #{MENU.INICIO}
-      li.nav__item: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
-      li.nav__item.nav__item_active: a(href=URL.PRECIOS) #{MENU.PRECIOS}
-      li.nav__item: a(href=URL.PORTALES) #{MENU.PORTALES}
-      li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
-      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
-
-    //- ul.nav-lang.mobile-menu__nav-lang
-      li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
-      li.nav-lang__item
-        a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
-    
-    .designby.mobile-menu__designby.grid__column
-      p.text_xsmall #{COMMON.DESARROLLADO_POR}:
-      a(
-        href='http://www.memorandum.net'
-        target='_blank'
-      )
-        +picture('/img/logo_memorandum.svg', MEMORANDUM_MULTIMEDIA)
+  +mobile-menu('precios')
 
 block content
-  header.header.text_white
-    .inner
-      +menu-icon('header__menu-icon no-desktop')
-      .logo.header__logo
-        a(href=URL.INICIO)
-          +picture('/img/logo_matchtalent.svg', COMMON.WEBSITE_NAME)
-
-      ul.nav.header__nav.only-desktop
-        li.nav__item: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
-        li.nav__item.nav__item_active: a(href=URL.PRECIOS) #{MENU.PRECIOS}
-        li.nav__item: a(href=URL.PORTALES) #{MENU.PORTALES}
-        li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
-        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
-
-      //ul.nav-lang.header__nav-lang.only-desktop
-        li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
-        li.nav-lang__item: a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
+  +header('precios')
 
   section.content-header.remove_margin-top.remove_margin-bottom
     .content-header__image

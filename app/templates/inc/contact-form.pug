@@ -1,42 +1,43 @@
 p#ContactFormIntro
-  | Si desea más información, resolver alguna duda o realizar una prueba con MatchTalent, rellene el siguiente formulario:
+  | #{CONTACT_FORM.TEXT}
 #ContactFormIntro.contacto__success.text_success(hidden)
-  | Gracias por mostrar interes en MatchTalent. Su formulario ha sido enviado correctamente. Próximamente alguien de nuestro Departamento Comercial se pondrá en contacto con Usted. 
+  | #{CONTACT_FORM.SUCCESS}
+
   .button()
-    a.js-modal-close(href='#') Cerrar
+    a.js-modal-close(href='#') #{COOKIES_ALERT.CERRAR}
 
 form#ContactForm.contacto__form(method='POST', action='./sendmail.php')
   fieldset
-    label(for='formName') Nombre:
-    input(type='text',name='formName',id='formName',placeholder='Su nombre')
-    .error.text_error(data-error-type='ErrorNameShort', data-error-msg='El campo nombre es muy corto (mínimo 2 carácteres).', hidden)
-    .error.text_error(data-error-type='ErrorNameEmpty', data-error-msg='El nombre no puede estar vacío.', hidden)
+    label(for='formName') #{CONTACT_FORM.NAME.TITLE}:
+    input(type='text',name='formName',id='formName',placeholder=CONTACT_FORM.NAME.PLACEHOLDER)
+    .error.text_error(data-error-type='ErrorNameShort', data-error-msg=CONTACT_FORM.ERRORS.NAME_SHORT, hidden)
+    .error.text_error(data-error-type='ErrorNameEmpty', data-error-msg=CONTACT_FORM.ERRORS.NAME_BLANK, hidden)
   fieldset
-    label(for='formCompany') Empresa:
-    input(type='text',name='formCompany',id='formCompany',placeholder='Nombre de su empresa')
-    .error.text_error(data-error-type='ErrorCompanyShort', data-error-msg='El campo empresa es muy corto (mínimo 2 carácteres).', hidden)
-    .error.text_error(data-error-type='ErrorCompanyEmpty', data-error-msg='La empresa no puede estar vacía.', hidden)
+    label(for='formCompany') #{CONTACT_FORM.COMPANY.TITLE}:
+    input(type='text',name='formCompany',id='formCompany',placeholder=CONTACT_FORM.COMPANY.PLACEHOLDER)
+    .error.text_error(data-error-type='ErrorCompanyShort', data-error-msg=CONTACT_FORM.ERRORS.COMPANY_SHORT, hidden)
+    .error.text_error(data-error-type='ErrorCompanyEmpty', data-error-msg=CONTACT_FORM.ERRORS.COMPANY_BLANK, hidden)
   fieldset
-    label(for='formPhoneNumber') Teléfono:
-    input(type='number',name='formPhoneNumber',id='formPhoneNumber',placeholder='Su teléfono')
-    .error.text_error(data-error-type='ErrorPhoneNumberEmpty', data-error-msg='El teléfono no puede estar vacío.', hidden)
-    .error.text_error(data-error-type='ErrorPhoneNumberFormat', data-error-msg='El teléfono debe tener un formato válido.', hidden)
+    label(for='formPhoneNumber') #{CONTACT_FORM.PHONE.TITLE}:
+    input(type='text',name='formPhoneNumber',id='formPhoneNumber',placeholder=CONTACT_FORM.PHONE.PLACEHOLDER)
+    .error.text_error(data-error-type='ErrorPhoneNumberEmpty', data-error-msg=CONTACT_FORM.ERRORS.PHONE_BLANK, hidden)
+    .error.text_error(data-error-type='ErrorPhoneNumberFormat', data-error-msg=CONTACT_FORM.ERRORS.PHONE_FORMAT, hidden)
   fieldset
-    label(for='formEmail') Email:
-    input(type='email',name='formEmail',id='formEmail',placeholder='Su correo electrónico')
-    .error.text_error(data-error-type='ErrorEmailFormat', data-error-msg='El correo no tiene un formato válido.', hidden)
-    .error.text_error(data-error-type='ErrorEmailEmpty', data-error-msg='El correo no puede estar vacío.', hidden)
+    label(for='formEmail') #{CONTACT_FORM.EMAIL.TITLE}:
+    input(type='email',name='formEmail',id='formEmail',placeholder=CONTACT_FORM.EMAIL.PLACEHOLDER)
+    .error.text_error(data-error-type='ErrorEmailFormat', data-error-msg=CONTACT_FORM.ERRORS.EMAIL_FORMAT, hidden)
+    .error.text_error(data-error-type='ErrorEmailEmpty', data-error-msg=CONTACT_FORM.ERRORS.EMAIL_BLANK, hidden)
   fieldset
-    label(for='formTextarea') Consulta:
-    textarea(cols=40,rows=10,name='formTextarea',id='formTextarea',placeholder='Su consulta')
-    .error.text_error(data-error-type='ErrorTextShort', data-error-msg='El campo consulta es muy corto (mínimo 10 carácteres).', hidden)
-    .error.text_error(data-error-type='ErrorTextEmpty', data-error-msg='La consulta no puede estar vacía.', hidden)
+    label(for='formTextarea') #{CONTACT_FORM.MESSAGE.TITLE}:
+    textarea(cols=40,rows=10,name='formTextarea',id='formTextarea',placeholder=CONTACT_FORM.MESSAGE.PLACEHOLDER)
+    .error.text_error(data-error-type='ErrorTextShort', data-error-msg=CONTACT_FORM.ERRORS.MESSAGE_SHORT, hidden)
+    .error.text_error(data-error-type='ErrorTextEmpty', data-error-msg=CONTACT_FORM.ERRORS.MESSAGE_BLANK, hidden)
   fieldset
     input(type='checkbox',name='formCheckboxConditions',id='formCheckboxConditions')
-    label(for='formCheckboxConditions') He leído y acepto los <a href="./aviso-legal.html" target="_blank">términos y condiciones</a>
-    .error.text_error(data-error-type='ErrorCheckboxConditions', data-error-msg='Debe aceptar las condiciones.', hidden)
+    label(for='formCheckboxConditions') !{CONTACT_FORM.ACCEPT}
+    .error.text_error(data-error-type='ErrorCheckboxConditions', data-error-msg=CONTACT_FORM.ERRORS.ACCEPT_FALSE, hidden)
   fieldset.clearfix
     img.float-left(src='./captcha.php')
     input#tmptxt.float-left(type='text',name='tmptxt')
-    .error.text_error.float-left(data-error-type='ErrorCaptchaWrongCode', data-error-msg='El código captcha no es correcto.', hidden)
-  button#formButton.button Enviar
+    .error.text_error.float-left(data-error-type='ErrorCaptchaWrongCode', data-error-msg=CONTACT_FORM.ERRORS.CAPTCHA_WRONG, hidden)
+  button#formButton.button #{CONTACT_FORM.SEND}

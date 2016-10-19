@@ -237,9 +237,46 @@
 		"MAS_DETALLES" : "más detalles"
 	},
 	"CONTACT_FORM" : {
-
+		"TEXT" : "Si desea más información, resolver alguna duda o realizar una prueba con MatchTalent, rellene el siguiente formulario:",
+		"SUCCESS" : "Gracias por mostrar interes en MatchTalent. Su formulario ha sido enviado correctamente. Próximamente alguien de nuestro Departamento Comercial se pondrá en contacto con Usted.",
+		"NAME" : {
+			"TITLE" : "Nombre",
+			"PLACEHOLDER" : "Su nombre"
+		},
+		"COMPANY" : {
+			"TITLE" : "Empresa",
+			"PLACEHOLDER" : "Nombre de su empresa"
+		},
+		"PHONE" : {
+			"TITLE" : "Teléfono",
+			"PLACEHOLDER" : "Su teléfono"
+		},
+		"EMAIL" : {
+			"TITLE" : "Email",
+			"PLACEHOLDER" : "Su correo electrónico"
+		},
+		"MESSAGE" : {
+			"TITLE" : "Consulta",
+			"PLACEHOLDER" : "Su consulta"
+		},
+		"ACCEPT" : "He leído y acepto los <a href='./aviso-legal.html' target='_blank'>términos y condiciones</a>",
+		"SEND" : "Enviar",
+		"ERRORS" : {
+			"NAME_SHORT" : "El campo nombre es muy corto (mínimo 2 carácteres).",
+			"NAME_BLANK" : "El nombre no puede estar vacío.",
+			"COMPANY_SHORT" : "El campo empresa es muy corto (mínimo 2 carácteres).",
+			"COMPANY_BLANK" : "La empresa no puede estar vacía.",
+			"PHONE_BLANK" : "El teléfono no puede estar vacío.",
+			"PHONE_FORMAT" : "El teléfono debe tener un formato válido.",
+			"EMAIL_FORMAT" : "El correo no tiene un formato válido.",
+			"EMAIL_BLANK" : "El correo no puede estar vacío.",
+			"MESSAGE_SHORT" : "El campo consulta es muy corto (mínimo 10 carácteres).",
+			"MESSAGE_BLANK" : "La consulta no puede estar vacía.",
+			"ACCEPT_FALSE" : "Debe aceptar las condiciones.",
+			"CAPTCHA_WRONG" : "El código captcha no es correcto."
+		}
 	},
-	"COOKIES" : {
+	"COOKIES_ALERT" : {
 		"TEXT": "Utilizamos cookies propias y de terceros para mejorar su experiencia y nuestros servicios. Si continua navegando, consideramos que aceptas su uso. Puede obtener más información o conocer cómo cambiar la configuración <a href='./cookies.html' class='text_white'>aquí.</a>",
 		"CERRAR" : "Cerrar"
 	}

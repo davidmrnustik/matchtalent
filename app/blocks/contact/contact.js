@@ -77,12 +77,10 @@
 	}
 	function validateNumber(input, dataEl) {
 		var el = getDataElement(dataEl);
-		if (isNaN(parseInt(input.value)) && input.value != "") {
+		if (isNaN((parseInt(input.value).toString()))) {
 			showErrorMessage(el, dataEl);
 		} else {
-			if (input.value != ""){
-				formPhoneNumber.value = parseInt(input.value);
-			}
+			formPhoneNumber.value = parseInt(input.value).toString();
 			hideErrorMessage(el, dataEl);
 		}
 	}
