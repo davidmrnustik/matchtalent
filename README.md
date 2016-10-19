@@ -47,3 +47,7 @@ Por ejemplo esta class:
 Plantillas están ubicadas en /app/templates/ y están hechas con el sistema de render de plantillas **pug** (https://pugjs.org/api/getting-started.html). Tienen extensión *.pug y siguen syntax de pug (https://pugjs.org/language/attributes.html).  
 
 Los mixins (predeterminados trozos de código) están definidos en /app/template/inc/mixin.pug. Cabecera y pie están en /app/template/inc/head.pug resp. /app/template/inc/footer.pug.
+
+# Contenido #
+
+El contenido de las páginas está ubicado en /app/translations/es.json.
