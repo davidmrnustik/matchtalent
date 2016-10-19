@@ -241,6 +241,7 @@ gulp.task('pug:dev', function (){
 
 gulp.task('pug:build', function (){
 	return gulp.src(src.pug)
+	.pipe(gp.data(getJsonData('./app/translations/es')))
 	.pipe(gp.pug())
 	.pipe(gulp.dest(src.build));
 });
