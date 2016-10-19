@@ -41,6 +41,7 @@ Por ejemplo esta class:
 /app/fonts *- fuentes*  
 /app/img *- imagenes*  
 /app/templates *- plantillas pug*
+/app/translations *- traducciones en JSON
 
 # Plantilas #
 
