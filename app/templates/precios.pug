@@ -1,192 +1,145 @@
 extends layout.pug
 
 block title
-  title Precios de MatchTalent - Plataforma de empleo
+  title #{SEO.PRECIOS.TITLE}
   meta(
     name='content'
-    description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+    description=SEO.PRECIOS.DESCRIPTION
   )
 
 block mobile-menu
   +menu-icon('mobile-menu__menu-icon')
   .inner
     ul.nav.mobile-menu__nav
-      li.nav__item: a(href='./') Inicio
-      li.nav__item: a(href='./ventajas.html') Ventajas
-      li.nav__item.nav__item_active: a(href='./precios.html') Precios
-      li.nav__item: a(href='./portales.html') ​Portales de Empleo
-      li.nav__item: a(href='./contacto.html') Contacto
-      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
-      
-    //ul.nav-lang.mobile-menu__nav-lang
-      li.nav-lang__item.nav-lang__item_highlighted Español
+      li.nav__item: a(href=URL.INICIO) #{MENU.INICIO}
+      li.nav__item: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
+      li.nav__item.nav__item_active: a(href=URL.PRECIOS) #{MENU.PRECIOS}
+      li.nav__item: a(href=URL.PORTALES) #{MENU.PORTALES}
+      li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
+      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
+
+    //- ul.nav-lang.mobile-menu__nav-lang
+      li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
       li.nav-lang__item
-        a(href='#') English
+        a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
     
     .designby.mobile-menu__designby.grid__column
-      p.text_xsmall Desarrollado por:
+      p.text_xsmall #{COMMON.DESARROLLADO_POR}:
       a(
         href='http://www.memorandum.net'
         target='_blank'
       )
-        +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+        +picture('/img/logo_memorandum.svg', MEMORANDUM_MULTIMEDIA)
 
 block content
   header.header.text_white
     .inner
       +menu-icon('header__menu-icon no-desktop')
       .logo.header__logo
-        a(href='./')
-          +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
+        a(href=URL.INICIO)
+          +picture('/img/logo_matchtalent.svg', COMMON.WEBSITE_NAME)
+
       ul.nav.header__nav.only-desktop
-        li.nav__item: a(href='./ventajas.html') Ventajas
-        li.nav__item.nav__item_active: a(href='./precios.html') Precios
-        li.nav__item: a(href='./portales.html') ​Portales de Empleo
-        li.nav__item: a(href='./contacto.html') Contacto
-        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+        li.nav__item: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
+        li.nav__item.nav__item_active: a(href=URL.PRECIOS) #{MENU.PRECIOS}
+        li.nav__item: a(href=URL.PORTALES) #{MENU.PORTALES}
+        li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
+        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
 
       //ul.nav-lang.header__nav-lang.only-desktop
-        li.nav-lang__item.nav-lang__item_highlighted Español
-        li.nav-lang__item: a(href='#') English
+        li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
+        li.nav-lang__item: a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
 
   section.content-header.remove_margin-top.remove_margin-bottom
     .content-header__image
       +content-header-image('header_image_precios.jpg')
     .inner
       .content-header__title
-        h1 Nuestros planes
+        h1 #{PRECIOS.TITLE}
 
   section.our-plans.inner.inner_smaller.text_center
     .grid.grid_3-columns.our-plans__grid_3-columns
       .our-plans__item.grid__column
         .our-plans__header
-          .our-plans__title Profesional
+          .our-plans__title #{PRECIOS.PROFESIONAL.TITLE}
           .our-plans__price.text_blue
             span#planProfesionalPrice(data-plan-price)
             span.our-plans__currency &euro;
-            span.text_small(data-plan-period='profesionalMensual') / mensual
-            span.text_small(data-plan-period='profesionalAnual', hidden) / anual
+            span.text_small(data-plan-period='profesionalMensual') / #{PRECIOS.MENSUAL}
+            span.text_small(data-plan-period='profesionalAnual', hidden) / #{PRECIOS.ANUAL}
           fieldset.our-plans__period.text_xsmall
             input(
               type='radio',
               name='planProfesionalPeriod',
               id='profesionalMensual'
-              value=89
+              value=PRECIOS.PROFESIONAL.PRECIO.MENSUAL
               checked
               data-period-for='planProfesionalPrice'
             )/
-            label(for='profesionalMensual') mensual
+            label(for='profesionalMensual') #{PRECIOS.MENSUAL}
           fieldset.our-plans__period.text_xsmall
             input(
               type='radio',
               name='planProfesionalPeriod',
               id='profesionalAnual'
-              value=960
+              value=PRECIOS.PROFESIONAL.PRECIO.ANUAL
               data-period-for='planProfesionalPrice'
             )/
-            label(for='profesionalAnual') anual
+            label(for='profesionalAnual') #{PRECIOS.ANUAL}
         ul.our-plans__features
-          li
-            | <strong>5 Active Jobs</strong>
-          li
-            | <strong>5000 Candidates</strong>
-          li Unlimited archived positions
-          li Unlimited users
-          li: a(href='#plansInclude', data-scroll) All features
+          | !{PRECIOS.PROFESIONAL.PLAN}
+          li: a(href='#plansInclude', data-scroll) #{PRECIOS.ALL_FEATURES}
         .our-plans__button.button.button_inverse_blue
-          a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+          a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
       .our-plans__item.grid__column.our-plans__item_highlighted
         .our-plans__header
-          .our-plans__title Experto
+          .our-plans__title #{PRECIOS.EXPERTO.TITLE}
           .our-plans__price.text_blue
             span#planExpertoPrice(data-plan-price)
             span.our-plans__currency &euro;
-            span.text_small(data-plan-period='expertoMensual') / mensual
-            span.text_small(data-plan-period='expertoAnual', hidden) / anual
+            span.text_small(data-plan-period='expertoMensual') / #{PRECIOS.MENSUAL}
+            span.text_small(data-plan-period='expertoAnual', hidden) / #{PRECIOS.ANUAL}
           fieldset.our-plans__period.text_xsmall
             input(
               type='radio',
               name='planExpertolPeriod',
               id='expertoMensual'
-              value=179
+              value=PRECIOS.EXPERTO.PRECIO.MENSUAL
               checked
               data-period-for='planExpertoPrice'
             )/
-            label(for='expertoMensual') mensual
+            label(for='expertoMensual') #{PRECIOS.MENSUAL}
           fieldset.our-plans__period.text_xsmall
             input(
               type='radio',
               name='planExpertolPeriod',
               id='expertoAnual'
-              value=1930
+              value=PRECIOS.EXPERTO.PRECIO.ANUAL
               data-period-for='planExpertoPrice'
             )/
-            label(for='expertoAnual') anual
+            label(for='expertoAnual') #{PRECIOS.ANUAL}
         ul.our-plans__features
-          li
-            | <strong>15 Active Jobs</strong>
-          li
-            | <strong>15000 Candidates</strong>
-          li Unlimited archived positions
-          li Unlimited users
-          li: a(href='#plansInclude', data-scroll) All features
+          | !{PRECIOS.EXPERTO.PLAN}
+          li: a(href='#plansInclude', data-scroll) #{PRECIOS.ALL_FEATURES}
         .our-plans__button.button.button_inverse_blue
-          a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+          a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
       .our-plans__item.grid__column
         .our-plans__header
-          .our-plans__title Custom
-          .our-plans__price.text_blue: a(href='./contacto.html') Contacta con nosotros
+          .our-plans__title #{PRECIOS.CUSTOM.TITLE}
+          .our-plans__price.text_blue: a(href='./contacto.html') #{PRECIOS.CUSTOM.CONTACTA_NOSOTROS}
         ul.our-plans__features
-          li
-            | <strong>Hasta 30 Active Jobs</strong>
-          li
-            | <strong>Hasta 30000 Candidates</strong>
-          li Unlimited archived positions
-          li Unlimited users
-          li: a(href='#plansInclude', data-scroll) All features
+          | !{PRECIOS.CUSTOM.PLAN}
+          li: a(href='#plansInclude', data-scroll) #{PRECIOS.ALL_FEATURES}
         .our-plans__button.button.button_inverse_blue
-          a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+          a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
 
   .hr.hr_fullwidth
 
   section#plansInclude.plans-include.inner
     h2.plans-include__headline.text_uppercase.text_center
-      | Todos planes incluyen
+      | #{PRECIOS.TODOS_PLANES_INCLUYEN.TITLE}
     .grid.grid_3-columns.plans-include__grid_3-columns.grid_justify-initial
-      .plans-include__item.grid__column
-        h3.plans-include__title Posting
-        ul.list.plans-include__description
-          li.list__item Lorem divb dssdfbv dsbfsdfds
-          li.list__item kfhvb fvbsdfbsfg blisgdls
-          li.list__item bortheiu bvishl bvshb vsd fbkfsgd
-          li.list__item dsfkhbv adhiv bisdfbv iorg bs
-      .plans-include__item.grid__column
-        h3.plans-include__title Job Applications
-        ul.list.plans-include__description
-          li.list__item kfhvb fvbsdfbsfg blisgdls
-          li.list__item dsfkhbv adhiv bisdfbv iorg bs
-          li.list__item bortheiu bvishl bvshb vsd fbkfsgd
-      .plans-include__item.grid__column
-        h3.plans-include__title Candidate Database
-        ul.list.plans-include__description
-          li.list__item kfhvb fvbsdfbsfg blisgdls
-          li.list__item dsfkhbv adhiv bisdfbv iorg bs
-          li.list__item bortheiu bvishl bvshb vsd fbkfsgd
-      .plans-include__item.grid__column
-        h3.plans-include__title Reports & Usability
-        ul.list.plans-include__description
-          li.list__item kfhvb fvbsdfbsfg blisgdls
-          li.list__item dsfkhbv adhiv bisdfbv iorg bs
-          li.list__item bortheiu bvishl bvshb vsd fbkfsgd
-          li.list__item ergwrttregb bvishl bvshb vsd svsdf
-      .plans-include__item.grid__column
-        h3.plans-include__title Optional Features
-        ul.list.plans-include__description
-          li.list__item ds fvsdfvsdfvdsf blisgdls
-          li.list__item sdfv sdf iorg bs
-          li.list__item dsfkhbv adhiv bisdfbv iorg bs
-          li.list__item sdvsd vsdf vd vsd fbkfsgd
-          li.list__item ergwrttregb bvishl bvshb vsd svsdf
+      | !{PRECIOS.TODOS_PLANES_INCLUYEN.TEXT}
 
   include inc/contact-with-us.pug
 

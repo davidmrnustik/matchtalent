@@ -7,6 +7,7 @@ var gulpLoadPlugins = require('gulp-load-plugins');
 var gp 							= gulpLoadPlugins();
 var browserSync	 		=	require('browser-sync');
 var reload					= browserSync.reload;
+var fs 							= require('fs');
 
 var src = {
 	scss: ['./app/**/*.scss'],
@@ -39,8 +40,13 @@ var src = {
 	php: './app/modules/**/*.php',
 	dev: '_dev',
 	build: '_build',
+	translations: './app/translations/**/*',
 	pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}'],
 	templates: './app/templates/**/*.html'
+};
+
+var getJsonData = function(file) {
+	return JSON.parse(fs.readFileSync(file + '.json'));
 };
 
 gulp.task('clean', function(){
@@ -216,7 +222,6 @@ gulp.task('root:build', function(){
 	.pipe(gulp.dest(src.build));
 });
 
-
 gulp.task('fonts:dev', function(){
 	return gulp.src(src.fonts)
 	.pipe(gulp.dest(src.dev + '/fonts'));
@@ -227,13 +232,14 @@ gulp.task('fonts:build', function(){
 	.pipe(gulp.dest(src.build + '/fonts'));
 });
 
-gulp.task('pug:dev', function buildHTML(){
+gulp.task('pug:dev', function (){
 	return gulp.src(src.pug)
-	.pipe(gp.pug())
+	.pipe(gp.data(getJsonData('./app/translations/es')))
+	.pipe(gp.pug({pretty: true}))
 	.pipe(gulp.dest(src.dev));
 });
 
-gulp.task('pug:build', function buildHTML(){
+gulp.task('pug:build', function (){
 	return gulp.src(src.pug)
 	.pipe(gp.pug())
 	.pipe(gulp.dest(src.build));
@@ -266,5 +272,6 @@ gulp.task('default', ['dev'], function(){
 	gulp.watch([src.js], ['js:dev', reload]);
 	gulp.watch([src.img], ['images:dev', reload]);
 	gulp.watch(['./app/templates/**/*.pug'], ['pug:dev', reload]);
+	gulp.watch(src.translations, ['pug:dev', reload]);
 	gulp.watch([src.php], ['root:dev', reload]);
 });

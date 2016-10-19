@@ -26,7 +26,7 @@ mixin slider-item(pos, img, title, description)
         .slider__title= title
         .slider__description= description
         .slider__button.button.button_inverse
-          a(href='#modal-prueba-gratuita', data-modal, data-init-form) Solicitar demo
+          a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{COMMON.SOLICITAR_DEMO}
 
 mixin clients-item(img, name)
   .clients__item.grid__column
@@ -46,7 +46,7 @@ mixin why-matchtalent-item(img, title, description, url)
     h3.why-matchtalent__title= title
     .why-matchtalent__description= description
     .why-matchtalent__button.button
-      a(href=url) más detalles
+      a(href=url) #{COMMON.MAS_DETALLES}
 
 mixin solution-for-item(icon, title, description)
   .solutions-for__item.solutions-for__item_left.grid__column

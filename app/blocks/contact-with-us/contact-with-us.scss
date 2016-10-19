@@ -10,6 +10,15 @@ $block: 'contact-with-us';
 
 	&__text {
 		@include font-size(24);
+
+		a {
+			color: #fff;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 	&__text_small {
 		margin-top: 5px;

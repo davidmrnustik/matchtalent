@@ -41,7 +41,7 @@ $iconWidth: 70px;
 		&_#{$icon} {
 			&:after {
 				@if ($i > 0) {
-					background-position: -calc((#{$iconWidth} * #{$i})) 0;
+					background-position: calc(-#{$iconWidth} * #{$i}) 0;
 				} @else {
 					background-position: 0 0;
 				}

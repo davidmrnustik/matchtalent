@@ -7,26 +7,26 @@ footer.footer.text_white
         h4.footer__links-title.only-phablet
           | MatchTalent <i class="fa fa-angle-down" aria-hidden="true"></i>
         ul.nav.footer__nav
-          li.nav__item: a(href='./') Inicio
-          li.nav__item: a(href='./ventajas.html') Ventajas
-          li.nav__item: a(href='./precios.html') Precios
-          li.nav__item: a(href='./portales.html') ​Portales de Empleo
-          li.nav__item: a(href='./contacto.html') Contacto
-          li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
-          li.nav__item.nav__item_highlighted: a(href='tel:987 654 321') Llamar 987 654 321
-          li.nav__item: a(href='./cookies.html') Política de cookies
-          li.nav__item: a(href='./aviso-legal.html') Aviso legal
+          li.nav__item: a(href=URL.INICIO) #{MENU.INICIO}
+          li.nav__item: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
+          li.nav__item: a(href=URL.PRECIOS) #{MENU.PRECIOS}
+          li.nav__item: a(href=URL.PORTALES) #{MENU.PORTALES}
+          li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
+          li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
+          li.nav__item.nav__item_highlighted: a(href="tel:" + FOOTER.NUMERO_TELEFONO) #{FOOTER.LLAMAR} #{FOOTER.NUMERO_TELEFONO}
+          li.nav__item: a(href=URL.COOKIES) #{MENU.COOKIES}
+          li.nav__item: a(href=URL.AVISO_LEGAL) #{MENU.AVISO_LEGAL}
       .footer__socialnet.grid__column
         +social-networks({'facebook':'https://www.facebook.com/profile.php?id=100011762462152', 'twitter': 'https://twitter.com/MemorandumSL', 'google-plus':'https://plus.google.com/105176459277512230938'})
 
     .grid.grid_2-columns.footer__grid_2-column.grid_flex-end
       .footer__copyright.grid__column
-        | Copyright &copy; MatchTalent, 2016. <br class="only-phablet" />All Rights Reserved.
+        | Copyright &copy; MatchTalent, 2016. <br class="only-phablet" />#{ALL_RIGHTS_RESERVED}
       .designby.footer__designby.grid__column
         p.text_xsmall
-          | Desarrollado por:
+          | #{COMMON.DESARROLLADO_POR}:
         a(
           href='http://www.memorandum.net'
           target='_blank'
         )
-          +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+          +picture('/img/logo_memorandum.svg', MEMORANDUM_MULTIMEDIA)

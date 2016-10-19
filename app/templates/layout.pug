@@ -4,10 +4,10 @@ doctype html
 html(lang="es")
   head
     block title
-      title MatchTalent - Plataforma de empleo
+      title #{COMMON.WEBSITE_NAME}
       meta(
         name='content'
-        description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+        description= SEO.INICIO.DESCRIPTION
       )
 
     block head
@@ -15,7 +15,7 @@ html(lang="es")
 
   body
     #intro
-      +picture('/img/logo_matchtalent_blue.svg', 'MatchTalent - Plataforma de empleo')
+      +picture('/img/logo_matchtalent_blue.svg', COMMON.WEBSITE_NAME)
     
     #mobileMenu.mobile-menu.text_white
       block mobile-menu

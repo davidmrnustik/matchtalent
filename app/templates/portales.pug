@@ -1,65 +1,65 @@
 extends layout.pug
 
 block title
-  title Portales de empleo MatchTalent - Plataforma de empleo
+  title #{SEO.PORTALES.TITLE}
   meta(
     name='content'
-    description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+    description=SEO.PORTALES.DESCRIPTION
   )
 
 block mobile-menu
   +menu-icon('mobile-menu__menu-icon')
   .inner
     ul.nav.mobile-menu__nav
-      li.nav__item: a(href='./') Inicio
-      li.nav__item: a(href='./ventajas.html') Ventajas
-      li.nav__item: a(href='./precios.html') Precios
-      li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
-      li.nav__item: a(href='./contacto.html') Contacto
-      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
-      
-    //ul.nav-lang.mobile-menu__nav-lang
-      li.nav-lang__item.nav-lang__item_highlighted Español
+      li.nav__item: a(href=URL.INICIO) #{MENU.INICIO}
+      li.nav__item: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
+      li.nav__item: a(href=URL.PRECIOS) #{MENU.PRECIOS}
+      li.nav__item/nav__item_active: a(href=URL.PORTALES) #{MENU.PORTALES}
+      li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
+      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
+
+    //- ul.nav-lang.mobile-menu__nav-lang
+      li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
       li.nav-lang__item
-        a(href='#') English
+        a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
     
     .designby.mobile-menu__designby.grid__column
-      p.text_xsmall Desarrollado por:
+      p.text_xsmall #{COMMON.DESARROLLADO_POR}:
       a(
         href='http://www.memorandum.net'
         target='_blank'
       )
-        +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+        +picture('/img/logo_memorandum.svg', MEMORANDUM_MULTIMEDIA)
 
 block content
   header.header.text_white
     .inner
       +menu-icon('header__menu-icon no-desktop')
       .logo.header__logo
-        a(href='./')
-          +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
+        a(href=URL.INICIO)
+          +picture('/img/logo_matchtalent.svg', COMMON.WEBSITE_NAME)
+
       ul.nav.header__nav.only-desktop
-        li.nav__item: a(href='./ventajas.html') Ventajas
-        li.nav__item: a(href='./precios.html') Precios
-        li.nav__item.nav__item_active: a(href='./portales.html') ​Portales de Empleo
-        li.nav__item: a(href='./contacto.html') Contacto
-        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+        li.nav__item: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
+        li.nav__item: a(href=URL.PRECIOS) #{MENU.PRECIOS}
+        li.nav__item.nav__item_active: a(href=URL.PORTALES) #{MENU.PORTALES}
+        li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
+        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
 
       //ul.nav-lang.header__nav-lang.only-desktop
-        li.nav-lang__item.nav-lang__item_highlighted Español
-        li.nav-lang__item: a(href='#') English
+        li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
+        li.nav-lang__item: a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
 
   section.content-header.remove_margin-top.remove_margin-bottom
     .content-header__image
       +content-header-image('header_image_empleo.jpg')
     .inner
       .content-header__title
-        h1 ​Portales de Empleo
+        h1 #{PORTALES_EMPLEO.TITLE}
 
   section.content-text.inner.inner_smaller.contacto.remove_margin-bottom
     .content-text__text
-      p
-        | Reciba candidatos de los principales portales de empleo, tanto generales como sectoriales. Si desea añadir alguna otra entidad, centro formativo, portal etc, que no esté en este listado, lo incluiremos dentro de su plataforma.
+      | !{PORTALES_EMPLEO.TEXT}
       hr.hr
 
   section.partners.inner.text_center.remove_margin-top

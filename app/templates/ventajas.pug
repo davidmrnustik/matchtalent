@@ -1,102 +1,100 @@
 extends layout.pug
 
 block title
-  title Ventajas de MatchTalent - Plataforma de empleo
+  title #{SEO.VENTAJAS.TITLE}
   meta(
     name='content'
-    description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+    description=SEO.VENTAJAS.DESCRIPTION
   )
 
 block mobile-menu
   +menu-icon('mobile-menu__menu-icon')
   .inner
     ul.nav.mobile-menu__nav
-      li.nav__item: a(href='./') Inicio
-      li.nav__item.nav__item_active: a(href='./ventajas.html') Ventajas
-      li.nav__item: a(href='./precios.html') Precios
-      li.nav__item: a(href='./portales.html') ​Portales de Empleo
-      li.nav__item: a(href='./contacto.html') Contacto
-      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+      li.nav__item: a(href=URL.INICIO) #{MENU.INICIO}
+      li.nav__item.nav__item_active: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
+      li.nav__item: a(href=URL.PRECIOS) #{MENU.PRECIOS}
+      li.nav__item: a(href=URL.PORTALES) #{MENU.PORTALES}
+      li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
+      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
       
-    //ul.nav-lang.mobile-menu__nav-lang
-      li.nav-lang__item.nav-lang__item_highlighted Español
+    //- ul.nav-lang.mobile-menu__nav-lang
+      li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
       li.nav-lang__item
-        a(href='#') English
-    
+        a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
+      
     .designby.mobile-menu__designby.grid__column
-      p.text_xsmall Desarrollado por:
+      p.text_xsmall #{COMMON.DESARROLLADO_POR}:
       a(
         href='http://www.memorandum.net'
         target='_blank'
       )
-        +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+        +picture('/img/logo_memorandum.svg', MEMORANDUM_MULTIMEDIA)
 
 block content
   header.header.text_white
     .inner
       +menu-icon('header__menu-icon no-desktop')
       .logo.header__logo
-        a(href='./')
-          +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
+        a(href=URL.INICIO)
+          +picture('/img/logo_matchtalent.svg', COMMON.WEBSITE_NAME)
+
       ul.nav.header__nav.only-desktop
-        li.nav__item.nav__item_active: a(href='./ventajas.html') Ventajas
-        li.nav__item: a(href='./precios.html') Precios
-        li.nav__item: a(href='./portales.html') ​Portales de Empleo
-        li.nav__item: a(href='./contacto.html') Contacto
-        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+        li.nav__item.nav__item_active: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
+        li.nav__item: a(href=URL.PRECIOS) #{MENU.PRECIOS}
+        li.nav__item: a(href=URL.PORTALES) #{MENU.PORTALES}
+        li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
+        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
 
       //ul.nav-lang.header__nav-lang.only-desktop
-        li.nav-lang__item.nav-lang__item_highlighted Español
-        li.nav-lang__item: a(href='#') English
+        li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
+        li.nav-lang__item: a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
 
   section.content-header.remove_margin-top.remove_margin-bottom
     .content-header__image
       +content-header-image('header_image_ventajas.jpg')
     .inner
       .content-header__title
-        h1 Nuestras ventajas
+        h1 #{VENTAJAS.TITLE}
 
   section.content-text.inner.inner_smaller
     .content-text__grid_2-columns.grid.grid_2-columns.content-text__text.grid_items-center
       .grid__column
-        p
-          | Nuestra herramienta se <strong>integra dentro de la página web</strong> de su empresa y desde allí le permite <strong>acceder a las ofertas y currículos</strong> de los candidatos, gestionarlos, filtrarlos y eliminarlos según lo desee.
-        p
-          | Así mismo, le ofrecemos la posibilidad de <strong>integrar la plataforma con los portales de empleo</strong> que crea necesario para dar mayor difusión a las ofertas de empleo o buscar candidatos más específicos según su formación.
+        | !{VENTAJAS.TEXT}
       .grid__column
         .content-text__cta.cta.text_center
           .cta__content.text_blue
             p
-              | Contacta con nosotros <strong><a href="tel:987 654 321">987&nbsp;654&nbsp;321</a></strong> o solicita demo:
+              | !{VENTAJAS.CONTACTA_CON_NOSOTROS}
             .cta__button.button.button_inverse.button_inverse_blue
-              a(href='#modal-prueba-gratuita', data-modal, data-init-form) solicitar demo
+              a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{COMMON.SOLICITAR_DEMO}
 
   section.our-features
     .inner.inner_smaller
       +our-features-item(
         'dashboard',
-        'Panel de empleo',
-        '<p>Dispondrá dentro de tu Web de un interfaz sencilla y funcional, en el cual podrá disponer de todas sus ofertas y candidatos en un solo clic.</p><p>En cada perfil de candidatos dispondrá de toda la información necesaria, perfil de candidato, currículum, ofertas a las que se han inscrito etc. Pudiendo editar esta información siempre que quiera.</p><p>Podrá personalizar el panel de empleo y publicar automáticamente en su web y en los portales que desee.</p>'
+        VENTAJAS.PANEL.TITLE,
+        VENTAJAS.PANEL.DESCRIPTION
       )
       +our-features-item(
         'social-networks',
-        'Total interacción con redes sociales',
-        '<p>Las ofertas de empleo se publican también en las Redes Sociales que crea conveniente (Facebook, Twitter, Linkedin).</p>'
+        VENTAJAS.SOCIALNETWORK.TITLE,
+        VENTAJAS.SOCIALNETWORK.DESCRIPTION
       )
       +our-features-item(
         'mobile',
-        'Acceso móvil',
-        '<p>Sus candidatos podrán inscribirse a sus ofertas desde cualquier dispositivo móvil.</p>'
+        VENTAJAS.MOVIL.TITLE,
+        VENTAJAS.MOVIL.DESCRIPTION
       )
       +our-features-item(
         'candidate',
-        'Acceso al candidato',
-        '<p>Podrá conocer el estado en el que se encuentra cada candidatura de cada oferta de empleo, los comentarios que ha recibido de cada candidato así como los puestos cubiertos y las vacantes por cubrir.</p>'
+        VENTAJAS.CANDIDATO.TITLE,
+        VENTAJAS.CANDIDATO.DESCRIPTION
       )
       +our-features-item(
         'subscriptions',
-        'Inscripciones simultaneas',
-        '<p>Publique, con un solo clic, sus ofertas de empleo en el portal o portales elegidos así como en las Redes Sociales preferidas, tantas simultáneas como necesite.</p><p>La integración con estos portales permite, que al realizar cualquier cambio en su plataforma se cambie automáticamente en el resto de portales.</p>'
+        VENTAJAS.INSCRIPCIONES.TITLE,
+        VENTAJAS.INSCRIPCIONES.DESCRIPTION
       )
 
   include inc/contact-with-us.pug
@@ -105,26 +103,26 @@ block content
     .inner.inner_smaller
       +our-features-item(
         'unique-db',
-        'Base de datos única',
-        '<p>Utilizando una única base de datos puede recopilar, gestionar y volcar al destino que desee todos los currículos generados en su plataforma o en el portal de empleo y editarlos, modificarlos borrarlos etc. desde el mismo lugar. Podrá buscar por palabras clave y filtrar, evitando duplicidades y pérdidas de tiempo.</p><p>Estas búsquedas dentro de la base de datos podrá hacerlas con toda la precisión que sea necesaria, cruzando datos o a través de cualquier palabra clave dentro del texto de los currículos.</p><p>Así mismo la herramienta dispone de un conjunto de funcionalidades que permiten realizar tareas como, seleccionar candidatos favoritos, hacer comentarios sobre cada uno, almacenar comentarios y valoraciones, agregarlos para un proceso en particular, marcarlos con otros fines, reenviar su currículum a un tercero, descargarlo, enviarles emails personalizados y SMS, moverlos a una oferta en concreto etc.</p>'
+        VENTAJAS.BASEDATOS.TITLE,
+        VENTAJAS.BASEDATOS.DESCRIPTION
       )
       +our-features-item(
         'interaction',
-        'Interaccción con candidatos',
-        '<p>La plataforma permite:</p><ul class="our-features__list list"><li class="list__item">Configurar respuestas automáticas. Cada vez que un candidato cambia de estado dentro de una oferta se le puede avisar por email. Igualmente se puede enviar una respuesta automática a todo aquel que envíe un currículum o se interese por una oferta.</li><li class="list__item">Enviar respuestas personalizadas, individuales o a varios candidatos dentro de la misma oferta. La plataforma también dispone de plantillas de correo electrónico para optimizar tiempo en los envíos, también es posible crear nuevas.</li><li class="list__item">Gestionar la agenda de entrevistas, una herramienta potente permite dar cita previa a cada uno de los preseleccionados con notificación al candidato y opción de cambiar horario en función de la disponibilidad establecida.</li><li class="list__item">Entrevistar por videoconferencia a los candidatos preseleccionados en tiempo real. El módulo de videoconferencia permite establecer una comunicación directa con el candidato a través de videoconferencia y sin necesidad de software o descargas adicionales, una característica que en conjunto con la gestión de agenda resulta extremadamente útil en los procesos de selección y entrevista.</li></ul>'
+        VENTAJAS.INTERACCION.TITLE,
+        VENTAJAS.INTERACCION.DESCRIPTION
       )
       +our-features-item(
         'reports',
-        'Informes',
-        '<p>Todo el rendimiento del proceso de selección y oferta de empleo, se pueden analizar a través de los informes que la herramienta genera. Se pueden utilizar los estándares o crear nuevos.</p><p>Con ellos podrá saber, que canal genera más actividad, más candidatos, cuáles son los más adecuados para un puesto, que oficina es la más efectiva etc. Y todo a través de todos los gráficos que precise.</p>'
+        VENTAJAS.INFORMES.TITLE,
+        VENTAJAS.INFORMES.DESCRIPTION
       )
       +our-features-item(
         'lopd',
-        'LOPD',
-        '<p>La Ley Orgánica de Protección de datos es fundamentar en nuestro sector. En Matchtalent no dejamos nada al azar en este aspecto:</p><ul class="our-features__list list"><li class="list__item">Los candidatos rellenan un compromiso de confidencialidad. Se le envían recordatorios constantes hasta que está realizado.</li><li class="list__item">Las empresas cumplen todas con sus obligaciones a este respecto.</li><li class="list__item">Somos muy estrictos a la hora de comprobar que todos los portales y entidades externos, cumplen con la LOPD como corresponde.</li></ul>'
+        VENTAJAS.LOPD.TITLE,
+        VENTAJAS.LOPD.DESCRIPTION
       )
       +our-features-item(
         'video',
-        'Video presentación',
-        '<p>La plataforma permite poner el enlace de la videopresentación en el perfil del candidato.</p>'
+        VENTAJAS.VIDEO.TITLE,
+        VENTAJAS.VIDEO.DESCRIPTION
       )

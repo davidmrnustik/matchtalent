@@ -1,92 +1,62 @@
 extends layout.pug
 
 block title
-  title Política de Cookies MatchTalent - Plataforma de empleo
+  title #{SEO.COOKIES.TITLE}
   meta(
     name='content'
-    description='Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia.'
+    description= SEO.COOKIES.DESCRIPTION
   )
 
 block mobile-menu
   +menu-icon('mobile-menu__menu-icon')
   .inner
     ul.nav.mobile-menu__nav
-      li.nav__item: a(href='./') Inicio
-      li.nav__item: a(href='./ventajas.html') Ventajas
-      li.nav__item: a(href='./precios.html') Precios
-      li.nav__item: a(href='./portales.html') ​Portales de Empleo
-      li.nav__item: a(href='./contacto.html') Contacto
-      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
-      
-    //ul.nav-lang.mobile-menu__nav-lang
-      li.nav-lang__item.nav-lang__item_highlighted Español
+      li.nav__item: a(href=URL.INICIO) #{MENU.INICIO}
+      li.nav__item: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
+      li.nav__item: a(href=URL.PRECIOS) #{MENU.PRECIOS}
+      li.nav__item: a(href=URL.PORTALES) #{MENU.PORTALES}
+      li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
+      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
+
+    //- ul.nav-lang.mobile-menu__nav-lang
+      li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
       li.nav-lang__item
-        a(href='#') English
+        a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
     
     .designby.mobile-menu__designby.grid__column
-      p.text_xsmall Desarrollado por:
+      p.text_xsmall #{COMMON.DESARROLLADO_POR}:
       a(
         href='http://www.memorandum.net'
         target='_blank'
       )
-        +picture('/img/logo_memorandum.svg', 'Memorándum Multimedia')
+        +picture('/img/logo_memorandum.svg', MEMORANDUM_MULTIMEDIA)
 
 block content
   header.header.text_white
     .inner
       +menu-icon('header__menu-icon no-desktop')
       .logo.header__logo
-        a(href='./')
-          +picture('/img/logo_matchtalent.svg', 'MatchTalent - Plataforma de empleo')
+        a(href=URL.INICIO)
+          +picture('/img/logo_matchtalent.svg', COMMON.WEBSITE_NAME)
+
       ul.nav.header__nav.only-desktop
-        li.nav__item: a(href='./ventajas.html') Ventajas
-        li.nav__item: a(href='./precios.html') Precios
-        li.nav__item: a(href='./portales.html') ​Portales de Empleo
-        li.nav__item: a(href='./contacto.html') Contacto
-        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) Prueba gratuita
+        li.nav__item: a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
+        li.nav__item: a(href=URL.PRECIOS) #{MENU.PRECIOS}
+        li.nav__item: a(href=URL.PORTALES) #{MENU.PORTALES}
+        li.nav__item: a(href=URL.CONTACTO) #{MENU.CONTACTO}
+        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
 
       //ul.nav-lang.header__nav-lang.only-desktop
-        li.nav-lang__item.nav-lang__item_highlighted Español
-        li.nav-lang__item: a(href='#') English
+        li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
+        li.nav-lang__item: a(href=LANG.ENGLISH.URL) #{LANG.ENGLISH.TEXT}
 
   section.content-header.remove_margin-top.remove_margin-bottom
     .content-header__image
       +content-header-image('header_image_contacto.jpg')
     .inner
       .content-header__title
-        h1 Política de Cookies
+        h1 #{COOKIES.TITLE}
 
   section.content-text.inner.inner_smaller.contacto
     .content-text__text
-      p
-        | MatchTalent por su propia cuenta o la de un tercero contratado para prestación de servicios de medición, pueden utilizar cookies cuando el usuario navega por el sitio web. Las cookies son ficheros enviados al navegador por medio de un servicio web con la finalidad de registrar las actividades del usuario durante su tiempo de navegación.
-      p
-        | Las cookies utilizadas se asocian únicamente con un usuario anónimo y su ordenador, y no proporcionan por sí mismas los datos personales del usuario.
-      p
-        | Mediante el uso de las cookies resulta posible que el servidor donde se encuentra la web reconozca el navegador web utilizado por el usuario con la finalidad de que la navegación sea más sencilla. Se utilizan también para medir la audiencia y parámetros del tráfico, controlar el proceso y número de entradas.
-      p
-        | El usuario tiene la posibilidad de configurar su navegador para ser avisado de la recepción de cookies y para impedir su instalación en su equipo. Por favor consulte las instrucciones y manuales de su navegador para ampliar esta información.
-      p
-        | Para utilizar el sitio web no es necesario que el usuario permita la instalación de las cookies enviadas al sitio web, o el tercero que actúe en su nombre, sin perjuicio de que sea necesario que el usuario inicie una sesión tal en cada uno de los servicios cuya prestación requiera el previo registro.
-      p
-        | A continuación podrá encontrar detallados los diferentes tipos de cookies que utilizan las páginas de MatchTalent, con su nombre, fecha de expiración y finalidad.
-
-      table
-        tr
-          th Nombre de la cookie
-          th Gestión 
-          th Tipo de cookie
-          th Duración
-          th Descripción
-        tr
-          td cookie_matchtalent
-          td MatchTalent
-          td Session
-          td 1 mes
-          td Guarda preferencias de navegación.
-        tr
-          td PHPSESSID
-          td MatchTalent
-          td Persistente
-          td -
-          td Asocia un identificador a un usuario con la aplicación PHP para todas aquellas variables almacenadas en sesión.
+      | !{COOKIES.TEXT}
