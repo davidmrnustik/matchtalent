@@ -14,5 +14,17 @@ $block: 'list__item';
 		width: 5px;
 		height: 5px;
 		background-color: $color-blue;
+
+		.list_icon-check & {
+			background: none;
+			top: -8px;
+			left: 0px;
+			width: 40px;
+			height: 40px;
+			@include bg-image('checkbox_blue.svg', left, top, cover);
+		}
+	}
+	.list_icon-check & {
+		padding-left: 42px;
 	}
 }

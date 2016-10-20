@@ -172,36 +172,41 @@
 	"PRECIOS" : {
 		"TITLE" : "Nuestros planes",
 		"PROFESIONAL" : {
-			"TITLE" : "Profesional",
+			"TITLE" : "Basic",
 			"PRECIO" : {
-				"MENSUAL" : "89",
-				"ANUAL" : "960"
+				"MENSUAL" : "295",
+				"ANUAL" : "",
+				"LANZAMIENTO" : "195"
 			},
-			"PLAN" : "<li><strong>5 Active Jobs</strong></li><li><strong>5000 Candidates</strong></li><li>Unlimited archived positions</li><li>Unlimited users</li>"
+			"PLAN" : "<li><strong>10 Ofertas</strong></li><li><strong>1.000 Candidatos</strong></li><li>3 portales de empleo integrados</li>"
 		},
 		"EXPERTO" : {
-			"TITLE" : "Experto",
+			"TITLE" : "Plus",
 			"PRECIO" : {
-				"MENSUAL" : "179",
-				"ANUAL" : "1930"
+				"MENSUAL" : "395",
+				"ANUAL" : "",
+				"LANZAMIENTO" : "275"
 			},
-			"PLAN" : "<li><strong>15 Active Jobs</strong></li><li><strong>15000 Candidates</strong></li><li>Unlimited archived positions</li><li>Unlimited users</li>"
+			"PLAN" : "<li><strong>20 Ofertas</strong></li><li><strong>2.000 Candidatos</strong></li><li>5 portales de empleo integrados</li>"
 		},
 		"CUSTOM" : {
-			"TITLE" : "Custom",
+			"TITLE" : "Premium",
 			"PRECIO" : {
-				"MENSUAL" : "",
-				"ANUAL" : ""
+				"MENSUAL" : "695",
+				"ANUAL" : "",
+				"LANZAMIENTO" : "495"
 			},
-			"PLAN" : "<li><strong>Hasta 30 Active Jobs</strong></li><li><strong>Hasta 30000 Candidates</strong></li><li>Unlimited archived positions</li><li>Unlimited users</li>",
+			"PLAN" : "<li><strong>ilimitado</strong></li><li><strong>ilimitado</strong></li><li>10 portales de empleo integrados</li>",
 			"CONTACTA_NOSOTROS" : "Contacta con nosotros"
 		},
 		"MENSUAL" : "mensual",
 		"ANUAL" : "anual",
-		"ALL_FEATURES" : "All features",
+		"LANZAMIENTO" : "lanzamiento",
+		"PRECIO_INFO" : "pagos mensuales,<br/>descuento de 10% en pagos anuales,<br/>* Oferta lanzamiento",
+		"ALL_FEATURES" : "Ventajas incluidas",
 		"TODOS_PLANES_INCLUYEN" : {
 			"TITLE" : "Todos planes incluyen",
-			"TEXT" : "<div class='plans-include__item grid__column'><h3 class='plans-include__title'>Posting</h3><ul class='list plans-include__description'><li class='list__item'>Lorem divb dssdfbv dsbfsdfds</li><li class='list__item'>kfhvb fvbsdfbsfg blisgdls</li><li class='list__item'>bortheiu bvishl bvshb vsd fbkfsgd</li><li class='list__item'>dsfkhbv adhiv bisdfbv iorg bs</li></ul></div><div class='plans-include__item grid__column'><h3 class='plans-include__title'>Job Applications</h3><ul class='list plans-include__description'><li class='list__item'>kfhvb fvbsdfbsfg blisgdls</li><li class='list__item'>dsfkhbv adhiv bisdfbv iorg bs</li><li class='list__item'>bortheiu bvishl bvshb vsd fbkfsgd</li></ul></div><div class='plans-include__item grid__column'><h3 class='plans-include__title'>Candidate Database</h3><ul class='list plans-include__description'><li class='list__item'>kfhvb fvbsdfbsfg blisgdls</li><li class='list__item'>dsfkhbv adhiv bisdfbv iorg bs</li><li class='list__item'>bortheiu bvishl bvshb vsd fbkfsgd</li></ul></div><div class='plans-include__item grid__column'><h3 class='plans-include__title'>Reports & Usability</h3><ul class='list plans-include__description'><li class='list__item'>kfhvb fvbsdfbsfg blisgdls</li><li class='list__item'>dsfkhbv adhiv bisdfbv iorg bs</li><li class='list__item'>bortheiu bvishl bvshb vsd fbkfsgd</li><li class='list__item'>ergwrttregb bvishl bvshb vsd svsdf</li></ul></div><div class='plans-include__item grid__column'><h3 class='plans-include__title'>Optional Features</h3><ul class='list plans-include__description'><li class='list__item'>ds fvsdfvsdfvdsf blisgdls</li><li class='list__item'>sdfv sdf iorg bs</li><li class='list__item'>dsfkhbv adhiv bisdfbv iorg bs</li><li class='list__item'>sdvsd vsdf vd vsd fbkfsgd</li><li class='list__item'>ergwrttregb bvishl bvshb vsd svsdf</li></ul></div>"
+			"TEXT" : "<div class='plans-include__item grid__column grid__column_remove-bottom'><h3 class='plans-include__title'>Ventajas Candidato</h3><ul class='list list_icon-check plans-include__description'><li class='list__item'>Inscripción en ofertas disponibles</li><li class='list__item'>Creación y edición de CV</li><li class='list__item'>Visualización de ofertas disponibles </li><li class='list__item'>Inscripción en ofertas </li><li class='list__item'>Visualización de ofertas inscritas</li><li class='list__item'>Videoconferencia para entrevistas</li></ul></div><div class='plans-include__item grid__column grid__column_remove-bottom'><h3 class='plans-include__title'>Ventajas RRHH</h3><ul class='list list_icon-check plans-include__description'><li class='list__item'>Configuración general</li><li class='list__item'>Herramientas de perfiles</li><li class='list__item'>Comunicación con usuarios (Email)</li><li class='list__item'>Listado de ofertas de trabajo</li><li class='list__item'>Alta de oferta</li><li class='list__item'>Inclusión de preguntas con respuesta (preestablecidas y libres)</li><li class='list__item'>Entrevistas por Videoconferenci</li></ul></div>"
 		}
 	},
 	"PORTALES_EMPLEO" : {

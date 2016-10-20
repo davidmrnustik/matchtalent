@@ -12,6 +12,10 @@
 			padding-left: ($gap / 2);
 		}
 	}
+	&_remove-bottom {
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
 }
 
 @mixin grid_3-columns($gap){

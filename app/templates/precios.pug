@@ -25,71 +25,48 @@ block content
       .our-plans__item.grid__column
         .our-plans__header
           .our-plans__title #{PRECIOS.PROFESIONAL.TITLE}
-          .our-plans__price.text_blue
-            span#planProfesionalPrice(data-plan-price)
+          .our-plans__price.text_strikethrough
+            span #{PRECIOS.PROFESIONAL.PRECIO.MENSUAL}
             span.our-plans__currency &euro;
-            span.text_small(data-plan-period='profesionalMensual') / #{PRECIOS.MENSUAL}
-            span.text_small(data-plan-period='profesionalAnual', hidden) / #{PRECIOS.ANUAL}
-          fieldset.our-plans__period.text_xsmall
-            input(
-              type='radio',
-              name='planProfesionalPeriod',
-              id='profesionalMensual'
-              value=PRECIOS.PROFESIONAL.PRECIO.MENSUAL
-              checked
-              data-period-for='planProfesionalPrice'
-            )/
-            label(for='profesionalMensual') #{PRECIOS.MENSUAL}
-          fieldset.our-plans__period.text_xsmall
-            input(
-              type='radio',
-              name='planProfesionalPeriod',
-              id='profesionalAnual'
-              value=PRECIOS.PROFESIONAL.PRECIO.ANUAL
-              data-period-for='planProfesionalPrice'
-            )/
-            label(for='profesionalAnual') #{PRECIOS.ANUAL}
+          .our-plans__price.our-plans__price_lanzamiento
+            span #{PRECIOS.PROFESIONAL.PRECIO.LANZAMIENTO}
+            span.our-plans__currency &euro;*
+          .our-plans__price-text
+            | !{PRECIOS.PRECIO_INFO}
         ul.our-plans__features
           | !{PRECIOS.PROFESIONAL.PLAN}
           li: a(href='#plansInclude', data-scroll) #{PRECIOS.ALL_FEATURES}
         .our-plans__button.button.button_inverse_blue
           a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
+      
       .our-plans__item.grid__column.our-plans__item_highlighted
         .our-plans__header
           .our-plans__title #{PRECIOS.EXPERTO.TITLE}
-          .our-plans__price.text_blue
-            span#planExpertoPrice(data-plan-price)
+          .our-plans__price.text_strikethrough
+            span #{PRECIOS.EXPERTO.PRECIO.MENSUAL}
             span.our-plans__currency &euro;
-            span.text_small(data-plan-period='expertoMensual') / #{PRECIOS.MENSUAL}
-            span.text_small(data-plan-period='expertoAnual', hidden) / #{PRECIOS.ANUAL}
-          fieldset.our-plans__period.text_xsmall
-            input(
-              type='radio',
-              name='planExpertolPeriod',
-              id='expertoMensual'
-              value=PRECIOS.EXPERTO.PRECIO.MENSUAL
-              checked
-              data-period-for='planExpertoPrice'
-            )/
-            label(for='expertoMensual') #{PRECIOS.MENSUAL}
-          fieldset.our-plans__period.text_xsmall
-            input(
-              type='radio',
-              name='planExpertolPeriod',
-              id='expertoAnual'
-              value=PRECIOS.EXPERTO.PRECIO.ANUAL
-              data-period-for='planExpertoPrice'
-            )/
-            label(for='expertoAnual') #{PRECIOS.ANUAL}
+          .our-plans__price.our-plans__price_lanzamiento
+            span #{PRECIOS.EXPERTO.PRECIO.LANZAMIENTO}
+            span.our-plans__currency &euro;*
+          .our-plans__price-text
+            | !{PRECIOS.PRECIO_INFO}
         ul.our-plans__features
           | !{PRECIOS.EXPERTO.PLAN}
           li: a(href='#plansInclude', data-scroll) #{PRECIOS.ALL_FEATURES}
         .our-plans__button.button.button_inverse_blue
           a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
+      
       .our-plans__item.grid__column
         .our-plans__header
           .our-plans__title #{PRECIOS.CUSTOM.TITLE}
-          .our-plans__price.text_blue: a(href='./contacto.html') #{PRECIOS.CUSTOM.CONTACTA_NOSOTROS}
+          .our-plans__price.text_strikethrough
+            span #{PRECIOS.CUSTOM.PRECIO.MENSUAL}
+            span.our-plans__currency &euro;
+          .our-plans__price.our-plans__price_lanzamiento
+            span #{PRECIOS.CUSTOM.PRECIO.LANZAMIENTO}
+            span.our-plans__currency &euro;*
+          .our-plans__price-text
+            | !{PRECIOS.PRECIO_INFO}
         ul.our-plans__features
           | !{PRECIOS.CUSTOM.PLAN}
           li: a(href='#plansInclude', data-scroll) #{PRECIOS.ALL_FEATURES}
@@ -98,10 +75,10 @@ block content
 
   .hr.hr_fullwidth
 
-  section#plansInclude.plans-include.inner
+  section#plansInclude.plans-include.inner.inner_smaller.remove_margin-bottom
     h2.plans-include__headline.text_uppercase.text_center
       | #{PRECIOS.TODOS_PLANES_INCLUYEN.TITLE}
-    .grid.grid_3-columns.plans-include__grid_3-columns.grid_justify-initial
+    .grid.grid_2-columns.plans-include__grid_2-columns.grid_center
       | !{PRECIOS.TODOS_PLANES_INCLUYEN.TEXT}
 
   include inc/contact-with-us.pug

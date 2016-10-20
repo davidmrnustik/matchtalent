@@ -7,4 +7,7 @@ $block: 'list';
 	@include custom-breakpoint-min($breakpoint-phablet) {
 		margin-left: 20px;
 	}
+	&_icon-check {
+		margin-left: 5px;
+	}
 }

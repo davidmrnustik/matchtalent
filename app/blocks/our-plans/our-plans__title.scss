@@ -1,0 +1,15 @@
+$block: 'our-plans__title';
+
+.#{$block} {
+	font-family: $font-secondary;
+	color: $color-blue;
+	@include font-size(22);
+	padding-top: 15px;
+	padding-bottom: 13px;
+	border-bottom: 1px solid #dedede;
+
+	.our-plans__item_highlighted & {
+		background-color: $color-blue;
+		color: #fff;
+	}
+}

@@ -139,8 +139,11 @@ temp-page
 		our-plans__item
 			our-plans__item_highlighted
 			our-plans__grid_3-columns
+			our-plans__header
 			our-plans__title
+			out-plans__price-text
 			our-plans__price
+				our-plans__price_lanzamiento
 			our-plans__currency
 			our-plans__period
 			our-plans__features
@@ -162,6 +165,7 @@ temp-page
 
 # helper blocks #
 list
+	list_icon-check
 	list__item
 cta
 	cta__content
@@ -182,6 +186,7 @@ grid
 	grid_items-center
 	grid_2-columns
 		grid__column
+			grid__column_remove-bottom
 	grid_3-columns
 		grid__column
 

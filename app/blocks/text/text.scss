@@ -31,4 +31,7 @@ $block: 'text';
 	&_success {
 		color: green;
 	}
+	&_strikethrough {
+		text-decoration: line-through;
+	}
 }
