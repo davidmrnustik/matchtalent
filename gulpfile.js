@@ -37,7 +37,6 @@ var src = {
 		'./app/modules/**/*.php',
 		'./.htaccess'
 	],
-	php: './app/modules/**/*.php',
 	dev: '_dev',
 	build: '_build',
 	translations: './app/translations/**/*',
@@ -274,5 +273,5 @@ gulp.task('default', ['dev'], function(){
 	gulp.watch([src.img], ['images:dev', reload]);
 	gulp.watch(['./app/templates/**/*.pug'], ['pug:dev', reload]);
 	gulp.watch(src.translations, ['pug:dev', reload]);
-	gulp.watch([src.php], ['root:dev', reload]);
+	gulp.watch([src.root], ['root:dev', reload]);
 });

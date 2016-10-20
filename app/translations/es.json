@@ -215,7 +215,7 @@
 	},
 	"CONTACTO" : {
 		"TITLE" : "Contacta con nosotros",
-		"TEXT" : "<h4>Dirección</h4><p><strong>MatchTalent</strong><br/>La Terminal, Centro de Arte y Tecnología 4ªpl.<br/>Avda. Ciudad de Soria, 8<br/>50003 Zaragoza</p><p> <a href='tel:876019922'>(+34) 876 01 99 22</a><br/><script> buildEmail('memorandum', 'memorandum.net'); </script></p>"
+		"TEXT" : "<h4>Dirección</h4><p><strong>MatchTalent</strong><br/>La Terminal, Centro de Arte y Tecnología 4ªpl.<br/>Avda. Ciudad de Soria, 8<br/>50003 Zaragoza</p><p> <a href='tel:876019922'>(+34) 876 01 99 22</a><br/><script> buildEmail('comercial', 'memorandum.net'); </script></p>"
 	},
 	"COOKIES" : {
 		"TITLE" : "Política de cookies",
