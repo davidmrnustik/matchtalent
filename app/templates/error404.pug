@@ -1,0 +1,21 @@
+extends layout.pug
+
+block title
+  title #{SEO.INICIO.TITLE}
+  meta(
+    name='content'
+    description=SEO.INICIO.DESCRIPTION
+  )
+
+block mobile-menu
+  +mobile-menu('404')
+
+block content
+  +header('404')
+
+  section.content-header.remove_margin-top.remove_margin-bottom
+    .content-header__image
+      +content-header-image('header_image_contacto.jpg')
+    .inner
+      .content-header__title
+        h1 404 page

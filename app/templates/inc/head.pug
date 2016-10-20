@@ -24,14 +24,13 @@ style
   | #intro img { position: absolute; display:block;margin:0 auto;width: auto; max-width:200px;left:50%;top:250px;margin-left:-100px; -webkit-animation: scale 1.5s ease-out; -webkit-animation-iteration-count: infinite; }
   | @-webkit-keyframes scale { 0% {opacity: 1} 50% {opacity: .4} 100% {opacity: 1} }
 
-<!--[if !IE]>
-  <!--><script src="/js/components.js"></script>
-<!--<![endif]-->
 <!--[if IE 9]>
-  <!--><script src="/js/components.js"></script>
-<!--<![endif]-->
+  <script src="/js/components.js"></script>
+<![endif]-->
 <!--[if IE 8]>
   <link rel="stylesheet" type="text/css" href="/css/no-flexbox.css">
   <script src="/js/components_ie.js"></script> 
   <script src="/js/legacy.js"></script> 
 <![endif]-->
+<!--[if !IE]> -->
+script(src="/js/components.js")
