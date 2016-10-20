@@ -65,4 +65,4 @@
   </FilesMatch>
   Header always append X-Frame-Options SAMEORIGIN
 </IfModule>
-ErrorDocument 404 ./error404.html
+ErrorDocument 404 /error404.html

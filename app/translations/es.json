@@ -284,5 +284,9 @@
 	"COOKIES_ALERT" : {
 		"TEXT": "Utilizamos cookies propias y de terceros para mejorar su experiencia y nuestros servicios. Si continua navegando, consideramos que aceptas su uso. Puede obtener más información o conocer cómo cambiar la configuración <a href='./cookies.html' class='text_white'>aquí.</a>",
 		"CERRAR" : "Cerrar"
+	},
+	"PAGE404" : {
+		"TITLE" : "Página no encontrada",
+		"TEXT" : "<p>La página solicitada puede no estar disponible, haber cambiado de dirección (URL) o no existir.<p>Prueba a dirigirse hacia nuestra <a href='/'>página principal</a>.</p><p>Disculpe las molestias.</p>"
 	}
 }
