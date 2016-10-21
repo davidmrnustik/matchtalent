@@ -20,6 +20,11 @@ if ((isset($_POST['tmptxt'])) and ($_SESSION['tmptxt']==$_POST['tmptxt'])) {
 		return $data;
 	};
 
+	function show_error($myError) {
+		echo $myError;
+		exit();
+	}
+
 	$mail = new PHPMailer();
 
 	$formName = check_input($_POST["name"]);

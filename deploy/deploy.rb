@@ -12,7 +12,8 @@ class Deploy
 	# Servidores FTP - array[server, user, pwd]
 	# 0 - demo, 1 - production
 	@servers = [
-		["matchtalent.com.es", "webtalentdemo", "Hm69tu4~"],
+		#["matchtalent.com.es", "webtalentdemo", "Hm69tu4~"],
+		["matchtalent.tests-mm.com", "ftp_matchtalent", "Icp6w2#5"],
 		["matchtalent.com.es", "webtalent", "Hm69tu4~"]
 	]
 
