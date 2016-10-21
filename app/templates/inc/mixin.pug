@@ -134,7 +134,7 @@ mixin content-header-image(img)
     )
 
 mixin our-features-item(icon, title, description)
-  .our-features__grid_2-columns.grid.grid_2-columns.our-features__item
+  .our-features__grid_2-columns.grid.grid_2-columns.our-features__item(id=icon)
     .our-features__icon.grid__column(class='our-features__icon_' + icon)
     .our-features__content.grid__column
       .our-features__title
