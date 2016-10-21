@@ -239,7 +239,8 @@
 		"DESARROLLADO_POR" : "Desarrollado por",
 		"MEMORANDUM_MULTIMEDIA": "Memorándum Multimedia",
 		"SOLICITAR_DEMO" : "Solicitar demo",
-		"MAS_DETALLES" : "más detalles"
+		"MAS_DETALLES" : "más detalles",
+		"MAS_INFORMACIONES" : "más informaciones"
 	},
 	"CONTACT_FORM" : {
 		"TEXT" : "Si desea más información, resolver alguna duda o realizar una prueba con MatchTalent, rellene el siguiente formulario:",

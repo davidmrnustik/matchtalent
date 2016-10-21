@@ -15,10 +15,10 @@ block content
   
   section.hero.remove_margin-bottom
     .slider.text_white.hero__slider.text_center(data-slick!={"arrows": false, "dots": true, "dotsClass": "slider__dotnav", "lazyLoad": "progressive", "infinite": false})
-      +slider-item(1, 'slide_01.jpg', INICIO.SLIDER.GESTION.TITLE, INICIO.SLIDER.GESTION.DESCRIPTION)
-      +slider-item(2, 'slide_02.jpg', INICIO.SLIDER.AHORRO.TITLE, INICIO.SLIDER.AHORRO.DESCRIPTION)
-      +slider-item(3, 'slide_03.jpg', INICIO.SLIDER.AUTOMATIZADO.TITLE, INICIO.SLIDER.AUTOMATIZADO.DESCRIPTION)
-      +slider-item(4, 'slide_04.jpg', INICIO.SLIDER.VIDEOCONFERENCIA.TITLE, INICIO.SLIDER.VIDEOCONFERENCIA.DESCRIPTION)
+      +slider-item(1, 'slide_01.jpg', INICIO.SLIDER.GESTION.TITLE, INICIO.SLIDER.GESTION.DESCRIPTION, '#modal-prueba-gratuita', true, true, MENU.PRUEBA_GRATUITA)
+      +slider-item(2, 'slide_02.jpg', INICIO.SLIDER.AHORRO.TITLE, INICIO.SLIDER.AHORRO.DESCRIPTION, '#modal-prueba-gratuita', true, true, MENU.PRUEBA_GRATUITA)
+      +slider-item(3, 'slide_03.jpg', INICIO.SLIDER.AUTOMATIZADO.TITLE, INICIO.SLIDER.AUTOMATIZADO.DESCRIPTION, '#modal-prueba-gratuita', true, true, MENU.PRUEBA_GRATUITA)
+      +slider-item(4, 'slide_04.jpg', INICIO.SLIDER.VIDEOCONFERENCIA.TITLE, INICIO.SLIDER.VIDEOCONFERENCIA.DESCRIPTION, URL.VENTAJAS, false, false, COMMON.MAS_INFORMACIONES)
 
   section.clients.text_center.remove_margin-top
     .inner
@@ -89,6 +89,6 @@ block content
     h2.partners__headline.text_center.text_uppercase
       | #{INICIO.PORTALES_EMPLEO.TITLE}
     .grid.grid_flex.grid_center
-      +partners(["/img/portal_buscarempleo.jpg", "/img/portal_ticjob.jpg", "/img/portal_monster.jpg", "/img/portal_infoempleo.jpg", "/img/portal_linkedinjobs.jpg", "/img/portal_xing.jpg", "/img/portal_disjob.jpg", "/img/portal_fjobs.jpg"])
+      +partners(["/img/portal_buscarempleo.jpg", "/img/portal_ticjob.jpg", "/img/portal_monster.jpg", "/img/portal_infoempleo.jpg", "/img/portal_linkedinjobs.jpg", "/img/portal_turijobs.jpg", "/img/portal_disjob.jpg", "/img/portal_fjobs.jpg"])
     .button.partners__button
       a(href=URL.PORTALES) #{INICIO.PORTALES_EMPLEO.VER_TODOS_PORTALES}
