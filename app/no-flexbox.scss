@@ -8,69 +8,69 @@ $grid: 'grid';
 
 .#{$block} {
 
-	.#{$grid} {
-		@include clearfix();
-		text-align: center;
-		display: block;
+  .#{$grid} {
+    @include clearfix();
+    text-align: center;
+    display: block;
 
-		&_2-columns {
-			float: none;
+    &_2-columns {
+      float: none;
 
-			& > .#{$grid}__column {
-				@include custom-breakpoint-min($breakpoint-phablet) {
-					float: left;
-				}
-			}
-		}
-		&_width-auto.#{$grid}_2-columns {
-			& > .#{$grid}__column {
-				padding-bottom: 0px;
-				
-				@include custom-breakpoint-min($breakpoint-tablet) {
-					width: 50%;
-				}
-			}
-		}
-		&_3-columns {
-			float:none;
+      & > .#{$grid}__column {
+        @include custom-breakpoint-min($breakpoint-phablet) {
+          float: left;
+        }
+      }
+    }
+    &_width-auto.#{$grid}_2-columns {
+      & > .#{$grid}__column {
+        padding-bottom: 0px;
+        
+        @include custom-breakpoint-min($breakpoint-tablet) {
+          width: 50%;
+        }
+      }
+    }
+    &_3-columns {
+      float:none;
 
-			& > .#{$grid}__column {
-				@include custom-breakpoint-min($breakpoint-phablet) {
-					float: left;
-					width: 100%;
-				}
-				@include custom-breakpoint-min($breakpoint-tablet) {
-					width: 33.33%;
-				}
-			}
-		}
-		&_flex {
-			& > .#{$grid}__column {
-				display: block;
+      & > .#{$grid}__column {
+        @include custom-breakpoint-min($breakpoint-phablet) {
+          float: left;
+          width: 100%;
+        }
+        @include custom-breakpoint-min($breakpoint-tablet) {
+          width: 33.33%;
+        }
+      }
+    }
+    &_flex {
+      & > .#{$grid}__column {
+        display: block;
 
-				@include custom-breakpoint-min($breakpoint-phablet) {
-					display: inline-block;
-				}
-			}
-		}
-		&.footer__grid_3-column {
-			float: none;
+        @include custom-breakpoint-min($breakpoint-phablet) {
+          display: inline-block;
+        }
+      }
+    }
+    &.footer__grid_3-column {
+      float: none;
 
-			.grid__column {
-				@include custom-breakpoint-min($breakpoint-tablet) {
-					float: left;
-				}
-			}
-			.grid__column:first-child {
-				@include custom-breakpoint-min($breakpoint-tablet) {
-					width: 160px;
-				}
-			}
-			.grid__column:last-child {
-				@include custom-breakpoint-min($breakpoint-tablet) {
-					float: right;
-				}
-			}
-		}
-	}
+      .grid__column {
+        @include custom-breakpoint-min($breakpoint-tablet) {
+          float: left;
+        }
+      }
+      .grid__column:first-child {
+        @include custom-breakpoint-min($breakpoint-tablet) {
+          width: 160px;
+        }
+      }
+      .grid__column:last-child {
+        @include custom-breakpoint-min($breakpoint-tablet) {
+          float: right;
+        }
+      }
+    }
+  }
 }
