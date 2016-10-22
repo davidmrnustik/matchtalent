@@ -52,3 +52,8 @@ Los mixins (predeterminados trozos de código) están definidos en /app/template
 # Contenido #
 
 El contenido de las páginas está ubicado en /app/translations/es.json.
+
+# Despliegue #
+$ gulp build  
+$ ruby deploy/deploy.rb demo - despliegue a demo  
+$ ruby deploy/deploy.rb production - despliegue a producción
