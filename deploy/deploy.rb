@@ -17,6 +17,12 @@ class Deploy
     ["matchtalent.com.es", "webtalent", "Hm69tu4~"]
   ]
 
+  def self.build
+    puts "Building application..."
+    commands = CONFIG_PATH + `gulp build`
+    puts commands
+  end
+
   def self.init
     param = ARGV[0]
     case param
@@ -32,6 +38,7 @@ class Deploy
     end
     puts "Deploying to #{@env}:"
     puts "-------------------------"
+    build()
     ftp(@env)
   end
   
