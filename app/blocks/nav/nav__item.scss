@@ -1,21 +1,21 @@
 $block: 'nav__item';
 
 .#{$block} {
-	@include custom-breakpoint-min($breakpoint-phablet) {
-		display: inline-block;
-	}
+  @include custom-breakpoint-min($breakpoint-phablet) {
+    display: inline-block;
+  }
 
-	.header__nav &_active {
-		&:after {
-			content: "";
-			height: 3px;
-			background-color: #fff;
-			display: block;
-			margin: 0px auto;
-			width: calc(100% - 18px);
-		}
-	}
-	.mobile-menu__nav &_active {
-		background: rgba(darken($color-blue, 2%), 1);
-	}
+  .header__nav &_active {
+    &:after {
+      content: "";
+      height: 3px;
+      background-color: #fff;
+      display: block;
+      margin: 0px auto;
+      width: calc(100% - 18px);
+    }
+  }
+  .mobile-menu__nav &_active {
+    background: rgba(darken($color-blue, 2%), 1);
+  }
 }

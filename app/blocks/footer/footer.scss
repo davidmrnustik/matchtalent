@@ -1,11 +1,11 @@
 $block: 'footer';
 
 .#{$block} {
-	background-color: $color-blue;
-	@include font-size(14);
-	padding: 45px 20px 10px 20px;
+  background-color: $color-blue;
+  @include font-size(14);
+  padding: 45px 20px 10px 20px;
 
-	@include custom-breakpoint-max($breakpoint-phablet) {
-		padding: 45px 0px 10px 0px;
-	}
+  @include custom-breakpoint-max($breakpoint-phablet) {
+    padding: 45px 0px 10px 0px;
+  }
 }

@@ -1,10 +1,10 @@
 $block: 'slider';
 
 .#{$block} {
-	margin-bottom: 0px !important;
+  margin-bottom: 0px !important;
 
-	.slick-list,
-	.slick-track {
-		height: 100%;
-	}
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
 }

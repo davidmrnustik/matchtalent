@@ -1,11 +1,11 @@
 $block: 'hero';
 
 .#{$block} {
-	height: 640px;
-	background-color: $color-blue;
-	margin-top: -$header-height !important;
+  height: 640px;
+  background-color: $color-blue;
+  margin-top: -$header-height !important;
 
-	@include custom-breakpoint-max($breakpoint-desktop) {
+  @include custom-breakpoint-max($breakpoint-desktop) {
     height: 520px;
   }
 

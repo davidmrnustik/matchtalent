@@ -1,13 +1,13 @@
 $block: 'solutions-for__headline';
 
 .#{$block} {
-	margin: 0 auto 25px auto;
+  margin: 0 auto 25px auto;
 
-	@include custom-breakpoint-min($breakpoint-tablet) {
-		@include font-size(24);
-		margin-bottom: 70px;
-		position: absolute;
-		left: 50%;
-		@include transform(translate, -50%, X);
-	}
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    @include font-size(24);
+    margin-bottom: 70px;
+    position: absolute;
+    left: 50%;
+    @include transform(translate, -50%, X);
+  }
 }

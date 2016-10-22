@@ -1,24 +1,24 @@
 $block: 'cookies';
 
 ##{$block} {
-	@include font-size(14);
-	position: fixed;
-	z-index: 5;
-	bottom: 0px;
-	left: 0px;
-	width: 100%;
-	padding: 20px 25px;
-	border-top: 3px solid #fff;
-	background-color: rgba($color-blue, .9);
+  @include font-size(14);
+  position: fixed;
+  z-index: 5;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 20px 25px;
+  border-top: 3px solid #fff;
+  background-color: rgba($color-blue, .9);
 
-	a {
-		text-decoration: underline;
+  a {
+    text-decoration: underline;
 
-		&:hover {
-			text-decoration: none;
-		}
-	}
-	&__close {
-		margin-left: 10px;
-	}
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__close {
+    margin-left: 10px;
+  }
 }

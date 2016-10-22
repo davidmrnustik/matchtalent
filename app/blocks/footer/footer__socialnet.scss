@@ -3,34 +3,34 @@ $icon: 'footer__icon';
 
 .#{$block} {
 
-	@include custom-breakpoint-min($breakpoint-tablet) {
-		text-align: right;
-	}
-	.#{$icon} {
-		display: inline-block;
-		@include font-size(24);
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		margin: 0px 3px;
-		transition: font-size 0.08s;
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    text-align: right;
+  }
+  .#{$icon} {
+    display: inline-block;
+    @include font-size(24);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 0px 3px;
+    transition: font-size 0.08s;
 
-		&:hover {
-			@include font-size(26);
-		}
-		@include custom-breakpoint-max($breakpoint-tablet) {
-			width: 40px;
-			height: 40px;
-			@include font-size(35);
-			margin: 30px 8px 30px 8px;
+    &:hover {
+      @include font-size(26);
+    }
+    @include custom-breakpoint-max($breakpoint-tablet) {
+      width: 40px;
+      height: 40px;
+      @include font-size(35);
+      margin: 30px 8px 30px 8px;
 
-			&:hover {
-				@include font-size(35);
-			}
-		}
-		a {
-			vertical-align: middle;
-			color: #fff;
-		}
-	}
+      &:hover {
+        @include font-size(35);
+      }
+    }
+    a {
+      vertical-align: middle;
+      color: #fff;
+    }
+  }
 }

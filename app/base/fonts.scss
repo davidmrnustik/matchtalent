@@ -1,49 +1,52 @@
+// Fonts setting: there is an iteration that creates font-face rules for every font type.
+
 $urlFonts: "../fonts/";
 
 @each $font_family, $font_filename, $font_weight in
-	('opensans', 'opensans-bold', 700),
-	('opensans', 'opensans-regular', 500),
-	('opensans', 'opensans-italic', 400),
-	('proximanova', 'proximanova-bold', 700),
-	('FontAwesome', 'fontawesome', 'normal')
+  ('opensans', 'opensans-bold', 700),
+  ('opensans', 'opensans-regular', 500),
+  ('opensans', 'opensans-italic', 400),
+  ('proximanova', 'proximanova-bold', 700),
+  ('FontAwesome', 'fontawesome', 'normal')
 {
-	@font-face {
-		font-family: $font_family;
-		src: url('#{$urlFonts}#{$font_filename}-webfont.woff2') format('woff2'),
-				 url('#{$urlFonts}#{$font_filename}-webfont.woff') format('woff'),
-				 url('#{$urlFonts}#{$font_filename}-webfont.ttf') format('truetype'),
-				 url('#{$urlFonts}#{$font_filename}-webfont.svg##{$font_family}') format('svg'),
-				 url('#{$urlFonts}#{$font_filename}-webfont.eot');
-		font-weight: $font_weight;
-		font-style: normal;
-	}
+  @font-face {
+    font-family: $font_family;
+    src: url('#{$urlFonts}#{$font_filename}-webfont.woff2') format('woff2'),
+         url('#{$urlFonts}#{$font_filename}-webfont.woff') format('woff'),
+         url('#{$urlFonts}#{$font_filename}-webfont.ttf') format('truetype'),
+         url('#{$urlFonts}#{$font_filename}-webfont.svg##{$font_family}') format('svg'),
+         url('#{$urlFonts}#{$font_filename}-webfont.eot');
+    font-weight: $font_weight;
+    font-style: normal;
+  }
 }
 
-// Reglas para font awesome
+// CSS rules for every used icon of Font Awesome.
+// Put every icon that is used in app, not all of them!!
 
 .fa {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .fa-facebook-f:before,
 .fa-facebook:before {
-	content: "\f09a";
+  content: "\f09a";
 }
 .fa-google-plus:before {
-	content: "\f0d5";
+  content: "\f0d5";
 }
 .fa-instagram:before {
-	content: "\f16d";
+  content: "\f16d";
 }
 .fa-twitter:before {
-	content: "\f099";
+  content: "\f099";
 }
 .fa-phone:before {
-	content: "\f095";
+  content: "\f095";
 }
 .fa-angle-up:before {
   content: "\f106";

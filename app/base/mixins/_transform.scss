@@ -1,23 +1,27 @@
-@mixin rotate($value){
-	-webkit-transform: rotate($value);
-		 -moz-transform: rotate($value);
-			-ms-transform: rotate($value);
-			 -o-transform: rotate($value);
-					transform: rotate($value);
-}
-@mixin transform($action, $value, $xy:false){
-	// Usage - example 1: @include transform(translate, -50%, X);
-	// Usage - example 2: @include transform(translate, (-50%, -50%));
+// Mixins for transform.
 
-	@if($xy){
-		-moz-transform: $action + $xy + "(" + $value + ")";
-		 -ms-transform: $action + $xy + "(" + $value + ")";
-			-o-transform: $action + $xy + "(" + $value + ")";
-				 transform: $action + $xy + "(" + $value + ")";
-	} @else {
-		-moz-transform: $action + "(" + $value + ")";
-		 -ms-transform: $action + "(" + $value + ")";
-			-o-transform: $action + "(" + $value + ")";
-				 transform: $action + "(" + $value + ")";
-	}
+@mixin rotate($value){
+  -webkit-transform: rotate($value);
+     -moz-transform: rotate($value);
+      -ms-transform: rotate($value);
+       -o-transform: rotate($value);
+          transform: rotate($value);
 }
+// Usage: @include rotate(105deg);
+
+
+@mixin transform($action, $value, $xy:false){
+  @if($xy){
+    -moz-transform: $action + $xy + "(" + $value + ")";
+     -ms-transform: $action + $xy + "(" + $value + ")";
+      -o-transform: $action + $xy + "(" + $value + ")";
+         transform: $action + $xy + "(" + $value + ")";
+  } @else {
+    -moz-transform: $action + "(" + $value + ")";
+     -ms-transform: $action + "(" + $value + ")";
+      -o-transform: $action + "(" + $value + ")";
+         transform: $action + "(" + $value + ")";
+  }
+}
+// Usage - example 1: @include transform(translate, -50%, X);
+// Usage - example 2: @include transform(translate, (-50%, -50%));

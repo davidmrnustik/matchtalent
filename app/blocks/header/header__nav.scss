@@ -2,46 +2,46 @@ $block: 'header__nav';
 $nav: 'nav';
 
 .#{$block} {
-	position: absolute;
-	top: calc(50% - 13px);
-	right: 0px;
-	text-transform: uppercase;
-	font-family: $font-secondary;
-	@include font-size(15);	
-	
-	@include custom-breakpoint-min($breakpoint-tablet) {
-		margin-left: $logo-top-width;
-		text-align: right;
-	}
-	.#{$nav}__item {
-		display: inline-block;
-		margin-left: 12px;
+  position: absolute;
+  top: calc(50% - 13px);
+  right: 0px;
+  text-transform: uppercase;
+  font-family: $font-secondary;
+  @include font-size(15); 
+  
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    margin-left: $logo-top-width;
+    text-align: right;
+  }
+  .#{$nav}__item {
+    display: inline-block;
+    margin-left: 12px;
 
-		a {
-			background: transparent;
-			padding: 6px 9px;
-			border: 1px solid transparent;
-			transition: background .5s, color .5s;
-			//transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    a {
+      background: transparent;
+      padding: 6px 9px;
+      border: 1px solid transparent;
+      transition: background .5s, color .5s;
+      //transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-			&:hover {
-				background: #fff;
-				color: $link-color !important;
-				text-decoration: none;
-			}
-		}
-		&_highlighted {
-			a {
-				background-color: #fff;
-				color: $link-color !important;
+      &:hover {
+        background: #fff;
+        color: $link-color !important;
+        text-decoration: none;
+      }
+    }
+    &_highlighted {
+      a {
+        background-color: #fff;
+        color: $link-color !important;
 
-				&:hover {
-					background: transparent;
-					border: 1px solid #fff;
-					color: #fff !important;
-					text-decoration: none;
-				}
-			}
-		}
-	}
+        &:hover {
+          background: transparent;
+          border: 1px solid #fff;
+          color: #fff !important;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

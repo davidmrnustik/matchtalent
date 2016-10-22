@@ -1,60 +1,60 @@
 $block: 'slider__text-content';
 
 .#{$block} {
-	position: absolute;
-	text-align: left;
-	width: 70%;
-	left: 50%;
-	@include transform(translate, -50%, X);
+  position: absolute;
+  text-align: left;
+  width: 70%;
+  left: 50%;
+  @include transform(translate, -50%, X);
 
-	@include custom-breakpoint-max($breakpoint-phablet) {
-		bottom: 30px;
-		width: 80%;
+  @include custom-breakpoint-max($breakpoint-phablet) {
+    bottom: 30px;
+    width: 80%;
   }
-	@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-desktop) {
-		bottom: 60px;
-		top: initial;
+  @include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-desktop) {
+    bottom: 60px;
+    top: initial;
   }
-	@include custom-breakpoint-min($breakpoint-desktop) {
-		max-width: 550px;
-		transform: none;
+  @include custom-breakpoint-min($breakpoint-desktop) {
+    max-width: 550px;
+    transform: none;
   }
 
-	&_slide-01 {
-		@include custom-breakpoint-min($breakpoint-desktop) {
-			top: 55%;
-			left: 40%;
-			max-width: 500px;
-	  }
-	}
-	&_slide-02 {
-		@include custom-breakpoint-min($breakpoint-desktop) {
-			top: 38%;
-			left: 15%;
-			max-width: 530px;
-	  }
-	}
-	&_slide-03 {
-		@include custom-breakpoint-min($breakpoint-desktop) {
-			top: 45%;
-			@include transform(translate, -50%, X);
-	  }
-	}
-	&_slide-04 {
-		@include custom-breakpoint-min($breakpoint-desktop) {
-			top: 40%;
-			left: 15%;
-			max-width: 400px;
-	  }
-	}
-	.slider__description {
-		margin-top: 5px;
-		margin-bottom: 15px;
-		@include font-size(16);
+  &_slide-01 {
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      top: 55%;
+      left: 40%;
+      max-width: 500px;
+    }
+  }
+  &_slide-02 {
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      top: 38%;
+      left: 15%;
+      max-width: 530px;
+    }
+  }
+  &_slide-03 {
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      top: 45%;
+      @include transform(translate, -50%, X);
+    }
+  }
+  &_slide-04 {
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      top: 40%;
+      left: 15%;
+      max-width: 400px;
+    }
+  }
+  .slider__description {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    @include font-size(16);
 
-		@include custom-breakpoint-min($breakpoint-desktop) {
-			@include font-size(18);
-			margin-bottom: 20px;
-		}
-	}
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      @include font-size(18);
+      margin-bottom: 20px;
+    }
+  }
 }

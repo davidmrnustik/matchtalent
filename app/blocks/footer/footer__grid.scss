@@ -1,32 +1,32 @@
 $block: 'footer__grid';
 
 .footer .grid {
-	@include custom-breakpoint-max($breakpoint-phablet) {
-		margin: 0px !important;
-	}
+  @include custom-breakpoint-max($breakpoint-phablet) {
+    margin: 0px !important;
+  }
 }
 .#{$block}_2-column {
-	@include custom-breakpoint-max($breakpoint-tablet) {
-		text-align: center;
-	}
+  @include custom-breakpoint-max($breakpoint-tablet) {
+    text-align: center;
+  }
 }
 .#{$block}_3-column {
-	& > .grid__column {
-		&:first-child,
-		&:last-child {
-			@include custom-breakpoint-min($breakpoint-tablet) {
-				min-width: 160px;
-			}
-		}
-	}
-	@include custom-breakpoint-max($breakpoint-tablet) {
-		margin-bottom: 30px;
-		text-align: center;
-		display: block !important;
-	}
-	.grid__column:nth-child(2){
-		@include custom-breakpoint-min($breakpoint-tablet) {
-			max-width: calc(100% - 320px);
-		}
-	}
+  & > .grid__column {
+    &:first-child,
+    &:last-child {
+      @include custom-breakpoint-min($breakpoint-tablet) {
+        min-width: 160px;
+      }
+    }
+  }
+  @include custom-breakpoint-max($breakpoint-tablet) {
+    margin-bottom: 30px;
+    text-align: center;
+    display: block !important;
+  }
+  .grid__column:nth-child(2){
+    @include custom-breakpoint-min($breakpoint-tablet) {
+      max-width: calc(100% - 320px);
+    }
+  }
 }

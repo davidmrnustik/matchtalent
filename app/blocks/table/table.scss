@@ -1,23 +1,23 @@
 $block: 'table';
 
 #{$block} {
-	margin-top: 20px;
-	@include font-size(13);
-	display: block;
-	overflow: auto;
+  margin-top: 20px;
+  @include font-size(13);
+  display: block;
+  overflow: auto;
 
-	th, td {
-		padding: 8px;
-		vertical-align: top;
-	}
+  th, td {
+    padding: 8px;
+    vertical-align: top;
+  }
 
-	th {
-		text-align: left;
-		white-space: nowrap;
-		font-weight: 700;
-		border-bottom: 1px solid lighten($color-grey, 40%);
-	}
-	td {
-		border-bottom: 1px solid lighten($color-grey, 60%);
-	}
+  th {
+    text-align: left;
+    white-space: nowrap;
+    font-weight: 700;
+    border-bottom: 1px solid lighten($color-grey, 40%);
+  }
+  td {
+    border-bottom: 1px solid lighten($color-grey, 60%);
+  }
 }

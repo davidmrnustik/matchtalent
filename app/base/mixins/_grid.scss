@@ -1,58 +1,64 @@
+// Grid system for 2 columns. You can set value for a padding gap.
+// Usage: @include grid_2-columns(10px);
+
 @mixin grid_2-columns($gap){
-	width: 100%;
-	padding-bottom: 20px;
+  width: 100%;
+  padding-bottom: 20px;
 
-	@include custom-breakpoint-min($breakpoint-tablet) {
-		width: 50%;
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    width: 50%;
 
-		&:nth-child(odd) {
-			padding-right: ($gap / 2);
-		}
-		&:nth-child(even) {
-			padding-left: ($gap / 2);
-		}
-	}
-	&_remove-bottom {
-		margin-bottom: 0px;
-		padding-bottom: 0px;
-	}
+    &:nth-child(odd) {
+      padding-right: ($gap / 2);
+    }
+    &:nth-child(even) {
+      padding-left: ($gap / 2);
+    }
+  }
+  &_remove-bottom {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
 }
 
+// Grid system for 3 columns. You can set value for a padding gap.
+// Usage: @include grid_2-columns(10px);
+
 @mixin grid_3-columns($gap){
-	&:first-of-type {
-		@include custom-breakpoint-min($breakpoint-desktop) {
-			padding-right: $gap;
-		}
-		@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-desktop) {
-			padding-right: ($gap / 4);
-		}
-	}
-	&:nth-child(2) {
-		@include custom-breakpoint-max($breakpoint-phablet) {
-			margin: ($gap / 2) 0px;
-		}
-		@include custom-breakpoint-min($breakpoint-desktop) {
-			padding-left: ($gap / 2);
-			padding-right: ($gap / 2);
-		}
-		@include custom-breakpoint-min-max($breakpoint-tablet, $breakpoint-desktop) {
-			padding-left: ($gap / 4);
-			padding-right: ($gap / 4);
-		}
-		@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
-			padding-left: ($gap / 4);
-			padding-right: 0px;
-		}
-	}
-	&:last-of-type {
-		@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
-			margin-top: ($gap / 2);
-		}
-		@include custom-breakpoint-min($breakpoint-desktop) {
-			padding-left: $gap;
-		}
-		@include custom-breakpoint-min-max($breakpoint-tablet, $breakpoint-desktop) {
-			padding-left: ($gap / 4);
-		}
-	}
+  &:first-of-type {
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      padding-right: $gap;
+    }
+    @include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-desktop) {
+      padding-right: ($gap / 4);
+    }
+  }
+  &:nth-child(2) {
+    @include custom-breakpoint-max($breakpoint-phablet) {
+      margin: ($gap / 2) 0px;
+    }
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      padding-left: ($gap / 2);
+      padding-right: ($gap / 2);
+    }
+    @include custom-breakpoint-min-max($breakpoint-tablet, $breakpoint-desktop) {
+      padding-left: ($gap / 4);
+      padding-right: ($gap / 4);
+    }
+    @include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
+      padding-left: ($gap / 4);
+      padding-right: 0px;
+    }
+  }
+  &:last-of-type {
+    @include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
+      margin-top: ($gap / 2);
+    }
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      padding-left: $gap;
+    }
+    @include custom-breakpoint-min-max($breakpoint-tablet, $breakpoint-desktop) {
+      padding-left: ($gap / 4);
+    }
+  }
 }

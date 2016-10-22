@@ -1,35 +1,35 @@
 $block: 'solutions-for';
 
 .#{$block}__item {
-	&:first-of-type {
-		.#{$block}__title {
-			&:before {
-				@include bg-image('palm.svg', left, center, cover);
-			}
-		}
-	}
-	&:nth-child(2) {
-		.#{$block}__title {
-			&:before {
-				@include bg-image('server.svg', left, center, cover);
-			}
-		}
-	}
-	&:last-of-type {
-		.#{$block}__title {
-			&:before {
-				@include bg-image('cross.svg', left, center, cover);
-			}
-		}
-	}
-	@include custom-breakpoint-min($breakpoint-tablet) {
-		&:first-of-type,
-		&:last-of-type {
-			margin-top: 80px;
-		}
-		&:nth-child(2) {
-			position: relative;
-			margin-top: 250px;
-		}
-	}
+  &:first-of-type {
+    .#{$block}__title {
+      &:before {
+        @include bg-image('palm.svg', left, center, cover);
+      }
+    }
+  }
+  &:nth-child(2) {
+    .#{$block}__title {
+      &:before {
+        @include bg-image('server.svg', left, center, cover);
+      }
+    }
+  }
+  &:last-of-type {
+    .#{$block}__title {
+      &:before {
+        @include bg-image('cross.svg', left, center, cover);
+      }
+    }
+  }
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    &:first-of-type,
+    &:last-of-type {
+      margin-top: 80px;
+    }
+    &:nth-child(2) {
+      position: relative;
+      margin-top: 250px;
+    }
+  }
 }

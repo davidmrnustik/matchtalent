@@ -1,37 +1,37 @@
 $block: 'text';
 
 .#{$block} {
-	&_center {
-		text-align: center;
-	}
-	&_right {
-		text-align: right;
-	}
-	&_small {
-		@include font-size(14);
-	}
-	&_xsmall {
-		@include font-size(12);
-	}
-	&_uppercase {
-		text-transform: uppercase;
-	}
-	&_em {
-		font-weight: 400;
-	}
-	&_white {
-		color: #fff;
-	}
-	&_blue {
-		color: $color-blue;
-	}
-	&_error {
-		color: red;
-	}
-	&_success {
-		color: green;
-	}
-	&_strikethrough {
-		text-decoration: line-through;
-	}
+  &_center {
+    text-align: center;
+  }
+  &_right {
+    text-align: right;
+  }
+  &_small {
+    @include font-size(14);
+  }
+  &_xsmall {
+    @include font-size(12);
+  }
+  &_uppercase {
+    text-transform: uppercase;
+  }
+  &_em {
+    font-weight: 400;
+  }
+  &_white {
+    color: #fff;
+  }
+  &_blue {
+    color: $color-blue;
+  }
+  &_error {
+    color: red;
+  }
+  &_success {
+    color: green;
+  }
+  &_strikethrough {
+    text-decoration: line-through;
+  }
 }

@@ -1,59 +1,59 @@
 $block: 'grid';
 
 .#{$block} {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-	&_space-between {
-		justify-content: space-between;
-	}
-	&_center {
-		justify-content: center;
-	}
-	&_nowrap {
-		flex-wrap: nowrap;
-	}
-	&_flex-end {
-		align-items: flex-end;
-	}
-	&_items-center {
-		align-items: center;
-	}
-	&_justify-initial {
-		justify-content: initial;
-	}
+  &_space-between {
+    justify-content: space-between;
+  }
+  &_center {
+    justify-content: center;
+  }
+  &_nowrap {
+    flex-wrap: nowrap;
+  }
+  &_flex-end {
+    align-items: flex-end;
+  }
+  &_items-center {
+    align-items: center;
+  }
+  &_justify-initial {
+    justify-content: initial;
+  }
 
-	@include custom-breakpoint-max($breakpoint-phablet) {
-		display: block;
-	}
+  @include custom-breakpoint-max($breakpoint-phablet) {
+    display: block;
+  }
 
-	&_2-columns {
-		& > .#{$block}__column {
-			@include grid_2-columns($grid-gap);
-		}
-	}
-	&_width-auto.#{$block}_2-columns {
-		& > .#{$block}__column {
-			padding-bottom: 0px;
-			
-			@include custom-breakpoint-min($breakpoint-tablet) {
-				width: auto;
-			}
-		}
-	}
-	&_3-columns {
-		& > .#{$block}__column {
-			width: 100%;
+  &_2-columns {
+    & > .#{$block}__column {
+      @include grid_2-columns($grid-gap);
+    }
+  }
+  &_width-auto.#{$block}_2-columns {
+    & > .#{$block}__column {
+      padding-bottom: 0px;
+      
+      @include custom-breakpoint-min($breakpoint-tablet) {
+        width: auto;
+      }
+    }
+  }
+  &_3-columns {
+    & > .#{$block}__column {
+      width: 100%;
 
-			@include custom-breakpoint-min($breakpoint-phablet) {
-				width: 50%;
-			}
-			@include custom-breakpoint-min($breakpoint-tablet) {
-				width: 33.33%;
-			}
-			@include grid_3-columns($grid-gap);
-		}
-	}
+      @include custom-breakpoint-min($breakpoint-phablet) {
+        width: 50%;
+      }
+      @include custom-breakpoint-min($breakpoint-tablet) {
+        width: 33.33%;
+      }
+      @include grid_3-columns($grid-gap);
+    }
+  }
 }

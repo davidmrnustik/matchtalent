@@ -1,79 +1,79 @@
 $block: 'button';
 %buttonBasic {
-	padding: 7px 14px 5px 14px;
-	display: inline-block;
-	text-transform: uppercase;
-	border: 1px solid $color-blue;
-	font-family: $font-secondary;
-	transition: background .5s, color .5s, border .5s;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 7px 14px 5px 14px;
+  display: inline-block;
+  text-transform: uppercase;
+  border: 1px solid $color-blue;
+  font-family: $font-secondary;
+  transition: background .5s, color .5s, border .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 %buttonBasicHover {
-	&:hover,
-	&:focus {
-		background: $color-blue;
-		color: white;
-	}
+  &:hover,
+  &:focus {
+    background: $color-blue;
+    color: white;
+  }
 }
 button.#{$block} {
-	@extend %buttonBasic;
-	background: none;
-	cursor: pointer;
-	color: $link-color;
-	padding-bottom: 7px;
+  @extend %buttonBasic;
+  background: none;
+  cursor: pointer;
+  color: $link-color;
+  padding-bottom: 7px;
 
-	@extend %buttonBasicHover;
+  @extend %buttonBasicHover;
 
-	&_inverse {
-		background: white;
-		border: 1px solid #fff;
-		color: $link-color;
+  &_inverse {
+    background: white;
+    border: 1px solid #fff;
+    color: $link-color;
 
-		&:hover,
-		&:focus {
-			background: transparent;
-			color: #fff;
-		}
-	}
+    &:hover,
+    &:focus {
+      background: transparent;
+      color: #fff;
+    }
+  }
 }
 .#{$block} {
-	
-	@include font-size(14);
+  
+  @include font-size(14);
 
-	a {
-		@extend %buttonBasic;
-	}
-	&:not(.#{$block}_inverse) {
-		a {
-			background: transparent;
+  a {
+    @extend %buttonBasic;
+  }
+  &:not(.#{$block}_inverse) {
+    a {
+      background: transparent;
 
-			@extend %buttonBasicHover;
-		}
-	}
-	&.#{$block}_inverse {
-		a {
-			background: white;
-			border: 1px solid #fff;
-			color: $link-color;
+      @extend %buttonBasicHover;
+    }
+  }
+  &.#{$block}_inverse {
+    a {
+      background: white;
+      border: 1px solid #fff;
+      color: $link-color;
 
-			&:hover,
-			&:focus {
-				background: transparent;
-				color: #fff;
-			}
-		}
-	}
-	&.#{$block}_inverse_blue {
-		a {
-			background: $color-blue;
-			border: 1px solid $color-blue;
-			color: #fff;
+      &:hover,
+      &:focus {
+        background: transparent;
+        color: #fff;
+      }
+    }
+  }
+  &.#{$block}_inverse_blue {
+    a {
+      background: $color-blue;
+      border: 1px solid $color-blue;
+      color: #fff;
 
-			&:hover,
-			&:focus {
-				background: #fff;
-				color: $color-blue;
-			}
-		}
-	}
+      &:hover,
+      &:focus {
+        background: #fff;
+        color: $color-blue;
+      }
+    }
+  }
 }

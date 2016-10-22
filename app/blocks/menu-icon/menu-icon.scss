@@ -1,27 +1,27 @@
 $block: 'menu-icon';
 
 .#{$block} {
-	position: absolute;
-	width: $menu-icon-width;
-	right: 0px;
-	top: calc(50% - 20px);
-	height: $menu-icon-width;
-	background-color: #fff;
-	text-align: center;
-	transition: background-color .3s;
-	cursor: pointer;
-	z-index: 3;
+  position: absolute;
+  width: $menu-icon-width;
+  right: 0px;
+  top: calc(50% - 20px);
+  height: $menu-icon-width;
+  background-color: #fff;
+  text-align: center;
+  transition: background-color .3s;
+  cursor: pointer;
+  z-index: 3;
 }
 .menu-open {
-	.#{$block} {
-		.#{$block}__line:nth-child(1){
-			opacity: 0;
-		}
-		.#{$block}__line:nth-child(2){
-			transform: translateY(-2px) rotate(135deg);
-		}
-		.#{$block}__line:nth-child(3){
-			transform: translateY(-2px) rotate(-135deg);
-		}
-	}
+  .#{$block} {
+    .#{$block}__line:nth-child(1){
+      opacity: 0;
+    }
+    .#{$block}__line:nth-child(2){
+      transform: translateY(-2px) rotate(135deg);
+    }
+    .#{$block}__line:nth-child(3){
+      transform: translateY(-2px) rotate(-135deg);
+    }
+  }
 }

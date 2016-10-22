@@ -1,9 +1,9 @@
 $block: 'features__button';
 
 .#{$block} {
-	display: block;
+  display: block;
 
-	@include custom-breakpoint-min($breakpoint-tablet) {
-		margin-top: 20px;
-	}
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    margin-top: 20px;
+  }
 }

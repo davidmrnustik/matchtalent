@@ -1,10 +1,12 @@
+// Initialize slider/carusel.
+
 (function(global){
-	var slider = {};
+  var slider = {};
 
-	slider.init = function(){
-		$('.slider').slick();
-	};
+  slider.init = function(){
+    $('.slider').slick();
+  };
 
-	global.slider = slider;
+  global.slider = slider;
 
 })(this);

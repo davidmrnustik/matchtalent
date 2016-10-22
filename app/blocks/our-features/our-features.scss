@@ -1,38 +1,38 @@
 $block: 'our-features';
 
 .#{$block} {
-	p {
-		margin-bottom: 10px;
+  p {
+    margin-bottom: 10px;
 
-		&:last-of-type {
-			margin-bottom: 0px;
-		}
-	}	
-	.#{$block}__grid_2-columns {
-		& > .grid__column {
-			padding-bottom: 0px;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  } 
+  .#{$block}__grid_2-columns {
+    & > .grid__column {
+      padding-bottom: 0px;
 
-			@include custom-breakpoint-min($breakpoint-tablet) {
-				&:first-of-type {
-					width: 30%;
-				}
-				&:last-of-type {
-					width: 70%;
-				}
-			}
-		}
-	}
-	&__title {
-		h2 {
-			@include font-size(26);
-			margin-bottom: 10px;
-		}
-	}
-	&__item {
-		margin-bottom: 20px;
+      @include custom-breakpoint-min($breakpoint-tablet) {
+        &:first-of-type {
+          width: 30%;
+        }
+        &:last-of-type {
+          width: 70%;
+        }
+      }
+    }
+  }
+  &__title {
+    h2 {
+      @include font-size(26);
+      margin-bottom: 10px;
+    }
+  }
+  &__item {
+    margin-bottom: 20px;
 
-		@include custom-breakpoint-min($breakpoint-tablet) {
-			margin-bottom: 60px;
-		}
-	}
+    @include custom-breakpoint-min($breakpoint-tablet) {
+      margin-bottom: 60px;
+    }
+  }
 }

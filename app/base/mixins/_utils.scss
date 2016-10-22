@@ -1,26 +1,34 @@
+// Mixin for clearfix. Use it when you need to use float.
+// Usage: @include clearfix();
 @mixin clearfix {
-	&:before,
-	&:after {
-		content: "";
-		display: block;
-		line-height: 0px;
-	}
-	&:after {
-		clear: both;
-	}
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    line-height: 0px;
+  }
+  &:after {
+    clear: both;
+  }
 }
+
+// Mixin for nav items used in responsive version. An item has bottom border with custom color and opacity.
+// Usage: @include navLinks($color-blue, 6%);
 @mixin navLinks($borderColor, $opacity) {
-	border-color: rgba($borderColor, $opacity);
-	border-style: solid;
-	border-bottom-width: 1px;
+  border-color: rgba($borderColor, $opacity);
+  border-style: solid;
+  border-bottom-width: 1px;
 }
+
+// Mixin for positioning an item to the vertical and horizontal center.
+// Usage: @include centerMiddle();
 @mixin centerMiddle(){
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	overflow: hidden;
-	-moz-transform: translate(-50%, -50%);
-		 -ms-transform: translate(-50%, -50%);
-			-o-transform: translate(-50%, -50%);
-				 transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  -moz-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
 }

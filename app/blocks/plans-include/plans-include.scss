@@ -1,43 +1,43 @@
 $block: 'plans-include';
 
 .#{$block} {
-	@include custom-breakpoint-min($breakpoint-desktop) {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	&__headline {
-		margin-bottom: 20px;
-		padding-left: 10px;
-		padding-right: 10px;
+  @include custom-breakpoint-min($breakpoint-desktop) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &__headline {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 
-		@include custom-breakpoint-min($breakpoint-desktop) {
-	    margin-bottom: 30px;
-	  }
-	}
-	&__title {
-		@include font-size(25);
-	}
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    @include font-size(25);
+  }
 }
 .#{$block}__grid_2-columns {
-	.grid__column {
-		@include grid_2-columns(10px);
+  .grid__column {
+    @include grid_2-columns(10px);
 
-		@include custom-breakpoint-max($breakpoint-tablet) {
-			padding-bottom: 20px;
-		}
-		&:last-of-type {
-			//padding-left: 7.5px;
-		}
-	}
+    @include custom-breakpoint-max($breakpoint-tablet) {
+      padding-bottom: 20px;
+    }
+    &:last-of-type {
+      //padding-left: 7.5px;
+    }
+  }
 }
 .#{$block} .grid__column,
 .#{$block} .grid__column:nth-child(2) {
-	margin-top: 0px;
+  margin-top: 0px;
 }
 .content > section.#{$block} {
-	margin-top: 30px;
+  margin-top: 30px;
 
-	@include custom-breakpoint-min($breakpoint-desktop) {
-		margin-top: 50px;
-	}	
+  @include custom-breakpoint-min($breakpoint-desktop) {
+    margin-top: 50px;
+  } 
 }

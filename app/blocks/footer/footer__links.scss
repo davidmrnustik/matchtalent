@@ -2,40 +2,40 @@ $block: 'footer__links';
 
 .#{$block} {
 
-	@include custom-breakpoint-max($breakpoint-phablet) {
-		padding-top: 15px;
-	}
-	&-title {
-		color: #fff;
-		@include font-size(18);
-		text-transform: uppercase;
-		padding: 15px 0px 18px 0px;
-		@include navLinks($color-blue, 6%);
-		background: darken($color-blue, 4%);
-		cursor: pointer;
-		transition: background .5s;
+  @include custom-breakpoint-max($breakpoint-phablet) {
+    padding-top: 15px;
+  }
+  &-title {
+    color: #fff;
+    @include font-size(18);
+    text-transform: uppercase;
+    padding: 15px 0px 18px 0px;
+    @include navLinks($color-blue, 6%);
+    background: darken($color-blue, 4%);
+    cursor: pointer;
+    transition: background .5s;
 
-		&:hover {
-			background: darken($color-blue, 6%);
-		}
+    &:hover {
+      background: darken($color-blue, 6%);
+    }
 
-		.fa {
-			@include font-size(24);
-			position: relative;
-			top: 2px;
-			padding-left: 5px;
-		}
-	}
+    .fa {
+      @include font-size(24);
+      position: relative;
+      top: 2px;
+      padding-left: 5px;
+    }
+  }
 }
 .open-footer-menu {
-	.fa-angle-down {
-		transform: rotate(180deg);
-		top: 3px;
-		left: 4px;
-	}
-	.footer__nav {
-		@include custom-breakpoint-max($breakpoint-phablet) {
-			display: block;
-		}
-	}
+  .fa-angle-down {
+    transform: rotate(180deg);
+    top: 3px;
+    left: 4px;
+  }
+  .footer__nav {
+    @include custom-breakpoint-max($breakpoint-phablet) {
+      display: block;
+    }
+  }
 }

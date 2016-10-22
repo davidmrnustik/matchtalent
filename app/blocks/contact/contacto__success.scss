@@ -1,14 +1,14 @@
 $block: 'contacto__success';
 
 .#{$block} {
-	margin: 20px 0px;
+  margin: 20px 0px;
 
-	.button {
-		display: none;
-		margin-top: 20px;
+  .button {
+    display: none;
+    margin-top: 20px;
 
-		.modal-page & {
-			display: block;
-		}
-	}
+    .modal-page & {
+      display: block;
+    }
+  }
 }

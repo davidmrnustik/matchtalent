@@ -1,3 +1,5 @@
+// Mixins for background image and responsive background images.
+
 $img-url: 'img';
 $img-extralarge: 'extralarge';
 $img-large: 'large';
@@ -5,26 +7,27 @@ $img-medium: 'medium';
 $img-small: 'small';
 
 @mixin bg-image($file, $positionX, $positionY, $size: initial) {
-	background-image: url('../#{$img-url}/#{$file}');
-	background-repeat: no-repeat;
-	background-position: $positionX $positionY;
-	background-size: $size;
+  background-image: url('../#{$img-url}/#{$file}');
+  background-repeat: no-repeat;
+  background-position: $positionX $positionY;
+  background-size: $size;
 }
+// Usage: @include bg-image('checkbox_blue.svg', left, top, cover);
 
 @mixin bg-resp-image($file, $positionX, $positionY, $size: initial) {
-	background-repeat: no-repeat;
-	background-position: $positionX $positionY;
-	background-size: $size;
-	background-image: url('../#{$img-url}/#{$img-small}/#{$file}');
+  background-repeat: no-repeat;
+  background-position: $positionX $positionY;
+  background-size: $size;
+  background-image: url('../#{$img-url}/#{$img-small}/#{$file}');
 
-	@include custom-breakpoint-min($breakpoint-phablet) {
-		background-image: url('../#{$img-url}/#{$img-medium}/#{$file}');
-	}
-	@include custom-breakpoint-min($breakpoint-tablet) {
-		background-image: url('../#{$img-url}/#{$img-large}/#{$file}');
-	}
-	@include custom-breakpoint-min($breakpoint-desktop) {
-		background-image: url('../#{$img-url}/#{$img-extralarge}/#{$file}');
-	}
-
+  @include custom-breakpoint-min($breakpoint-phablet) {
+    background-image: url('../#{$img-url}/#{$img-medium}/#{$file}');
+  }
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    background-image: url('../#{$img-url}/#{$img-large}/#{$file}');
+  }
+  @include custom-breakpoint-min($breakpoint-desktop) {
+    background-image: url('../#{$img-url}/#{$img-extralarge}/#{$file}');
+  }
 }
+// Usage: @include bg-resp-image('inicio_ventajas_bg.jpg', center, center, cover);

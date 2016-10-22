@@ -1,9 +1,12 @@
+// Set a rem font size with pixel fallback. Set font size in pixels.
+// Usage: @include font-size(16);
+
 @function calc-rem($size) {
   @return ($size / 16) * 1rem;
 }
 @function calc-em($px, $context: $browser-context) {
-	@return ($px / $context) * 1em;
+  @return ($px / $context) * 1em;
 }
 @mixin font-size($size) {
-	font-size: calc-rem($size);
+  font-size: calc-rem($size);
 }
