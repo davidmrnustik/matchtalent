@@ -1,18 +1,18 @@
 $block: 'why-matchtalent__title';
 
 .#{$block} {
-	padding-top: 10px;
-	padding-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 40px;
 
-	&:after {
-		content: "";
-		position: relative;
-		top: 20px;
-		width: 55px;
-		margin: 0px auto;
-		display: block;
-		height: 2px;
-		text-align: center;
-		background-color: $color-blue;
-	}
+  &:after {
+    content: "";
+    position: relative;
+    top: 20px;
+    width: 55px;
+    margin: 0px auto;
+    display: block;
+    height: 2px;
+    text-align: center;
+    background-color: $color-blue;
+  }
 }

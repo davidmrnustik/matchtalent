@@ -1,13 +1,13 @@
 $block: 'hr';
 
 .#{$block} {
-	height: 1px;
-	display: block;
-	background-color: #dedede;
-	margin: 30px 0;
-	border: 0px;
+  height: 1px;
+  display: block;
+  background-color: #dedede;
+  margin: 30px 0;
+  border: 0px;
 
-	&_fullwidth {
-		width: 100%;
-	}
+  &_fullwidth {
+    width: 100%;
+  }
 }

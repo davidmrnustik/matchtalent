@@ -1,24 +1,24 @@
 $block: 'features';
 
 .#{$block} {
-	position: relative;
-	@include bg-resp-image('inicio_ventajas_bg.jpg', center, center, cover);
+  position: relative;
+  @include bg-resp-image('inicio_ventajas_bg.jpg', center, center, cover);
 
-	&:before {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		background-color: rgba(0, 79, 162, .7);
-	}
-	& > .inner {
-		position: relative;
-		padding: 30px 0px;
-		z-index: 2;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 79, 162, .7);
+  }
+  & > .inner {
+    position: relative;
+    padding: 30px 0px;
+    z-index: 2;
 
-		@include custom-breakpoint-min($breakpoint-tablet) {
-			padding: 60px 0px;
-		}
-	}
+    @include custom-breakpoint-min($breakpoint-tablet) {
+      padding: 60px 0px;
+    }
+  }
 }

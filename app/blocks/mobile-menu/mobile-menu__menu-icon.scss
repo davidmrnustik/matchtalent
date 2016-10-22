@@ -1,14 +1,10 @@
 $block: 'mobile-menu__menu-icon';
 
 .#{$block} {
-	right: 20px;
-	top: 15px;
+  right: 20px;
+  top: 15px;
 
-	@include custom-breakpoint-min($breakpoint-phablet) {
-		right: 40px;
-	}
-
-	.menu-open & {
-		
-	}
+  @include custom-breakpoint-min($breakpoint-phablet) {
+    right: 40px;
+  }
 }

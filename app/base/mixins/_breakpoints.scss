@@ -1,9 +1,28 @@
+// Mixins for responsive media queries.
+
 @mixin custom-breakpoint-max($max-width) {
-	@media (max-width: ($max-width - 1)) { @content ; }
+  @media (max-width: ($max-width - 1)) { @content ; }
 }
+/* Usage:
+@include custom-breakpoint-max($breakpoint-phablet) {
+  css rule
+}
+*/
+
 @mixin custom-breakpoint-min($min-width) {
-	@media (min-width: $min-width) { @content ; }
+  @media (min-width: $min-width) { @content ; }
 }
+/* Usage:
+@include custom-breakpoint-min($breakpoint-phablet) {
+  css rule
+}
+*/
+
 @mixin custom-breakpoint-min-max($min-width, $max-width) {
-	@media (min-width: $min-width) and (max-width: ($max-width - 1)) { @content ; }
+  @media (min-width: $min-width) and (max-width: ($max-width - 1)) { @content ; }
 }
+/* Usage:
+@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-desktop) {
+  css rule
+}
+*/

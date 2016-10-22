@@ -1,22 +1,22 @@
 $block: 'our-features__content';
 
 .#{$block} {
-	position: relative;
-	padding-top: 5px;
+  position: relative;
+  padding-top: 5px;
 
-	@include custom-breakpoint-min($breakpoint-tablet) {
-		padding-right: 60px;
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    padding-right: 60px;
 
-		&:before {
-			content: "";
-			display: block;
-			position: absolute;
-			left: 0px;
-			top: 0px;
-			width: 1px;
-			height: 100%;
-			background-color: #dadada;
-		}
-	}
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 1px;
+      height: 100%;
+      background-color: #dadada;
+    }
+  }
 
 }

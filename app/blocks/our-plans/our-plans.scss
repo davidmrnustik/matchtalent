@@ -2,53 +2,53 @@ $block: 'our-plans';
 
 .#{$block} {
 
-	@include custom-breakpoint-min($breakpoint-desktop) {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	&__header {
-		padding: 0px 0px 15px 0px;
-		background-color: lighten($color-grey, 66%);
-	}
-	&__item_highlighted {
-		.#{$block}__header {
-			background-color: #f3f8fb;
-		}
-	}
-	&__button {
-		margin-top: 20px;
-	}
-	&__period {
-		display: inline-block;
-		margin: 0px 6px;
+  @include custom-breakpoint-min($breakpoint-desktop) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &__header {
+    padding: 0px 0px 15px 0px;
+    background-color: lighten($color-grey, 66%);
+  }
+  &__item_highlighted {
+    .#{$block}__header {
+      background-color: #f3f8fb;
+    }
+  }
+  &__button {
+    margin-top: 20px;
+  }
+  &__period {
+    display: inline-block;
+    margin: 0px 6px;
 
-		label {
-			@include font-size(13);
-			padding-left: 3px;
-			display: inline-block;
-			top: -3px;
-			position: relative;
-		}
-	}
-	&__grid_3-columns {
-		.grid__column {
-			@include grid_3-columns(15px);
+    label {
+      @include font-size(13);
+      padding-left: 3px;
+      display: inline-block;
+      top: -3px;
+      position: relative;
+    }
+  }
+  &__grid_3-columns {
+    .grid__column {
+      @include grid_3-columns(15px);
 
-			@include custom-breakpoint-max($breakpoint-tablet) {
-				padding-bottom: 20px;
-			}
-		}
-	}
-	&__price-text {
-		margin-top: 15px;
-		padding-left: 20px;
-		padding-right: 20px;
-		@include font-size(12);
-		color: #747474;
-		line-height: 1.4em;
+      @include custom-breakpoint-max($breakpoint-tablet) {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  &__price-text {
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include font-size(12);
+    color: #747474;
+    line-height: 1.4em;
 
-		.our-plans__item_highlighted & {
-			color: $color-blue;
-		}
-	}
+    .our-plans__item_highlighted & {
+      color: $color-blue;
+    }
+  }
 }

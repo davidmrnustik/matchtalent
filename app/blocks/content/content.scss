@@ -1,22 +1,22 @@
 $block: 'content';
 
 .#{$block} {
-	background: white;
-	position: relative;
-	z-index: 1;
+  background: white;
+  position: relative;
+  z-index: 1;
 
-	& > section {
-		margin: 30px auto;
+  & > section {
+    margin: 30px auto;
 
-		@include custom-breakpoint-min($breakpoint-tablet) {
-			margin: 60px auto;
-		}
-	}
-	& > section.remove_margin-top {
-		margin-top: 0px;
-	}
-	& > section.remove_margin-bottom {
-		margin-bottom: 0px;
-	}
-	
+    @include custom-breakpoint-min($breakpoint-tablet) {
+      margin: 60px auto;
+    }
+  }
+  & > section.remove_margin-top {
+    margin-top: 0px;
+  }
+  & > section.remove_margin-bottom {
+    margin-bottom: 0px;
+  }
+  
 }

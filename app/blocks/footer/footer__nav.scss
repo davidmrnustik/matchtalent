@@ -1,65 +1,65 @@
 $block: 'footer__nav';
 
 .#{$block} {
-	@include custom-breakpoint-max($breakpoint-phablet) {
-		text-decoration: none;
-		margin-bottom: 10px;
-		display: none;
+  @include custom-breakpoint-max($breakpoint-phablet) {
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: none;
 
-		a {
-			display: block;
-			padding: 12px 0px;
-			@include navLinks(darken($color-blue, 100%), .1);
-			//background: darken($color-blue, 2%);
-			cursor: pointer;
-			transition: background .5s;
+    a {
+      display: block;
+      padding: 12px 0px;
+      @include navLinks(darken($color-blue, 100%), .1);
+      //background: darken($color-blue, 2%);
+      cursor: pointer;
+      transition: background .5s;
 
-			&:hover {
-				background: darken($color-blue, 2%);
-			}
-		}
-	}
-	@include custom-breakpoint-min($breakpoint-phablet) {
-		a {
-			text-decoration: underline;
-			background: transparent;
-			display: inline-block;
-			padding: 4px 9px;
-			transition: background .5s, color .5s;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover {
+        background: darken($color-blue, 2%);
+      }
+    }
+  }
+  @include custom-breakpoint-min($breakpoint-phablet) {
+    a {
+      text-decoration: underline;
+      background: transparent;
+      display: inline-block;
+      padding: 4px 9px;
+      transition: background .5s, color .5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-			&:hover {
-				background: #fff;
-				color: $color-blue !important;
-				text-decoration: none;
-			}
-		}
-	}
-	@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
-		text-align: center;
-		@include font-size(16);
-		
-		a {
-			text-decoration: underline;
-			background: transparent;
-			display: inline-block;
-			padding: 4px 9px;
-			transition: background .5s, color .5s;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover {
+        background: #fff;
+        color: $color-blue !important;
+        text-decoration: none;
+      }
+    }
+  }
+  @include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
+    text-align: center;
+    @include font-size(16);
+    
+    a {
+      text-decoration: underline;
+      background: transparent;
+      display: inline-block;
+      padding: 4px 9px;
+      transition: background .5s, color .5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-			&:hover {
-				background: #fff;
-				color: $color-blue !important;
-				text-decoration: none;
-			}
-		}
-	}
-	.nav__item {
-		@include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
-			margin: 5px 0px;
-		}
-	}
-	.nav__item_highlighted {
-		font-weight: 700;
-	}
+      &:hover {
+        background: #fff;
+        color: $color-blue !important;
+        text-decoration: none;
+      }
+    }
+  }
+  .nav__item {
+    @include custom-breakpoint-min-max($breakpoint-phablet, $breakpoint-tablet) {
+      margin: 5px 0px;
+    }
+  }
+  .nav__item_highlighted {
+    font-weight: 700;
+  }
 }

@@ -1,10 +1,10 @@
 $block: 'map';
 
 ##{$block} {
-	height:300px;
-	z-index:2;
+  height:300px;
+  z-index:2;
 
-	@include custom-breakpoint-min($breakpoint-phablet) {
-		height: 400px;
-	}
+  @include custom-breakpoint-min($breakpoint-phablet) {
+    height: 400px;
+  }
 }

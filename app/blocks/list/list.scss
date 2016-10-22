@@ -1,13 +1,13 @@
 $block: 'list';
 
 .#{$block} {
-	margin-top: 15px;
-	margin-left: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
 
-	@include custom-breakpoint-min($breakpoint-phablet) {
-		margin-left: 20px;
-	}
-	&_icon-check {
-		margin-left: 5px;
-	}
+  @include custom-breakpoint-min($breakpoint-phablet) {
+    margin-left: 20px;
+  }
+  &_icon-check {
+    margin-left: 5px;
+  }
 }

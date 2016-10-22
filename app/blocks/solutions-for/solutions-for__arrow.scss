@@ -1,55 +1,55 @@
 $block: 'solutions-for__arrow';
 
 .#{$block} {
-	@include custom-breakpoint-min($breakpoint-tablet) {
-		border: 1px solid $color-blue;
-		display: inline-block;
-		padding: 75px 20px 60px 20px;
-		border-radius: 200px;
-		position: relative;
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    border: 1px solid $color-blue;
+    display: inline-block;
+    padding: 75px 20px 60px 20px;
+    border-radius: 200px;
+    position: relative;
 
-		&:before,
-		&:after {
-			content: "";
-			position: absolute;
-			display: block;
-			@include bg-image('../img/arrow.svg', center, center, cover);
-			background-repeat: no-repeat;
-		}
-		&_bottom {
-			&:after {
-				bottom: -36px;
-				left: 46%;
-				width: 17px;
-				height: 37px;
-				@include rotate(180deg);
-			}
-		}
-		&_left_right {
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			width: 100%;
-			height: 100%;
-			border: none;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      @include bg-image('../img/arrow.svg', center, center, cover);
+      background-repeat: no-repeat;
+    }
+    &_bottom {
+      &:after {
+        bottom: -36px;
+        left: 46%;
+        width: 17px;
+        height: 37px;
+        @include rotate(180deg);
+      }
+    }
+    &_left_right {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      border: none;
 
-			&:before {
-				top: 42%;
-				left: -35px;
-				width: 37px;
-				height: 37px;
-				background-position: left top;
-				@include rotate(-105deg);
-			}
-			&:after {
-				top: 42%;
-				left:initial;
-				right: -35px;
-				width: 37px;
-				height: 37px;
-				background-position: right top;
-				@include rotate(105deg);
-			}
-		}
-	}
+      &:before {
+        top: 42%;
+        left: -35px;
+        width: 37px;
+        height: 37px;
+        background-position: left top;
+        @include rotate(-105deg);
+      }
+      &:after {
+        top: 42%;
+        left:initial;
+        right: -35px;
+        width: 37px;
+        height: 37px;
+        background-position: right top;
+        @include rotate(105deg);
+      }
+    }
+  }
 }

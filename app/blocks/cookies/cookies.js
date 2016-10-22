@@ -1,3 +1,5 @@
+// Code for cookie alert.
+
 (function(global) {
   var cookies = {},
       cookiesAlert = document.getElementById('cookies'),

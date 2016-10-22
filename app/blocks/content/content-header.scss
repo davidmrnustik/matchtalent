@@ -1,17 +1,17 @@
 $block: 'content-header';
 
 .#{$block} {
-	position: relative;
-	height: $content-header-height - ($header-height - $header-height-small);
-	background-color: $color-blue;
-	margin-top: -$header-height !important;
+  position: relative;
+  height: $content-header-height - ($header-height - $header-height-small);
+  background-color: $color-blue;
+  margin-top: -$header-height !important;
 
-	@include custom-breakpoint-min($breakpoint-desktop) {
-		height: $content-header-height;
+  @include custom-breakpoint-min($breakpoint-desktop) {
+    height: $content-header-height;
   }
 
-	.inner {
-		position: relative;
-		height: 100%;
-	}
+  .inner {
+    position: relative;
+    height: 100%;
+  }
 }

@@ -1,47 +1,47 @@
 $block: 'mobile-menu';
 
 .menu-open {
-	overflow: hidden;
-	margin-right: 15px;
+  overflow: hidden;
+  margin-right: 15px;
 
-	& .#{$block} {
+  & .#{$block} {
 
-		&_show {
-			@include custom-breakpoint-min($breakpoint-desktop) {
-				opacity: 0;
-				z-index: 1;
-				transition: visibility .5s, opacity .5s, z-index .5s;
-				visibility: hidden;
-			}
-		}
-	}
+    &_show {
+      @include custom-breakpoint-min($breakpoint-desktop) {
+        opacity: 0;
+        z-index: 1;
+        transition: visibility .5s, opacity .5s, z-index .5s;
+        visibility: hidden;
+      }
+    }
+  }
 }
 
 .#{$block} {
-	background: $color-blue url('../img/pattern_diagonal_line.png') repeat top left;
-	bottom: 0px;
-	height: 100%;
-	right: 0;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-	position: fixed;
-	text-align: center;
-	left: 0px;
-	top: 0;
-	z-index: 1;
-	transition: visibility .5s, opacity .5s, z-index .5s;
-	visibility: hidden;
-	opacity: 0;
+  background: $color-blue url('../img/pattern_diagonal_line.png') repeat top left;
+  bottom: 0px;
+  height: 100%;
+  right: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  text-align: center;
+  left: 0px;
+  top: 0;
+  z-index: 1;
+  transition: visibility .5s, opacity .5s, z-index .5s;
+  visibility: hidden;
+  opacity: 0;
 
-	&_show {
-		height: 100%;
-		z-index: 3;
-		opacity: 1;
-		transition: visibility .5s, opacity .5s, z-index .5s;
-		visibility: visible;
-	}
-	&__designby {
-		position: relative;
-		padding-top: 25px;
-	}
+  &_show {
+    height: 100%;
+    z-index: 3;
+    opacity: 1;
+    transition: visibility .5s, opacity .5s, z-index .5s;
+    visibility: visible;
+  }
+  &__designby {
+    position: relative;
+    padding-top: 25px;
+  }
 }

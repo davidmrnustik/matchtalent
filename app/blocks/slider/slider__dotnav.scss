@@ -2,70 +2,70 @@ $block: 'slider__dotnav';
 $dot-size: 15px;
 
 .slick-dotted.slick-slider {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .#{$block} {
-	display: none !important;
-	position: absolute;
-	bottom: 60px;
-	right: 60px;
-	list-style: none;
-	display: block;
-	text-align: center;
-	padding: 0;
-	margin: 0;
-	//width: 100%;
+  display: none !important;
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  //width: 100%;
 
-	@include custom-breakpoint-min(768px) {
-		display: block  !important;
+  @include custom-breakpoint-min(768px) {
+    display: block  !important;
   }
 
-	li {
-		position: relative;
-		display: inline-block;
-		height: $dot-size;
-		width: $dot-size;
-		margin: 0 4px;
-		padding: 0;
-		cursor: pointer;
-		button {
-			border: 0;
-			background: transparent;
-			display: block;
-			height: $dot-size;
-			width: $dot-size;
-			outline: none;
-			line-height: 0px;
-			font-size: 0px;
-			color: transparent;
-			padding: 5px;
-			cursor: pointer;
-			&:hover, &:focus {
-				outline: none;
-				&:before {
-					opacity: $slick-opacity-on-hover;
-				}
-			}
-			&:before {
-				position: absolute;
-				top: 0;
-				left: 0;
-				background: $dotnav-bg-color;
-				content: $slick-dot-character;
-				width: $dot-size;
-				height: $dot-size;
-				line-height: $dot-size;
-				text-align: center;
-				color: $slick-dot-color;
-				opacity: $slick-opacity-not-active;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-			}
-		}
-		&.slick-active button:before {
-			color: $slick-dot-color-active;
-			opacity: $slick-opacity-default;
-		}
-	}
+  li {
+    position: relative;
+    display: inline-block;
+    height: $dot-size;
+    width: $dot-size;
+    margin: 0 4px;
+    padding: 0;
+    cursor: pointer;
+    button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: $dot-size;
+      width: $dot-size;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer;
+      &:hover, &:focus {
+        outline: none;
+        &:before {
+          opacity: $slick-opacity-on-hover;
+        }
+      }
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $dotnav-bg-color;
+        content: $slick-dot-character;
+        width: $dot-size;
+        height: $dot-size;
+        line-height: $dot-size;
+        text-align: center;
+        color: $slick-dot-color;
+        opacity: $slick-opacity-not-active;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+    &.slick-active button:before {
+      color: $slick-dot-color-active;
+      opacity: $slick-opacity-default;
+    }
+  }
 }

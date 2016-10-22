@@ -1,9 +1,9 @@
 $block: 'nav';
 
 .#{$block} {
-	@include clearfix();
+  @include clearfix();
 
-	a {
-		color: #fff;
-	}
+  a {
+    color: #fff;
+  }
 }

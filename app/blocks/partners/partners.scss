@@ -1,23 +1,23 @@
 $block: 'partners';
 
 .#{$block} {
-	&__headline {
-		padding-bottom: 20px;
+  &__headline {
+    padding-bottom: 20px;
 
-		@include custom-breakpoint-min($breakpoint-tablet) {
-			padding-bottom: 40px;
-		}
-	}
+    @include custom-breakpoint-min($breakpoint-tablet) {
+      padding-bottom: 40px;
+    }
+  }
 
-	& > .grid_flex {
-		align-items: center;
-	}
-	&__button {
-		@include custom-breakpoint-min($breakpoint-desktop) {
-			margin-top: 20px;
-		}
-	}
-	&__item {
-		padding: 2px 0px;
-	}
+  & > .grid_flex {
+    align-items: center;
+  }
+  &__button {
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      margin-top: 20px;
+    }
+  }
+  &__item {
+    padding: 2px 0px;
+  }
 }
