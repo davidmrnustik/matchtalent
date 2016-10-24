@@ -27,6 +27,10 @@
 		"AVISO_LEGAL" : {
 			"TITLE" : "Aviso legal MatchTalent - Plataforma de empleo",
 			"DESCRIPTION" : "Plataforma de empleo integrada con diferentes portales según el perfil de profesional que busque con posibilidad de entrevistar por videoconferencia."
+		},
+		"VIDEO_CONFERENCIA" : {
+			"TITLE" : "Entrevistas por videoconferencia MatchTalent - Plataforma de empleo",
+			"DESCRIPTION" : "Videoconferencia para entrevistas de selección de personal con gestión de agenda de citas integrada en plataforma de empleo MatchTalent."
 		}
 	},
 	"MENU" : {
@@ -46,7 +50,8 @@
 		"PORTALES" : "/portales.html",
 		"CONTACTO" : "/contacto.html",
 		"COOKIES" : "/cookies.html",
-		"AVISO_LEGAL" : "/aviso-legal.html"
+		"AVISO_LEGAL" : "/aviso-legal.html",
+		"VIDEO_CONFERENCIA" : "/videoconferencia.html"
 	},
 	"LANG" : {
 		"ESPANOL" : {
@@ -289,5 +294,9 @@
 	"PAGE404" : {
 		"TITLE" : "Página no encontrada",
 		"TEXT" : "<p>La página solicitada puede no estar disponible, haber cambiado de dirección (URL) o no existir.<p>Prueba a dirigirse hacia nuestra <a href='/'>página principal</a>.</p><p>Disculpe las molestias.</p>"
+	},
+	"VIDEO_CONFERENCIA" : {
+		"TITLE" : "Entrevistas por videoconferencia",
+		"TEXT" : "<p>Una de las ventajas de MatchTalent es gestión de las videoconferencias entre candidatos y entrevistadores RRHH. Sistema de videoconferencias le permite gestionar citas y estableces entorno de formación interactivo (audio, vídeo) sin necesidad instalar software adicional.</p><hr class='hr'/><h4>¿Como funciona?</h4>"
 	}
 }

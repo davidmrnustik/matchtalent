@@ -1,0 +1,25 @@
+extends layout.pug
+
+block title
+  title #{SEO.VIDEO_CONFERENCIA.TITLE}
+  meta(
+    name='content'
+    description= SEO.VIDEO_CONFERENCIA.DESCRIPTION
+  )
+
+block mobile-menu
+  +mobile-menu('cookies')
+
+block content
+  +header('cookies')
+
+  section.content-header.remove_margin-top.remove_margin-bottom
+    .content-header__image
+      +content-header-image('header_image_videoconferencia.jpg')
+    .inner
+      .content-header__title
+        h1 #{VIDEO_CONFERENCIA.TITLE}
+
+  section.content-text.inner.inner_smaller.contacto
+    .content-text__text
+      | !{VIDEO_CONFERENCIA.TEXT}
