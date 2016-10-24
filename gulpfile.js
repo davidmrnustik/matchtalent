@@ -38,10 +38,12 @@ var src = {
 		'./.htaccess'
 	],
 	dev: '_dev',
+	devURL: 'http://demo.matchtalent.com.es',
 	build: '_build',
+	buildURL: 'http://www.matchtalent.com.es',
 	translations: './app/translations/**/*',
 	pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}'],
-	templates: './app/templates/**/*.html'
+	templates: './app/templates/**/*.html',
 };
 
 var getJsonData = function(file) {
@@ -245,14 +247,34 @@ gulp.task('pug:build', function (){
 	.pipe(gulp.dest(src.build));
 });
 
+gulp.task('sitemap:dev', function() {
+	return gulp.src([src.dev + '/**/*.html', '!' + src.dev + '/index_temp.html'], {
+		read: false
+	})
+	.pipe(gp.sitemap({
+		siteUrl: src.devURL
+	}))
+	.pipe(gulp.dest(src.dev))
+});
+
+gulp.task('sitemap:build', function() {
+	return gulp.src([src.build + '/**/*.html', '!' + src.build + '/index_temp.html'], {
+		read: false
+	})
+	.pipe(gp.sitemap({
+		siteUrl: src.buildURL
+	}))
+	.pipe(gulp.dest(src.build))
+});
+
 gulp.task('dev', ['clean'], cb=> {
 	runSequence(
-		'pug:dev', 'sass:dev', 'css:dev', 'js:dev', 'jscomponents:dev', 'jscomponentsie:dev', 'jsothers:dev', 'jslegacy:dev', 'slick:dev', 'fonts:dev', 'images:dev', 'imgleaflet:dev', 'root:dev', cb
+		'pug:dev', 'sass:dev', 'css:dev', 'js:dev', 'jscomponents:dev', 'jscomponentsie:dev', 'jsothers:dev', 'jslegacy:dev', 'slick:dev', 'fonts:dev', 'images:dev', 'imgleaflet:dev', 'root:dev', 'sitemap:dev', cb
 	);
 });
 
 gulp.task('build', ['clean'], function(){
-	runSequence('pug:build', 'sass:build', 'css:build', 'js:build', 'jscomponents:build', 'jscomponentsie:build', 'jsothers:build', 'jslegacy:build', 'slick:build', 'fonts:build', 'images:build', 'imgleaflet:build', 'root:build');
+	runSequence('pug:build', 'sass:build', 'css:build', 'js:build', 'jscomponents:build', 'jscomponentsie:build', 'jsothers:build', 'jslegacy:build', 'slick:build', 'fonts:build', 'images:build', 'imgleaflet:build', 'root:build', 'sitemap:build');
 });
 
 gulp.task('deploy:dev', ['dev'], function(){
