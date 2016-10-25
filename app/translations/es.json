@@ -297,7 +297,7 @@
   },
   "VIDEO_CONFERENCIA" : {
     "TITLE" : "Entrevistas por videoconferencia",
-    "TEXT" : "<p>Una de las ventajas de MatchTalent es la posibilidad de hacer videoconferencias entre candidatos y entrevistadores RRHH. <br/>Se trata de un sistema de videoconferencias que le permite crear y gestionar citas y realizar entrevistas interactivas (audio, video) sin necesidad de instalar ningún software adicional.</p><hr class='hr'/>",
+    "TEXT" : "<p>Una de las ventajas de MatchTalent es la posibilidad de hacer videoconferencias entre candidatos y entrevistadores del Departamento de RRHH. Se trata de un sistema de videoconferencias que le permite crear y gestionar citas y realizar entrevistas interactivas (audio, video) con sus candidatos, sin necesidad de instalar ningún software adicional.</p><hr class='hr'/>",
     "COMO_FUNCIONA" : {
       "TITLE" : "¿Como funciona?",
       "STORY_01" : "El técnico de RRHH o administrador da de alta su perfil, escoge sus áreas de selección y envia la solicitud de entrevista al candidado.",

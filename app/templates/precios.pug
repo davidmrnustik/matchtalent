@@ -85,8 +85,8 @@ block content
 
   section.partners.inner.text_center
     h2.partners__headline.text_center.text_uppercase
-      | ​Portales de Empleo
+      | #{INICIO.PORTALES_EMPLEO.TITLE}
     .grid.grid_flex.grid_center
       +partners(8)
     .button.partners__button
-      a(href='/portales.html') ver todos portales
+      a(href=URL.PORTALES) #{INICIO.PORTALES_EMPLEO.VER_TODOS_PORTALES}
