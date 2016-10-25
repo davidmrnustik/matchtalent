@@ -183,7 +183,7 @@
         "ANUAL" : "",
         "LANZAMIENTO" : "195"
       },
-      "PLAN" : "<li><strong>10 Ofertas</strong></li><li><strong>1.000 Candidatos</strong></li><li>3 portales de empleo integrados</li>"
+      "PLAN" : "<li><strong>10 Ofertas activas</strong></li><li><strong>1.000 Candidatos activados</strong></li><li>3 portales de empleo integrados</li>"
     },
     "EXPERTO" : {
       "TITLE" : "Plus",
@@ -192,7 +192,7 @@
         "ANUAL" : "",
         "LANZAMIENTO" : "275"
       },
-      "PLAN" : "<li><strong>20 Ofertas</strong></li><li><strong>2.000 Candidatos</strong></li><li>5 portales de empleo integrados</li>"
+      "PLAN" : "<li><strong>20 Ofertas activas</strong></li><li><strong>2.000 Candidatos activados</strong></li><li>5 portales de empleo integrados</li>"
     },
     "CUSTOM" : {
       "TITLE" : "Premium",
