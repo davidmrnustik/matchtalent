@@ -8,3 +8,4 @@ uow-hack.js
 html/
 .DS_Store
 test/
+deploy/
