@@ -31,19 +31,19 @@ block content
       | #{INICIO.POR_QUE_MATCHTALENT.TITLE}
     .grid.grid_3-columns
       +why-matchtalent-item(
-        '/img/optimize.svg',
+        'optimize',
         INICIO.POR_QUE_MATCHTALENT.OPTIMIZA_RECURSOS.TITLE,
         INICIO.POR_QUE_MATCHTALENT.OPTIMIZA_RECURSOS.DESCRIPTION,
         URL.VENTAJAS
       )
       +why-matchtalent-item(
-        '/img/magnifier.svg',
+        'magnifier',
         INICIO.POR_QUE_MATCHTALENT.MEJORES_RESULTADOS.TITLE,
         INICIO.POR_QUE_MATCHTALENT.MEJORES_RESULTADOS.DESCRIPTION,
         URL.VENTAJAS
       )
       +why-matchtalent-item(
-        '/img/target.svg',
+        'target',
         INICIO.POR_QUE_MATCHTALENT.MAYOR_ALCANCE.TITLE,
         INICIO.POR_QUE_MATCHTALENT.MAYOR_ALCANCE.DESCRIPTION,
         URL.VENTAJAS
@@ -89,6 +89,6 @@ block content
     h2.partners__headline.text_center.text_uppercase
       | #{INICIO.PORTALES_EMPLEO.TITLE}
     .grid.grid_flex.grid_center
-      +partners(["/img/portal_buscarempleo.jpg", "/img/portal_ticjob.jpg", "/img/portal_monster.jpg", "/img/portal_infoempleo.jpg", "/img/portal_linkedinjobs.jpg", "/img/portal_turijobs.jpg", "/img/portal_disjob.jpg", "/img/portal_fjobs.jpg"])
+      +partners(8)
     .button.partners__button
       a(href=URL.PORTALES) #{INICIO.PORTALES_EMPLEO.VER_TODOS_PORTALES}

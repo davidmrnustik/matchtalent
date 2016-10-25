@@ -1,0 +1,33 @@
+$block: 'videoconferencia__icon';
+
+.#{$block} {
+  position: absolute;  left: 0px;
+  top: 0px;
+  width: 50px;
+  height: 55px;
+}
+
+.videoconferencia__item:first-of-type {
+  .#{$block} {
+    left: 54px;
+    @include bg-image('persons.svg', left, top, cover)
+  }
+}
+.videoconferencia__item:nth-of-type(2) {
+  .#{$block} {
+    left: 54px;
+    @include bg-image('persons.svg', right, top, cover)
+  }
+}
+.videoconferencia__item:nth-of-type(3) {
+  .#{$block} {
+    width: 104px;
+    @include bg-image('persons.svg', left, top, cover)
+  }
+}
+.videoconferencia__item:last-of-type {
+  .#{$block} {
+    left: 54px;
+    @include bg-image('persons.svg', left, top, cover)
+  }
+}

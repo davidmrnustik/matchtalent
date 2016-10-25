@@ -1,230 +1,244 @@
 # index #
 
 mobile-menu
-	mobile-menu_show
-	//mobile-menu__lang-switcher
-	mobile-menu__nav-lang
-	designby mobile-menu__designby
-	nav mobile-menu__nav
-		nav__item
-		nav__item_active
-		nav__item_highlighted
+  mobile-menu_show
+  //mobile-menu__lang-switcher
+  mobile-menu__nav-lang
+  designby mobile-menu__designby
+  nav mobile-menu__nav
+    nav__item
+    nav__item_active
+    nav__item_highlighted
 
 content
-	header
-		header_fixed
-		logo header__logo
-		menu-icon header__menu-icon
-			menu-icon__content
-				menu-icon__line
-		header__nav-lang nav-lang
-			nav-lang__item
-			nav-lang__item_highlighted
-		nav header__nav
-			nav__item
-			nav__item_active
-			nav__item_highlighted
-		icon-call
-	hero
-		slider hero__slider
-			slider__item
-				slider__image
-				slider__text-content
-					slider__title
-					slider__description
-					slider__button button button_inverse
-			slider__dotnav
-				slider__dotnav-item
-	clients inner
-		clients__item
-			clients__logo
-			clients__name
+  header
+    header_fixed
+    logo header__logo
+    menu-icon header__menu-icon
+      menu-icon__content
+        menu-icon__line
+    header__nav-lang nav-lang
+      nav-lang__item
+      nav-lang__item_highlighted
+    nav header__nav
+      nav__item
+      nav__item_active
+      nav__item_highlighted
+    icon-call
+  hero
+    slider hero__slider
+      slider__item
+        slider__image
+        slider__text-content
+          slider__title
+          slider__description
+          slider__button button button_inverse
+      slider__dotnav
+        slider__dotnav-item
+  clients inner
+    clients__item
+      clients__logo
+      clients__name
 
-	why-matchtalent inner
-		why-matchtalent__headline
-		why-matchtalent__item
-			why-matchtalent__icon
-			why-matchtalent__title
-			why-matchtalent__description
-			why-matchtalent__button button
+  why-matchtalent inner
+    why-matchtalent__headline
+    why-matchtalent__item
+      why-matchtalent__icon
+      why-matchtalent__title
+      why-matchtalent__description
+      why-matchtalent__button button
 
-	contact-with-us text_white
-		inner
-			contact-with-us__text
-			contact-with-us__text_small text_em text_small
-			contact-with-us__button button button_inverse
+  contact-with-us text_white
+    inner
+      contact-with-us__text
+      contact-with-us__text_small text_em text_small
+      contact-with-us__button button button_inverse
 
-	solutions-for inner
-		solutions-for__headline
-			solutions-for__arrow
-				solutions-for__arrow_bottom
-				solutions-for__arrow_left_right
-		solutions-for__item
-		solutions-for__title solutions-for__title_icon-palm
-		solutions-for__description
+  solutions-for inner
+    solutions-for__headline
+      solutions-for__arrow
+        solutions-for__arrow_bottom
+        solutions-for__arrow_left_right
+    solutions-for__item
+    solutions-for__title solutions-for__title_icon-palm
+    solutions-for__description
 
-	features text_white
-		inner
-			features__headline
-			features__item
-				features__description features__description_icon-check
-				features__button button button_inverse
+  features text_white
+    inner
+      features__headline
+      features__item
+        features__description features__description_icon-check
+        features__button button button_inverse
 
-	partners inner
-		partners__headline
-		partners__item
-		partners__logo
+  partners inner
+    partners__headline
+    partners__item
+    partners__logo
 
-	footer
-		inner
-			logo footer__logo
-			footer__links
-				footer__links-title
-			nav footer__nav
-				nav__item
-				nav__item_active
-				nav__item_highlighted
-			footer__socialnet
-			footer__icon footer__icon_facebook
-			footer__icon footer__icon_twitter
-			footer__icon footer__icon_googleplus
-			footer__icon footer__icon_instagram
-			designby footer__designby
-			footer__copyright
+  footer
+    inner
+      logo footer__logo
+      footer__links
+        footer__links-title
+      nav footer__nav
+        nav__item
+        nav__item_active
+        nav__item_highlighted
+      footer__socialnet
+      footer__icon footer__icon_facebook
+      footer__icon footer__icon_twitter
+      footer__icon footer__icon_googleplus
+      footer__icon footer__icon_instagram
+      designby footer__designby
+      footer__copyright
 
 
 # ventajas #
-	content-header
-		content-header__image
-		content-header__title
-	content-text inner inner_smaller
-		content-text__grid_2-columns
-		content-text__text
-	our-features inner inner_smaller
-		our-features__grid_2-columns
-		our-features__item
-			our-features__item_active
-		our-features__content
-		our-features__icon
-			our-features__icon_dashboard
-			our-features__icon_social-networks
-			our-features__icon_mobile
-			our-features__icon_candidate
-			our-features__icon_subscriptions
-			our-features__icon_unique-db
-			our-features__icon_interaction
-			our-features__icon_reports
-			our-features__icon_lopd
-			our-features__icon_video
-		our-features__title
-		our-features__description
-		our-features__list
+  content-header
+    content-header__image
+    content-header__title
+  content-text inner inner_smaller
+    content-text__grid_2-columns
+    content-text__text
+  our-features inner inner_smaller
+    our-features__grid_2-columns
+    our-features__item
+      our-features__item_active
+    our-features__content
+    our-features__icon
+      our-features__icon_dashboard
+      our-features__icon_social-networks
+      our-features__icon_mobile
+      our-features__icon_candidate
+      our-features__icon_subscriptions
+      our-features__icon_unique-db
+      our-features__icon_interaction
+      our-features__icon_reports
+      our-features__icon_lopd
+      our-features__icon_video
+    our-features__title
+    our-features__description
+    our-features__list
 
 
 # temp page #
 temp-page
-	temp-page__content
-	temp-page__logo
-	temp-page__title
-	temp-page__text
-	temp-page__designby
+  temp-page__content
+  temp-page__logo
+  temp-page__title
+  temp-page__text
+  temp-page__designby
 
 
 # precios #
-	content-header
-		content-header__image
-		content-header__title
-	our-plans inner inner_smaller
-		our-plans__grid_3-columns
-		our-plans__item
-			our-plans__item_highlighted
-			our-plans__grid_3-columns
-			our-plans__header
-			our-plans__title
-			out-plans__price-text
-			our-plans__price
-				our-plans__price_lanzamiento
-			our-plans__currency
-			our-plans__period
-			our-plans__features
-			our-plans__button button button_inverse
-	plans-include inner
-	plans-include__headline
-		plans-include__item
-		plans-include__title
-		plans-include__description
+  content-header
+    content-header__image
+    content-header__title
+  our-plans inner inner_smaller
+    our-plans__grid_3-columns
+    our-plans__item
+      our-plans__item_highlighted
+      our-plans__grid_3-columns
+      our-plans__header
+      our-plans__title
+      out-plans__price-text
+      our-plans__price
+        our-plans__price_lanzamiento
+      our-plans__currency
+      our-plans__period
+      our-plans__features
+      our-plans__button button button_inverse
+  plans-include inner
+  plans-include__headline
+    plans-include__item
+    plans-include__title
+    plans-include__description
+
+# videoconferencia #
+  content-header
+    content-header__image
+    content-header__title
+  videoconferencia inner
+    videoconferencia__como-funciona
+      videoconferencia__headline
+      videoconferencia__item
+      videoconferencia__icon
+      videoconferencia__description
+      videoconferencia__picture
+  caracteristicas
+    caracteristicas__title
 
 # contacto #
-	content-header
-		content-header__image
-		content-header__title
-	contacto
-		contacto__form
+  content-header
+    content-header__image
+    content-header__title
+  contacto
+    contacto__form
 
 ==========================
 
 # helper blocks #
 list
-	list_icon-check
-	list__item
+  list_icon-check
+  list__item
 cta
-	cta__content
-	cta__button
+  cta__content
+  cta__button
 text
-	text_white
-	text_em
-	text_small
-	text_center
-	text_upper
+  text_white
+  text_em
+  text_small
+  text_center
+  text_upper
 headings
 grid
-	grid_width-auto
-	grid_center
-	grid_flex-end
-	grid_center
-	grid_space-between
-	grid_items-center
-	grid_2-columns
-		grid__column
-			grid__column_remove-bottom
-	grid_3-columns
-		grid__column
+  grid_width-auto
+  grid_center
+  grid_flex-end
+  grid_center
+  grid_space-between
+  grid_items-center
+  grid_2-columns
+    grid__column
+      grid__column_remove-bottom
+  grid_3-columns
+    grid__column
 
 button
-	button_inverse
-	button_inverse_blue
+  button_inverse
+  button_inverse_blue
 inner
-	inner_smaller
+  inner_smaller
 
 hr
-	hr_fullwidth
+  hr_fullwidth
 
 modal
-	modal__content
-	modal__close
+  modal__content
+  modal__close
 
 cookies
-	cookies__alert
-	cookies__close
-	
+  cookies__alert
+  cookies__close
+  
 ==========================
 
 # File system #
 
 -app
-	-blocks
-		-header
-		-hero
-		-...
-		-footer
-		-text
-	-common
-		-controllers
-		-directives
-		-services
-		app.js
-		app.scss
-	-components
-	-translations
-	-views
+  -blocks
+    -header
+    -hero
+    -...
+    -footer
+    -text
+  -common
+    -controllers
+    -directives
+    -services
+    app.js
+    app.scss
+  -components
+  -translations
+  -views
 index.html

@@ -1,0 +1,11 @@
+$block: 'caracteristicas';
+
+.#{$block} {
+  @include custom-breakpoint-min($breakpoint-desktop) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &__title {
+    @include font-size(25);
+  }
+}

@@ -2,12 +2,12 @@ mixin picture(img, title)
   picture
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     source(
-      srcset= img
+      srcset= '/img/' + img + '.svg'
       type='image/svg+xml'
     )
     <!--[if IE 9]></video><![endif]-->
     img(
-      srcset= img
+      srcset= '/img/' + img + '.png'
       alt= title
       title= title
     )
@@ -41,7 +41,7 @@ mixin mobile-menu(page)
         href='http://www.memorandum.net'
         target='_blank'
       )
-        +picture('/img/logo_memorandum.svg', MEMORANDUM_MULTIMEDIA)
+        +picture('logo_memorandum', MEMORANDUM_MULTIMEDIA)
 
 mixin header(page)
   header.header.text_white
@@ -49,7 +49,7 @@ mixin header(page)
       +menu-icon('header__menu-icon no-desktop')
       .logo.header__logo
         a(href=URL.INICIO)
-          +picture('/img/logo_matchtalent.svg', COMMON.WEBSITE_NAME)
+          +picture('logo_matchtalent', COMMON.WEBSITE_NAME)
 
       ul.nav.header__nav.only-desktop
         li.nav__item(class=page == 'ventajas' ? 'nav__item_active' : ''): a(href=URL.VENTAJAS) #{MENU.VENTAJAS}
@@ -100,10 +100,18 @@ mixin features-item(description)
   .features__item.grid__column
     .features__description.features__description_icon-check= description
 
-mixin partners(items)
-  each item in items
-    .partners__item.grid__column
-      img.partners__logo(src=item)/
+mixin partners(numero)
+  - var partners = ["/img/portal_buscarempleo.jpg", "/img/portal_infojobs.jpg", "/img/portal_ticjob.jpg", "/img/portal_monster.jpg", "/img/portal_infoempleo.jpg", "/img/portal_linkedinjobs.jpg", "/img/portal_disjob.jpg", "/img/portal_fjobs.jpg", "/img/portal_trabajando.jpg", "/img/portal_turijobs.jpg", "/img/portal_jobandtalent.jpg", "/img/portal_laboris.jpg", "/img/portal_bebee.jpg", "/img/portal_tecnoempleo.jpg", "/img/portal_universia.jpg"]
+  - var i = 0
+  if numero
+    while i < numero
+      .partners__item.grid__column
+        img.partners__logo(src=partners[i])/
+      - i++
+  else
+    each partner in partners
+      .partners__item.grid__column
+        img.partners__logo(src=partner)/
 
 mixin social-networks(items)
   each url, icon in items

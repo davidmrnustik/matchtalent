@@ -18,5 +18,12 @@ $block: 'our-features__content';
       background-color: #dadada;
     }
   }
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
 }

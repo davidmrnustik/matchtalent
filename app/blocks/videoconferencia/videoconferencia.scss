@@ -1,0 +1,23 @@
+$block: 'videoconferencia';
+
+.#{$block} {
+  @include custom-breakpoint-min($breakpoint-desktop) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &__como-funciona {
+    @include custom-breakpoint-min($breakpoint-desktop) {
+      padding-right: 40px;
+    }
+  }
+  &__headline {
+    @include font-size(25);
+
+    @include custom-breakpoint-max($breakpoint-phablet) {
+      text-align: center;
+    }
+    @include custom-breakpoint-max($breakpoint-tablet) {
+      padding-bottom: 20px;
+    }
+  }
+}

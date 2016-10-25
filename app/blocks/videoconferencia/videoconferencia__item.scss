@@ -1,0 +1,12 @@
+$block: 'videoconferencia__item';
+
+.#{$block} {
+	margin-bottom: 30px;
+  position: relative;
+  min-height: 160px;
+
+  @include custom-breakpoint-min($breakpoint-tablet) {
+    margin-bottom: 10px;
+    min-height: 250px;
+  }
+}

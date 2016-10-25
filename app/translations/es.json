@@ -79,7 +79,7 @@
       },
       "VIDEOCONFERENCIA" : {
         "TITLE" : "Entrevistas por videoconferencia",
-        "DESCRIPTION" : "Consiga que las ofertas y candidatos de cualquier portal de empleo lleguen a su web automaticamente."
+        "DESCRIPTION" : "Gestione la agenda de entrevistas a candidatos y conózcalos a través de videoconferencia."
       }
     },
     "CLIENTES" : {
@@ -159,7 +159,7 @@
     },
     "INTERACCION" : {
       "TITLE" : "Interacción con candidatos",
-      "DESCRIPTION" : "<p>La plataforma permite:</p><ul class='our-features__list list'><li class='list__item'>Configurar respuestas automáticas. Cada vez que un candidato cambia de estado dentro de una oferta se le puede avisar por email. Igualmente se puede enviar una respuesta automática a todo aquel que envíe un currículum o se interese por una oferta.</li><li class='list__item'>Enviar respuestas personalizadas, individuales o a varios candidatos dentro de la misma oferta. La plataforma también dispone de plantillas de correo electrónico para optimizar tiempo en los envíos, también es posible crear nuevas.</li><li class='list__item'>Gestionar la agenda de entrevistas, una herramienta potente permite dar cita previa a cada uno de los preseleccionados con notificación al candidato y opción de cambiar horario en función de la disponibilidad establecida.</li><li class='list__item'>Entrevistar por videoconferencia a los candidatos preseleccionados en tiempo real. El módulo de videoconferencia permite establecer una comunicación directa con el candidato a través de videoconferencia y sin necesidad de software o descargas adicionales, una característica que en conjunto con la gestión de agenda resulta extremadamente útil en los procesos de selección y entrevista.</li></ul>"
+      "DESCRIPTION" : "<p>La plataforma permite:</p><ul class='our-features__list list'><li class='list__item'>Configurar respuestas automáticas. Cada vez que un candidato cambia de estado dentro de una oferta se le puede avisar por email. Igualmente se puede enviar una respuesta automática a todo aquel que envíe un currículum o se interese por una oferta.</li><li class='list__item'>Enviar respuestas personalizadas, individuales o a varios candidatos dentro de la misma oferta. La plataforma también dispone de plantillas de correo electrónico para optimizar tiempo en los envíos, también es posible crear nuevas.</li><li class='list__item'>Gestionar la agenda de entrevistas, una herramienta potente permite dar cita previa a cada uno de los preseleccionados con notificación al candidato y opción de cambiar horario en función de la disponibilidad establecida.</li><li class='list__item'><a href='/videoconferencia.html'>Entrevistar por videoconferencia</a> a los candidatos preseleccionados en tiempo real. <a href='/videoconferencia.html'>El módulo de videoconferencia</a> permite establecer una comunicación directa con el candidato a través de <a href='/videoconferencia.html'>videoconferencia</a> y sin necesidad de software o descargas adicionales, una característica que en conjunto con la gestión de agenda resulta extremadamente útil en los procesos de selección y entrevista.</li></ul>"
     },
     "INFORMES" : {
       "TITLE" : "Informes",
@@ -297,6 +297,16 @@
   },
   "VIDEO_CONFERENCIA" : {
     "TITLE" : "Entrevistas por videoconferencia",
-    "TEXT" : "<p>Una de las ventajas de MatchTalent es gestión de las videoconferencias entre candidatos y entrevistadores RRHH. Sistema de videoconferencias le permite gestionar citas y estableces entorno de formación interactivo (audio, vídeo) sin necesidad instalar software adicional.</p><hr class='hr'/><h4>¿Como funciona?</h4>"
+    "TEXT" : "<p>Una de las ventajas de MatchTalent es la posibilidad de hacer videoconferencias entre candidatos y entrevistadores RRHH. <br/>Se trata de un sistema de videoconferencias que le permite crear y gestionar citas y realizar entrevistas interactivas (audio, video) sin necesidad de instalar ningún software adicional.</p><hr class='hr'/>",
+    "COMO_FUNCIONA" : {
+      "TITLE" : "¿Como funciona?",
+      "STORY_01" : "El técnico de RRHH o administrador da de alta su perfil, escoge sus áreas de selección y envia la solicitud de entrevista al candidado.",
+      "STORY_02" : "El candidato recibe la solicitud, comprueba su disponibilidad en su calendario y confirma la fecha y hora propuesta para la entrevista.",
+      "STORY_03" : "El técnico de RRHH y el candidato realizan la entrevista cada uno en el lugar que deseen, a la hora y fecha acordada.",
+      "STORY_04" : "El técnico de RRHH tiene la posibilidad de apuntar comentarios u opiniones durante la entrevista y realizar una valoración sobre el candidato."
+    },
+    "CARACTERISTICAS" : {
+      "TEXT" : "<div class='grid__column grid__column_remove-bottom'><h3 class='caracteristicas__title'>Características</h3><ul class='list list_icon-check'><li class='list__item'>Áreas de selección de los candidatos</li> <li class='list__item'>Sistema de notificación</li> <li class='list__item'>Agenda de disponibilidad</li> <li class='list__item'>Gestión de valoraciones de los candidatos</li> <li class='list__item'>Sencillo proceso de clics. Establecer la comunicación de audio y vídeo sin la necesidad de configuraciones ni software adicionales</li> <li class='list__item'>Dispondrá de una cómoda pizarra, editor de gráficos y texto y además de un editor de expresiones gramaticales</li> </ul></div><div class='grid__column grid__column_remove-bottom'><h3 class='caracteristicas__title'>Características técnicas</h3><ul class='list list_icon-check'><li class='list__item'>HTML5, CSS3, jQuery</li> <li class='list__item'>Video de HTML5, sin Flash</li> <li class='list__item'>PHP</li> <li class='list__item'>MySQL server</li> <li class='list__item'>Compatibilidad con ordenadores de sobremesa y portátiles</li> <li class='list__item'>Compatibilidad con navegadores Internet Explorer 10.0 ó superior, Google Ghrome en últimas versiones, Firefox en últimas versiones</li></ul></div>"
+    }
   }
 }
