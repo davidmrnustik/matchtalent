@@ -28,6 +28,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-pug": "^3.1.0",
     "gulp-sass": "^2.3.2",
+    "gulp-scss-lint": "^0.4.0",
     "gulp-sitemap": "^4.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-surge": "^0.1.0",
