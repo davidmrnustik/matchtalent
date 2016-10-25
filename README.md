@@ -14,15 +14,6 @@ $ npm install
 $ gulp *- hace build en /_dev a lanza servidor en localhost:3000*  
 $ gulp build *- hace build en /_build*  
 
-## Preproducción ##
-Hay que instalar surge, http://surge.sh/: "npm install --global surge".  
-Registrate en surge y pide permisos para este subdominio a David Mrnustik.  
-$ gulp build *- hay que hacer build antes despliegue a preproducción*  
-$ surge _build --domain matchtalent.surge.sh *- hace despliegue a matchtalent.surge.sh, sin funcionamiento de PHP.*  
-
-** Pre-producción en servidor de matchtalent.com.es con funcionamiento de PHP **  
-De momento hay que copiar el contenido en _build a demo.matchtalent.com.es por FTP.
-
 # Metodología #
 Estructura del proyecto sigue la metodología BEM:  
 https://en.bem.info/methodology/quick-start/
