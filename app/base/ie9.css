@@ -11,3 +11,15 @@ body > img,
   height: 400px;
   background: url('/img/ie9_map.jpg') top left no-repeat;
 }
+.content-header__image img,
+.content-header__title h1 {
+  -ms-transform: translate(-50%, -50%);
+}
+@media (min-width: 800px) {
+  .videoconferencia__description {
+    -ms-transform: translateY(-50%);
+  }
+  .solutions-for__headline {
+    -ms-transform: translateX(-50%);
+  }
+}
