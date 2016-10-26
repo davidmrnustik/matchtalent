@@ -28,8 +28,9 @@ mixin mobile-menu(page)
       li.nav__item(class=page == 'precios' ? 'nav__item_active' : ''): a(href=URL.PRECIOS) #{MENU.PRECIOS}
       li.nav__item(class=page == 'portales' ? 'nav__item_active' : ''): a(href=URL.PORTALES) #{MENU.PORTALES}
       li.nav__item(class=page == 'contacto' ? 'nav__item_active' : ''): a(href=URL.CONTACTO) #{MENU.CONTACTO}
-      li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
-
+      if page != 'contacto'
+        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
+        
     //- ul.nav-lang.mobile-menu__nav-lang
       li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}
       li.nav-lang__item
@@ -56,7 +57,10 @@ mixin header(page)
         li.nav__item(class=page == 'precios' ? 'nav__item_active' : ''): a(href=URL.PRECIOS) #{MENU.PRECIOS}
         li.nav__item(class=page == 'portales' ? 'nav__item_active' : ''): a(href=URL.PORTALES) #{MENU.PORTALES}
         li.nav__item(class=page == 'contacto' ? 'nav__item_active' : ''): a(href=URL.CONTACTO) #{MENU.CONTACTO}
-        li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
+        if page == 'contacto'
+          li.nav__item.nav__item_highlighted: a(href='#contactSection', data-scroll) #{MENU.PRUEBA_GRATUITA}
+        else
+          li.nav__item.nav__item_highlighted: a(href='#modal-prueba-gratuita', data-modal, data-init-form) #{MENU.PRUEBA_GRATUITA}
 
       //ul.nav-lang.header__nav-lang.only-desktop
         li.nav-lang__item.nav-lang__item_highlighted #{LANG.ESPANOL.TEXT}

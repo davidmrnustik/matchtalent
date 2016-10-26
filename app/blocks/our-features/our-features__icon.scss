@@ -29,7 +29,7 @@ $iconWidth: 70px;
 
     @include custom-breakpoint-min($breakpoint-tablet) {
       right: 40px;
-      left: initial;
+      left: inherit;
     }
   }
 

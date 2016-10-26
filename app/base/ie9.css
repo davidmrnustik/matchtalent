@@ -1,0 +1,13 @@
+body > img,
+.solutions-for__arrow_left_right,
+.solutions-for__arrow:before,
+.solutions-for__arrow:after,
+#map .leaflet-pane,
+#map .leaflet-control-container {
+  display: none !important
+}
+#map {
+  width: 450px;
+  height: 400px;
+  background: url('/img/ie9_map.jpg') top left no-repeat;
+}

@@ -12,9 +12,10 @@ var fs              = require('fs');
 
 var src = {
   scss: ['./app/**/*.scss'],
-  js: ['./app/base/utils/*.js','./app/base/*.js','./app/blocks/**/*.js','./app/app.js', '!./app/anti-spam-email.js'],
+  js: ['./app/base/utils/*.js','./app/base/*.js','./app/blocks/**/*.js','./app/app.js', '!./app/base/anti-spam-email.js', '!./app/base/shim-classlist.js'],
   css: [
-    './app/components/leaflet/dist/leaflet.css'
+    './app/components/leaflet/dist/leaflet.css',
+    './app/base/ie9.css'
   ],
   jscomponents: [
     './app/components/modernizr-load/modernizr.js',
@@ -25,7 +26,8 @@ var src = {
   ],
   jsothers: [
     './app/components/leaflet/dist/leaflet.js',
-    './app/base/anti-spam-email.js'
+    './app/base/anti-spam-email.js',
+    './app/base/shim-classlist.js'
   ],
   slick: './app/components/slick-carousel/slick/ajax-loader.gif',
   fonts: ['./app/fonts/*', './app/components/font-awesome/fonts/*'],

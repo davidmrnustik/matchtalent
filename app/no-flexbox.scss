@@ -10,7 +10,7 @@ $grid: 'grid';
 
   .#{$grid} {
     @include clearfix();
-    text-align: center;
+    //text-align: center;
     display: block;
 
     &_2-columns {
