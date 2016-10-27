@@ -1,0 +1,14 @@
+$block: 'contacto__error';
+
+.#{$block} {
+  margin: 20px 0px;
+
+  .button {
+    display: none;
+    margin-top: 20px;
+
+    .modal-page & {
+      display: block;
+    }
+  }
+}

@@ -13,6 +13,7 @@ When you add a new item to validate, follow these steps:
       errors = {},
       sendValues = {},
       textSuccess = document.querySelector('.contacto__success'),
+      textError = document.querySelector('.contacto__error'),
       modalInitForm = document.querySelectorAll('[data-init-form]'),
       contactForm = document.getElementById('ContactForm'),
       contactFormIntro = document.getElementById('ContactFormIntro'),
@@ -182,13 +183,17 @@ When you add a new item to validate, follow these steps:
       url: './sendmail.php',
       data: sendFormValues(),
       cache: false,
-      success: function(){
-        contactForm.setAttribute('hidden', 'hidden');
-        contactFormIntro.setAttribute('hidden', 'hidden');
-        textSuccess.removeAttribute('hidden');
-        resetForm();
-        sendValues = {};
-        smoothScroll.animateScroll('#ContactFormIntro');
+      success: function(msg){
+        if(msg == 0 || msg == "0"){
+          contactForm.setAttribute('hidden', 'hidden');
+          contactFormIntro.setAttribute('hidden', 'hidden');
+          textSuccess.removeAttribute('hidden');
+          resetForm();
+          sendValues = {};
+          smoothScroll.animateScroll('#ContactFormIntro');
+        } else {
+          textError.removeAttribute('hidden', 'hidden');
+        }
       }
     });
   }
@@ -197,6 +202,7 @@ When you add a new item to validate, follow these steps:
     for(var i = 0, l = modalInitForm.length; i < l; i++){
       modalInitForm[i].addEventListener('click', function(){
         textSuccess.setAttribute('hidden', 'hidden');
+        textError.setAttribute('hidden', 'hidden');
         contactForm.removeAttribute('hidden');
         contactFormIntro.removeAttribute('hidden');
       })

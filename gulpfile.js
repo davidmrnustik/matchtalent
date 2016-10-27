@@ -43,9 +43,9 @@ var src = {
   dev: '_dev',
   devURL: 'http://demo.matchtalent.com.es',
   build: '_build',
-  buildURL: 'http://www.matchtalent.com.es',
+  buildURL: 'http://www.matchtalent.es',
   translations: './app/translations/**/*',
-  pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}'],
+  pug: ['./app/templates/**/*.pug', '!./app/templates/inc/{,/**}', '!./app/templates/layout.pug'],
   templates: './app/templates/**/*.html',
 };
 

@@ -33,8 +33,8 @@ if ((isset($_POST['tmptxt'])) and ($_SESSION['tmptxt']==$_POST['tmptxt'])) {
   $formPhoneNumber = check_input($_POST["phoneNumber"]);
   $formMessage = check_input($_POST["message"]);
 
-  $mailFrom = "no-reply@memorandum.net";
-  $mailFromName = "MatchTalent.com.es";
+  $mailFrom = "no-reply@matchtalent.es";
+  $mailFromName = "MatchTalent.es";
   $mailSubject = "MatchTalent - Consulta desde el formulario web";
   $mailRecipient = "comercial@memorandum.net";
   //$mailRecipient = "davidm@memorandum.net";
@@ -49,8 +49,8 @@ if ((isset($_POST['tmptxt'])) and ($_SESSION['tmptxt']==$_POST['tmptxt'])) {
   $mailMessage .= "Enviado desde: ".$url_field;
   $mailMessage .= "<p><em>MatchTalent Team"." - ".$datetime."</em></p>";
 
-  //$mail->isSMTP();
-  $mail->isSendMail();
+  $mail->isSMTP();
+  //$mail->isSendMail();
   $mail->Host = "localhost";
   $mail->SMTPAuth = false;
   $mail->From = $formEmail;
@@ -64,9 +64,9 @@ if ((isset($_POST['tmptxt'])) and ($_SESSION['tmptxt']==$_POST['tmptxt'])) {
   $mail->isHTML(true);
 
   if(!$mail->send()) {
-    echo 'Message could not be sent.';
+    echo 1;
   } else {
-    echo 'Message has been sent';
+    echo 0;
   } 
 }
 ?>

@@ -2,7 +2,6 @@ p#ContactFormIntro
   | #{CONTACT_FORM.TEXT}
 #ContactFormIntro.contacto__success.text_success(hidden)
   | #{CONTACT_FORM.SUCCESS}
-
   .button()
     a.js-modal-close(href='#') #{COOKIES_ALERT.CERRAR}
 
@@ -41,3 +40,8 @@ form#ContactForm.contacto__form(method='POST', action='./sendmail.php')
     input#tmptxt.float-left(type='text',name='tmptxt')
     .error.text_error.float-left(data-error-type='ErrorCaptchaWrongCode', data-error-msg=CONTACT_FORM.ERRORS.CAPTCHA_WRONG, hidden)
   button#formButton.button #{CONTACT_FORM.SEND}
+
+.contacto__error.text_error(hidden)
+  | !{CONTACT_FORM.ERROR}
+  .button()
+    a.js-modal-close(href='#') #{COOKIES_ALERT.CERRAR}
