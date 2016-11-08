@@ -16,6 +16,9 @@
             utils.removeClass(parent, 'modal_open');
             utils.removeClass(document.documentElement, 'modal-page');
             document.body.style.paddingRight = "";
+            setTimeout(function(){
+              parent.style.display = 'none';
+            }, 150);
           }
         })
       }
@@ -27,14 +30,18 @@
     for (var i = 0, l = modals.length; i < l; i++) {
       var item = modals[i];
       if(id == item.getAttribute('id')){
-        utils.addClass(item, 'modal_open');
-        utils.addClass(document.documentElement, 'modal-page');
-        document.body.style.paddingRight = "15px"; // avoid small move when closes
-        if(document.body.classList.contains('menu-open')){
-          openMenu.toggle();
-        }
-        closeModal(id);
+        item.style.display = 'block';
+        setTimeout(function(){
+          utils.addClass(item, 'modal_open');
+          utils.addClass(document.documentElement, 'modal-page');
+          document.body.style.paddingRight = "15px"; // avoid small move when closes
+          if(document.body.classList.contains('menu-open')){
+            openMenu.toggle();
+          }
+          closeModal(id);
+        }, 150);
       }
+
     }
   }
 

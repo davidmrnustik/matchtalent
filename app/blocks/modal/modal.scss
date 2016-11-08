@@ -11,6 +11,7 @@ $block: 'modal';
   -webkit-overflow-scrolling: touch;
   background-color: rgba(0, 0, 0, .5);
   opacity: 0;
+  display: none;
   -webkit-transition: opacity 0.15s linear, z-index 0.15s linear;
   transition: opacity 0.15s linear, z-index 0.15s linear;
   touch-action: cross-slide-y pinch-zoom double-tap-zoom;
